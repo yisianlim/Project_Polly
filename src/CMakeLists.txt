@@ -6,8 +6,8 @@ SET(sources
   ex1.hpp
   ex1.cpp
 
-  mesh_generator.cpp
   mesh_generator.hpp
+  mesh_generator.cpp
 
   opengl.hpp
   main.cpp
@@ -16,12 +16,13 @@ SET(sources
 add_executable(${CGRA_PROJECT} ${sources})
 
 add_subdirectory(cgra)
+add_subdirectory(noise)
 
 target_source_group_tree(${CGRA_PROJECT})
 
 target_link_libraries(${CGRA_PROJECT} PRIVATE ${OPENGL_LIBRARY})
 target_link_libraries(${CGRA_PROJECT} PRIVATE glfw ${GLFW_LIBRARIES})
-target_link_libraries(${CGRA_PROJECT} PRIVATE glew glm imgui)
+target_link_libraries(${CGRA_PROJECT} PRIVATE glew glm imgui libnoise)
 
 target_include_directories(${CGRA_PROJECT} PRIVATE "${PROJECT_SOURCE_DIR}/src")
 

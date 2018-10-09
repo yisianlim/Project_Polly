@@ -14,6 +14,9 @@
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 #include "glm/gtx/euler_angles.hpp"
+#include "../libnoise/include/noise/noise.h"
+
+using namespace noise;
 
 void Application::init() {
     // Load the shader program
@@ -35,8 +38,10 @@ void Application::init() {
     m_program.setViewMatrix(viewMatrix);
 
 	// Generate the terrain. 
-	m_meshGenerator = MeshGenerator();
-	m_terrain = m_meshGenerator.generate(10, 10, 3);
+	m_meshGenerator = MeshGenerator(15, 15, 5);
+	m_terrain = m_meshGenerator.generate();
+
+	module::Perlin myModule;
 }
 
 void Application::loadObj(const char *filename) {

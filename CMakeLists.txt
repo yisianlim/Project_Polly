@@ -31,6 +31,7 @@ include_directories("${PROJECT_SOURCE_DIR}/vendor/glfw/include")
 add_subdirectory(vendor/glfw)
 add_subdirectory(vendor/glm)
 add_subdirectory(vendor/imgui)
+add_subdirectory(vendor/libnoise)
 
 # Find OpenGL
 find_package(OpenGL REQUIRED)

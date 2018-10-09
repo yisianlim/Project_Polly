@@ -1,19 +1,22 @@
 #include "mesh_generator.hpp";
 
-cgra::Mesh MeshGenerator::generate(double width, double height, int subdivisions) {
+cgra::Mesh MeshGenerator::generate() {
 	cgra::Mesh mesh;
 
+	// Use the Perlin noise of seed 0.
+	PerlinNoise perlinNoise = PerlinNoise(0, 0.2, 1);
+
 	// Initial positions of the mesh.
-	double minX = - width / 2;
-	double minY = - height / 2;
+	double minX = - m_width / 2;
+	double minY = - m_height / 2;
 
 	// Number of subdivisions for each mesh. 
-	int width_subdivisions = width * subdivisions;
-	int height_subdivisions = height * subdivisions;
+	int width_subdivisions = m_width * m_subdivisions;
+	int height_subdivisions = m_height * m_subdivisions;
 
 	// Dimensions of each triangle making up the mesh.
-	float subWidth = width / width_subdivisions;
-	float subHeight = height / height_subdivisions;
+	float subWidth = m_width / width_subdivisions;
+	float subHeight = m_height / height_subdivisions;
 
 	// Number of vertices and triangles making up the mesh.
 	int num_vertices = (width_subdivisions + 1) * (height_subdivisions + 1);
@@ -28,7 +31,7 @@ cgra::Mesh MeshGenerator::generate(double width, double height, int subdivisions
 		float x = minX + subWidth * i;
 		for (int j = 0; j <= height_subdivisions; j++) {
 			float y = minY + subHeight * j;
-			vertices.setRow(count++, {x, 1.0, y});
+			vertices.setRow(count++, {x, perlinNoise.noise(x, y), y});
 		}
 	}
 
