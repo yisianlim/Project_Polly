@@ -26,59 +26,18 @@ void Application::init() {
     // Create a view matrix that positions the camera
     // 10 units behind the object
     glm::mat4 viewMatrix(1);
-    viewMatrix[3] = glm::vec4(0, 0, -10, 1);
+	viewMatrix = glm::lookAt(
+					glm::vec3(4, 3, 10), // Camera is at (4,3,3), in World Space
+					glm::vec3(0, 0, 0), // and looks at the origin
+					glm::vec3(0, 1, 0)  // Head is up (set to 0,-1,0 to look upside-down)
+	);
+	//viewMatrix[3] = glm::vec4(0, 0, -10, 1);
     m_program.setViewMatrix(viewMatrix);
 
-    // Create the cube mesh
-    createCube();
-}
+	// Generate the terrain. 
+	m_meshGenerator = MeshGenerator();
+	m_terrain = m_meshGenerator.generate(20, 20);
 
-void Application::createCube() {
-    /************************************************************
-     * 2. Create a Mesh                                         *
-     *                                                          *
-     * Add the remaining triangles for the cube                 *
-     ************************************************************/
-
-    // Use the correct number of rows for the full
-    // cube.
-    cgra::Matrix<double> vertices(8, 3);
-    cgra::Matrix<unsigned int> triangles(12, 3);
-
-    vertices.setRow(0, { -1.0, -1.0,  1.0 });
-    vertices.setRow(1, {  1.0, -1.0,  1.0 });
-    vertices.setRow(2, {  1.0,  1.0,  1.0 });
-    vertices.setRow(3, { -1.0,  1.0,  1.0 });
-    vertices.setRow(4, { -1.0, -1.0, -1.0 });
-    vertices.setRow(5, {  1.0, -1.0, -1.0 });
-    vertices.setRow(6, {  1.0,  1.0, -1.0 });
-    vertices.setRow(7, { -1.0,  1.0, -1.0 });
-
-    //Front.
-    triangles.setRow(0, { 0, 1, 2 });
-    triangles.setRow(1, { 2, 3, 0 });
-
-    // Right.
-    triangles.setRow(2, { 1, 5, 6 });
-    triangles.setRow(3, { 6, 2, 1 });
-
-    // Back.
-    triangles.setRow(4, { 5, 4, 7 });
-    triangles.setRow(5, { 7, 6, 5 });
-
-    // Left.
-    triangles.setRow(6, { 4, 0, 3 });
-    triangles.setRow(7, { 3, 7, 4 });
-
-    // Top.
-    triangles.setRow(8, { 3, 2, 6 });
-    triangles.setRow(9, { 6, 7, 3 });
-
-    // Bottom.
-    triangles.setRow(10, { 4, 5, 0});
-    triangles.setRow(11, { 1, 0, 5});
-
-    m_mesh.setData(vertices, triangles);
 }
 
 void Application::loadObj(const char *filename) {
@@ -122,7 +81,7 @@ void Application::loadObj(const char *filename) {
     	}
     }
 
-    m_mesh.setData(vertices, triangles);
+    m_terrain.setData(vertices, triangles);
 }
 
 void Application::drawScene() {
@@ -154,7 +113,7 @@ void Application::drawScene() {
     m_program.setModelMatrix(modelTransform);
 
     // Draw the mesh
-    m_mesh.draw();
+    m_terrain.draw();
 }
 
 void Application::doGUI() {
@@ -211,9 +170,9 @@ void Application::doGUI() {
     ImGui::Checkbox("Draw wireframe", &checked);
 
     if(checked){
-    	m_mesh.setDrawWireframe(true);
+    	m_terrain.setDrawWireframe(true);
     } else {
-    	m_mesh.setDrawWireframe(false);
+    	m_terrain.setDrawWireframe(false);
     }
 
     ImGui::End();

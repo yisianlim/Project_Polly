@@ -6,6 +6,9 @@ SET(sources
   ex1.hpp
   ex1.cpp
 
+  mesh_generator.cpp
+  mesh_generator.hpp
+
   opengl.hpp
   main.cpp
 )

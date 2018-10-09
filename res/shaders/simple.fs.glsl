@@ -5,7 +5,7 @@ out vec4 color;
 in vec3 fragPosition;
 in vec3 fragNormal;
 
-const vec3 lightDir = vec3(0.25, 0.25, -1);
+const vec3 lightDir = vec3(0.25, -2, -1);
 
 const vec3 ambientColor = vec3(0.05, 0.05, 0.1);
 const vec3 diffuseColor = vec3(0.4, 0.4, 1.0);

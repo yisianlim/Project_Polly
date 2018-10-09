@@ -4,6 +4,7 @@
 #include "cgra/shader.hpp"
 
 #include "glm/glm.hpp"
+#include "mesh_generator.hpp"
 
 class Application {
 public:
@@ -13,7 +14,7 @@ public:
     // The shader program used for drawing
     cgra::Program m_program;
     // The mesh data
-    cgra::Mesh m_mesh;
+    cgra::Mesh m_terrain;
 
     // The current size of the viewport
     glm::vec2 m_viewportSize;
@@ -32,6 +33,8 @@ public:
     // Whether or not the left, middle or right buttons are down.
     bool m_mouseButtonDown[3];
 
+	MeshGenerator m_meshGenerator;
+
     Application(GLFWwindow *win)
         : m_window(win),
           m_viewportSize(1, 1), m_mousePosition(0, 0),
@@ -48,7 +51,6 @@ public:
 
     void init();
 
-    void createCube();
     void loadObj(const char *filename);
 
     void drawScene();
