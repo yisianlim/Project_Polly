@@ -2,8 +2,8 @@
 
 out vec4 color;
 
-in vec3 fragPosition;
-in vec3 fragNormal;
+flat in vec3 fragPosition;
+flat in vec3 fragNormal;
 
 const vec3 lightDir = vec3(0.25, -2, -1);
 

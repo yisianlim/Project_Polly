@@ -20,8 +20,8 @@ void Application::init() {
     // The use of CGRA_SRCDIR "/path/to/shader" is so you don't
     // have to run the program from a specific folder.
     m_program = cgra::Program::load_program(
-        CGRA_SRCDIR "/res/shaders/simple.vs.glsl",
-        CGRA_SRCDIR "/res/shaders/simple.fs.glsl");
+        CGRA_SRCDIR "/res/shaders/Project_Polly.vs.glsl",
+        CGRA_SRCDIR "/res/shaders/Project_Polly.fs.glsl");
 
     // Create a view matrix that positions the camera
     // 10 units behind the object
@@ -36,8 +36,7 @@ void Application::init() {
 
 	// Generate the terrain. 
 	m_meshGenerator = MeshGenerator();
-	m_terrain = m_meshGenerator.generate(20, 20);
-
+	m_terrain = m_meshGenerator.generate(10, 10, 3);
 }
 
 void Application::loadObj(const char *filename) {

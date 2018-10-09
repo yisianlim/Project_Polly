@@ -7,8 +7,8 @@ uniform mat4 projectionMat;
 in vec3 vertPosition;
 in vec3 vertNormal;
 
-out vec3 fragPosition;
-out vec3 fragNormal;
+flat out vec3 fragPosition;
+flat out vec3 fragNormal;
 
 void main() {
     gl_Position = projectionMat * viewMat * modelMat * vec4(vertPosition, 1.0);

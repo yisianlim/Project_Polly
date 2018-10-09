@@ -1,6 +1,6 @@
 #include "mesh_generator.hpp";
 
-cgra::Mesh MeshGenerator::generate(double width, double height) {
+cgra::Mesh MeshGenerator::generate(double width, double height, int subdivisions) {
 	cgra::Mesh mesh;
 
 	// Initial positions of the mesh.
@@ -8,8 +8,8 @@ cgra::Mesh MeshGenerator::generate(double width, double height) {
 	double minY = - height / 2;
 
 	// Number of subdivisions for each mesh. 
-	int width_subdivisions = width * 2;
-	int height_subdivisions = height * 2;
+	int width_subdivisions = width * subdivisions;
+	int height_subdivisions = height * subdivisions;
 
 	// Dimensions of each triangle making up the mesh.
 	float subWidth = width / width_subdivisions;

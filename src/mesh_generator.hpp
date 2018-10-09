@@ -12,5 +12,5 @@ class MeshGenerator {
 		/*
 		* Generates a plane. 
 		*/
-		cgra::Mesh generate(double width, double height);
+		cgra::Mesh generate(double width, double height, int subdivisions);
 };
