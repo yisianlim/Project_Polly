@@ -40,8 +40,6 @@ void Application::init() {
 	// Generate the terrain. 
 	m_meshGenerator = MeshGenerator(15, 15, 5);
 	m_terrain = m_meshGenerator.generate();
-
-	module::Perlin myModule;
 }
 
 void Application::loadObj(const char *filename) {

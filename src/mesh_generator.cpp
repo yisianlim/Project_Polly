@@ -4,7 +4,9 @@ cgra::Mesh MeshGenerator::generate() {
 	cgra::Mesh mesh;
 
 	// Use the Perlin noise of seed 0.
-	PerlinNoise perlinNoise = PerlinNoise(0, 0.2, 1);
+	PerlinNoise perlinNoise = PerlinNoise(0, 0.1, 0.5, 2);
+	PerlinNoise perlinNoise1 = PerlinNoise(0, 0.1, 1, 0.5);
+	PerlinNoise perlinNoise2 = PerlinNoise(0, 0.1, 4, 1);
 
 	// Initial positions of the mesh.
 	double minX = - m_width / 2;
@@ -31,7 +33,10 @@ cgra::Mesh MeshGenerator::generate() {
 		float x = minX + subWidth * i;
 		for (int j = 0; j <= height_subdivisions; j++) {
 			float y = minY + subHeight * j;
-			vertices.setRow(count++, {x, perlinNoise.noise(x, y), y});
+			double height = perlinNoise.noise(x, y) + 0.5 * perlinNoise1.noise(x, y) + 0.25 * perlinNoise2.noise(x, y);
+			height = std::pow(height, 2);
+			//double height = perlinNoise.noise(x, y);
+			vertices.setRow(count++, {x, height, y});
 		}
 	}
 

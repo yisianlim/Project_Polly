@@ -16,9 +16,10 @@ private:
 	module::Perlin m_perlinModule;
 	int m_heightMultiplier;
 public:
-	PerlinNoise(int seed, float persistence, int heightMultiplier) {
+	PerlinNoise(int seed, float persistence, float frequency, int heightMultiplier) {
 		m_perlinModule.SetSeed(seed);
 		m_perlinModule.SetPersistence(persistence);
+		m_perlinModule.SetFrequency(frequency);
 		m_heightMultiplier = heightMultiplier;
 	}
 	virtual double noise(double x, double y) override;
