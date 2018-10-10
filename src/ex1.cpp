@@ -26,20 +26,17 @@ void Application::init() {
         CGRA_SRCDIR "/res/shaders/Project_Polly.vs.glsl",
         CGRA_SRCDIR "/res/shaders/Project_Polly.fs.glsl");
 
-    // Create a view matrix that positions the camera
-    // 10 units behind the object
+    // Create a view matrix.
     glm::mat4 viewMatrix(1);
 	viewMatrix = glm::lookAt(
 					glm::vec3(4, 3, 10), 
 					glm::vec3(0, 0, 0), 
-					glm::vec3(0, 1, 0)
-	);
-	//viewMatrix[3] = glm::vec4(0, 0, -10, 1);
+					glm::vec3(0, 1, 0));
     m_program.setViewMatrix(viewMatrix);
 
-	// Generate the terrain. 
+	// Generate the terrain
 	m_meshGenerator = MeshGenerator(15, 15, 5);
-	m_terrain = m_meshGenerator.generate();
+	m_terrain_meshes = m_meshGenerator.generateMeshes();
 }
 
 void Application::loadObj(const char *filename) {
@@ -83,7 +80,7 @@ void Application::loadObj(const char *filename) {
     	}
     }
 
-    m_terrain.setData(vertices, triangles);
+    m_mesh.setData(vertices, triangles);
 }
 
 void Application::drawScene() {
@@ -112,11 +109,15 @@ void Application::drawScene() {
     modelTransform = m_rotationMatrix * modelTransform;
     modelTransform = glm::translate(modelTransform, m_translation);
 
-    m_program.setModelMatrix(modelTransform);
-	m_program.setColor(glm::vec3(0, 1, 0));
+	for (int i = 0; i < m_terrain_meshes.size(); i++) {
+		m_program.setModelMatrix(modelTransform);
+		glm::vec3 colour = m_meshGenerator.region_to_colour.at(i);
+		m_program.setColor(colour);
+		m_terrain_meshes[i].draw();
+	}
 
-    // Draw the mesh
-    m_terrain.draw();
+
+
 }
 
 void Application::doGUI() {
@@ -173,9 +174,9 @@ void Application::doGUI() {
     ImGui::Checkbox("Draw wireframe", &checked);
 
     if(checked){
-    	m_terrain.setDrawWireframe(true);
+    	m_mesh.setDrawWireframe(true);
     } else {
-    	m_terrain.setDrawWireframe(false);
+    	m_mesh.setDrawWireframe(false);
     }
 
     ImGui::End();

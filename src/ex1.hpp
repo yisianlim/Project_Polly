@@ -13,8 +13,11 @@ public:
 
     // The shader program used for drawing
     cgra::Program m_program;
+
     // The mesh data
-    cgra::Mesh m_terrain;
+    std::vector<cgra::Mesh> m_terrain_meshes;
+
+	cgra::Mesh m_mesh;
 
     // The current size of the viewport
     glm::vec2 m_viewportSize;
