@@ -4,6 +4,7 @@ out vec4 color;
 
 flat in vec3 fragPosition;
 flat in vec3 fragNormal;
+flat in vec3 fragmentColor;
 
 const vec3 lightDir = vec3(0.25, -2, -1);
 
@@ -30,8 +31,9 @@ void main() {
     }
 
     vec3 fragColor = ambientColor +
-        lambertian * diffuseColor +
+        lambertian * fragmentColor +
         specular * specColor;
 
     color = vec4(fragColor, 1.0);
+    //color = vec4(fragmentColor, 1.0);
 }

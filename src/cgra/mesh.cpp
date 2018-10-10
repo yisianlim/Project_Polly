@@ -80,6 +80,30 @@ namespace cgra {
         }
     }
 
+	void Mesh::setColour(const Matrix<double> &colour){
+		// Check to make sure that the number of columns in colour.
+		if (colour.numCols() != 3) {
+			throw std::out_of_range("`colour` should have 3 columns");
+		}
+
+		// Clear any colour data we have. 
+		m_colours.clear();
+
+		// Copy the rows of `colour` into `m_colours`.
+		for (unsigned int r = 0; r < colour.numRows(); r++) {
+			const double *col = colour[r];
+
+			// Create the colour
+			Vertex c(
+				glm::vec3(col[0], col[1], col[2]),
+				glm::vec3(1)
+			);
+
+			// Add the colour to m_colours
+			m_colours.push_back(c);
+		}
+	}
+
     void Mesh::draw() {
         // Check to see if we have all the GPU objects we need to draw the
         // mesh.
@@ -113,6 +137,17 @@ namespace cgra {
             const void *idxData = reinterpret_cast<const void *>(&m_indices[0]);
             glBufferData(GL_ELEMENT_ARRAY_BUFFER, size, idxData, GL_STATIC_DRAW);
 
+			// Same as above, but for the vertex color.
+			//size_t size_col = sizeof(glm::vec3) * m_colours.size();
+			//const void *colData = reinterpret_cast<const void *>(&m_colours[0]);
+			//glGenBuffers(1, &m_cbo);
+			//glBindBuffer(GL_ARRAY_BUFFER, m_cbo);
+			//glBufferData(GL_ARRAY_BUFFER, size_col, colData, GL_STATIC_DRAW);
+
+			//glGenBuffers(1, &m_cbo);
+			//glBindBuffer(GL_ARRAY_BUFFER, m_cbo);
+			//glBufferData(GL_ARRAY_BUFFER, sizeof(g_color_buffer_data), g_color_buffer_data, GL_STATIC_DRAW);
+
             // We need to bind the VBO and IBO after binding the VAO
             glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
             glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ibo);
@@ -127,6 +162,10 @@ namespace cgra {
             glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex),
                                   reinterpret_cast<void *>(offsetof(Vertex, m_normal)));
             glEnableVertexAttribArray(1);
+
+			////// Attribute 2 is the colour.
+			//glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
+			//glEnableVertexAttribArray(2);
         }
 
         // Set the appropriate polygon mode for the drawing mode
@@ -163,5 +202,9 @@ namespace cgra {
             glDeleteVertexArrays(1, &m_vao);
             m_vao = 0;
         }
+		//if (m_cbo != 0) {
+		//	glDeleteBuffers(1, &m_cbo);
+		//	m_cbo = 0;
+		//}
     }
 }

@@ -25,6 +25,7 @@ cgra::Mesh MeshGenerator::generate() {
 	int num_triangles = (width_subdivisions * height_subdivisions) * 2;
 
 	cgra::Matrix<double> vertices(num_vertices, 3);
+	cgra::Matrix<double> colour(num_vertices, 3);
 	cgra::Matrix<unsigned int> triangles(num_triangles, 3);
 
 	// Generate the coordinates of all vertices making up the mesh.
@@ -36,7 +37,9 @@ cgra::Mesh MeshGenerator::generate() {
 			double height = perlinNoise.noise(x, y) + 0.5 * perlinNoise1.noise(x, y) + 0.25 * perlinNoise2.noise(x, y);
 			height = std::pow(height, 2);
 			//double height = perlinNoise.noise(x, y);
-			vertices.setRow(count++, {x, height, y});
+			vertices.setRow(count, {x, height, y});
+			colour.setRow(count, {1.0, 0.0, 0.0});
+			count++;
 		}
 	}
 
@@ -55,6 +58,8 @@ cgra::Mesh MeshGenerator::generate() {
 	}
 
 	mesh.setData(vertices, triangles);
+	mesh.setColour(colour);
+	
 	return mesh;
 
 }

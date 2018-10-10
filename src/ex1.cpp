@@ -30,9 +30,9 @@ void Application::init() {
     // 10 units behind the object
     glm::mat4 viewMatrix(1);
 	viewMatrix = glm::lookAt(
-					glm::vec3(4, 3, 10), // Camera is at (4,3,3), in World Space
-					glm::vec3(0, 0, 0), // and looks at the origin
-					glm::vec3(0, 1, 0)  // Head is up (set to 0,-1,0 to look upside-down)
+					glm::vec3(4, 3, 10), 
+					glm::vec3(0, 0, 0), 
+					glm::vec3(0, 1, 0)
 	);
 	//viewMatrix[3] = glm::vec4(0, 0, -10, 1);
     m_program.setViewMatrix(viewMatrix);
@@ -113,6 +113,7 @@ void Application::drawScene() {
     modelTransform = glm::translate(modelTransform, m_translation);
 
     m_program.setModelMatrix(modelTransform);
+	m_program.setColor(glm::vec3(0, 1, 0));
 
     // Draw the mesh
     m_terrain.draw();

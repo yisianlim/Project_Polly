@@ -21,18 +21,6 @@ namespace cgra {
                 m_position(pos), m_normal(norm) { }
         };
 
-        // A list of all the vertices in the mesh
-        std::vector<Vertex> m_vertices;
-        // A list of indices into m_vertices.
-        // Every three indices represents a triangle,
-        // For example, the list:
-        //    [0, 1, 2, 0, 2, 3]
-        // represents two triangles. The first triangle
-        // uses the first, second and third vertices;
-        // the second triangle uses the first, third and
-        // fourth triangles.
-        std::vector<unsigned int> m_indices;
-
         // Whether or not to draw this mesh as a wireframe
         bool m_drawWireframe;
 
@@ -51,9 +39,28 @@ namespace cgra {
         // The Index Buffer Object, this stores a list of indices
         // that represent triangles
         GLuint m_ibo;
+		// The Colour Buffer Object, this stores a list of colours for each vertex.
+		GLuint m_cbo;
+
+		// A list of all the vertices in the mesh
+		std::vector<Vertex> m_vertices;
+
+		// A list of indices into m_vertices.
+		// Every three indices represents a triangle,
+		// For example, the list:
+		//    [0, 1, 2, 0, 2, 3]
+		// represents two triangles. The first triangle
+		// uses the first, second and third vertices;
+		// the second triangle uses the first, third and
+		// fourth triangles.
+		std::vector<unsigned int> m_indices;
+
+		// A list of all vertices color in the mesh.
+		std::vector<Vertex> m_colours;
+
+
 
     public:
-
         // Set the mesh data using two Matrices.
         //
         // `vertices` is an n x 3 matrix of vertex positions
@@ -61,6 +68,11 @@ namespace cgra {
         //    indices into the rows of `vertices`
         void setData(const Matrix<double> &vertices,
                      const Matrix<unsigned int> &triangles);
+
+		// Set the colour of the mesh using Matrix.
+		// colour is an n x 3 matrix of vertex colours corresponding to
+		// each vertex positions. 
+		void setColour(const Matrix<double> &colour);
 
         // Set whether or not to draw this mesh as a wireframe.
         // true means that the mesh will be drawn as a wireframe.
@@ -87,6 +99,7 @@ namespace cgra {
         Mesh(const Mesh &m) :
             m_vertices(m.m_vertices),
             m_indices(m.m_indices),
+			m_colours(m.m_colours),
             m_drawWireframe(m.m_drawWireframe),
             m_vao(0), m_vbo(0), m_ibo(0) { }
 
@@ -95,6 +108,7 @@ namespace cgra {
         Mesh & operator=(const Mesh &m) {
             m_vertices = m.m_vertices;
             m_indices = m.m_indices;
+			m_colours = m.m_colours;
             m_drawWireframe = m.m_drawWireframe;
 
             deleteMesh();
@@ -111,6 +125,7 @@ namespace cgra {
         Mesh(Mesh &&m)
             : m_vertices(std::move(m.m_vertices)),
               m_indices(std::move(m.m_indices)),
+			  m_colours(std::move(m.m_colours)),
               m_drawWireframe(m.m_drawWireframe),
               m_vao(m.m_vao), m_vbo(m.m_vbo), m_ibo(m.m_ibo) {
             m.m_vao = 0;
@@ -123,6 +138,7 @@ namespace cgra {
         Mesh & operator=(Mesh &&m) {
             m_vertices = std::move(m.m_vertices);
             m_indices = std::move(m.m_indices);
+			m_colours = std::move(m.m_colours);
             m_drawWireframe = m.m_drawWireframe;
 
             deleteMesh();

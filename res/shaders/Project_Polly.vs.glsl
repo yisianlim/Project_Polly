@@ -6,9 +6,11 @@ uniform mat4 projectionMat;
 
 in vec3 vertPosition;
 in vec3 vertNormal;
+uniform vec3 uColor;
 
 flat out vec3 fragPosition;
 flat out vec3 fragNormal;
+flat out vec3 fragmentColor;
 
 void main() {
     gl_Position = projectionMat * viewMat * modelMat * vec4(vertPosition, 1.0);
@@ -18,4 +20,5 @@ void main() {
 
     mat3 normalMat = transpose(inverse(mat3(viewMat * modelMat)));
     fragNormal = normalMat * vertNormal;
+    fragmentColor = uColor;
 }

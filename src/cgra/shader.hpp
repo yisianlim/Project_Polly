@@ -3,6 +3,7 @@
 #include "opengl.hpp"
 
 #include "glm/glm.hpp"
+#include <glm/gtc/type_ptr.hpp>
 
 namespace cgra {
 
@@ -35,5 +36,7 @@ namespace cgra {
         // This specifies how to convert from 3D coordinates to
         // 2D coordinates
         void setProjectionMatrix(const glm::mat4 &);
+
+		void setColor(const glm::vec3 &col);
     };
 }

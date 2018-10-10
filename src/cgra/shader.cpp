@@ -132,6 +132,11 @@ namespace cgra {
         glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, &mat[0][0]);
     }
 
+
+	void Program::setColor(const glm::vec3 &col) {
+		glUniform3fv(glGetUniformLocation(m_program, "uColor"), 1, glm::value_ptr(col));
+	}
+
     static GLuint compileShader(const char *src, GLenum type) {
         // Create the shader object
         GLuint shader = glCreateShader(type);
