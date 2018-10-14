@@ -16,6 +16,7 @@
 #include "glm/gtx/euler_angles.hpp"
 #include "../libnoise/include/noise/noise.h"
 
+
 using namespace noise;
 
 void Application::init() {
@@ -36,6 +37,7 @@ void Application::init() {
 
 	// Generate the terrain
 	m_meshGenerator = MeshGenerator(15, 15, 5);
+	m_mesh = m_meshGenerator.generate();
 	m_terrain_meshes = m_meshGenerator.generateMeshes();
 }
 
@@ -109,13 +111,16 @@ void Application::drawScene() {
     modelTransform = m_rotationMatrix * modelTransform;
     modelTransform = glm::translate(modelTransform, m_translation);
 
-	for (int i = 0; i < m_terrain_meshes.size(); i++) {
-		m_program.setModelMatrix(modelTransform);
-		glm::vec3 colour = m_meshGenerator.region_to_colour.at(i);
-		m_program.setColor(colour);
-		m_terrain_meshes[i].draw();
-	}
+	//for (int i = 0; i < m_terrain_meshes.size(); i++) {
+	//	m_program.setModelMatrix(modelTransform);
+	//	glm::vec3 colour = m_meshGenerator.region_to_colour.at(i);
+	//	m_program.setColor(colour);
+	//	m_terrain_meshes[i].draw();
+	//}
 
+	m_program.setModelMatrix(modelTransform);
+	m_program.setColor(glm::vec3(1, 0, 1));
+	m_mesh.draw();
 
 
 }

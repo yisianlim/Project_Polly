@@ -1,7 +1,8 @@
 #include "mesh_generator.hpp";
+#include "triangulation/delaunator.hpp";
 
 cgra::Mesh MeshGenerator::generate() {
-	cgra::Mesh mesh;
+	//cgra::Mesh mesh;
 
 	// Combine variations of noise maps.
 	PerlinNoise noise_map_1 = PerlinNoise(0, 0.1, 0.5, 2);
@@ -24,41 +25,75 @@ cgra::Mesh MeshGenerator::generate() {
 	int num_vertices = (width_subdivisions + 1) * (height_subdivisions + 1);
 	int num_triangles = (width_subdivisions * height_subdivisions) * 2;
 
-	cgra::Matrix<double> vertices(num_vertices, 3);
-	cgra::Matrix<unsigned int> triangles(num_triangles, 3);
+	//cgra::Matrix<double> vertices(num_vertices, 3);
+	//cgra::Matrix<unsigned int> triangles(num_triangles, 3);
+
+	std::vector<glm::vec2> points;
+	std::vector<double> coords;
 
 	// Generate the coordinates of all vertices making up the mesh.
-	int count = 0;
 	for (int i = 0; i <= width_subdivisions; i++) {
 		float x = minX + subWidth * i;
 		for (int j = 0; j <= height_subdivisions; j++) {
 			float y = minY + subHeight * j;
 
-			// Here we combine the different noise map with a weight. 
-			double height = noise_map_1.noise(x, y) + 0.5 * noise_map_2.noise(x, y) + 0.25 * noise_map_3.noise(x, y);
-			height = std::pow(height, 2);
+			//// Here we combine the different noise map with a weight. 
+			//double height = noise_map_1.noise(x, y) + 0.5 * noise_map_2.noise(x, y) + 0.25 * noise_map_3.noise(x, y);
+			//height = std::pow(height, 2);
+			float scale = ((float)rand() / (float)(RAND_MAX));
+			float ranX = scale;
+			printf("x:%f, ranX:%f\n", x, ranX);
 
-			// Set the vertices coordinates.
-			vertices.setRow(count++, {x, height, y});
+			float scale2 = ((float)rand() / (float)(RAND_MAX));
+			float ranY = scale2;
+
+			// For triangulation.
+			//points.push_back(glm::vec2(ranX, ranY));
+			coords.push_back(minX + ranX * m_width);
+			coords.push_back(minY + ranY * m_height);
 		}
 	}
 
-	// Set the triangle data by specifying the respective vertices to make up each triangle. 
-	count = 0;
-	for (int x = 0; x < width_subdivisions; x++) {
-		for (int y = 0; y < height_subdivisions; y++) {
-			unsigned int a = x * (width_subdivisions + 1) + y;
-			unsigned int b = (x + 1) * (width_subdivisions + 1) + y;
-			unsigned int c = x * (width_subdivisions + 1) + (y + 1);
-			unsigned int d = (x + 1) * (width_subdivisions + 1) + (y + 1);
-			triangles.setRow(count, { d, b, a });
-			triangles.setRow(count + 1, { d, a, c });
-			count += 2;
-		}
+	delaunator::Delaunator d(coords);
+	std::vector<glm::vec3> vertices;
+
+	for (std::size_t i = 0; i < d.triangles.size(); i += 3) {
+		vertices.push_back(glm::vec3(d.coords[2 * d.triangles[i]], 0, d.coords[2 * d.triangles[i] + 1]));
+		vertices.push_back(glm::vec3(d.coords[2 * d.triangles[i + 1]], 0, d.coords[2 * d.triangles[i + 1] + 1]));
+		vertices.push_back(glm::vec3(d.coords[2 * d.triangles[i + 2]], 0, d.coords[2 * d.triangles[i + 2] + 1]));
+
 	}
 
-	mesh.setData(vertices, triangles);
+	cgra::Mesh mesh = createMeshFromVertices(vertices);
+	
+	//cgra::Matrix<double> vertices(triangulated_points.size(), 3);
+	//cgra::Matrix<unsigned int> triangles(triangulated_points.size() / 3, 3);
+	//int count = 0;
+	//for (int i = 0; i < triangulated_points.size(); i += 3) {
+	//	vertices.setRow(i, { minX + triangulated_points[i].x, 0, minY + triangulated_points[i].y });
+	//	vertices.setRow(i + 1, { minX + triangulated_points[i + 1].x, 0, minY + triangulated_points[i + 1].y });
+	//	vertices.setRow(i + 2, { minX + triangulated_points[i + 2].x, 0, minY + triangulated_points[i + 2].y });
+	//	triangles.setRow(count++, { (unsigned int)i, (unsigned int)i + 1, (unsigned int)i + 2 });
+	//}
+	//mesh.setData(vertices, triangles);
 	return mesh;
+
+	//// Set the triangle data by specifying the respective vertices to make up each triangle. 
+	//count = 0;
+	//for (int x = 0; x < width_subdivisions; x++) {
+	//	for (int y = 0; y < height_subdivisions; y++) {
+	//		unsigned int a = x * (width_subdivisions + 1) + y;
+	//		unsigned int b = (x + 1) * (width_subdivisions + 1) + y;
+	//		unsigned int c = x * (width_subdivisions + 1) + (y + 1);
+	//		unsigned int d = (x + 1) * (width_subdivisions + 1) + (y + 1);
+	//		triangles.setRow(count, { d, b, a });
+	//		triangles.setRow(count + 1, { d, a, c });
+	//		count += 2;
+	//	}
+	//}
+
+	//mesh.setData(vertices, triangles);
+	//return mesh;
 }
 
 std::vector<cgra::Mesh> MeshGenerator::generateMeshes() {
@@ -137,10 +172,10 @@ void MeshGenerator::determineRegionForVertices(glm::vec3 v1, glm::vec3 v2, glm::
 	else if (v3.y > 2) {
 		push_to_region(rock, v1, v2, v3);
 	}
-	else if (v3.y > 0.5) {
+	else if (v3.y > 0.8) {
 		push_to_region(ridge, v1, v2, v3);
 	}
-	else if (v3.y > 0.4) {
+	else if (v3.y > 0.2) {
 		push_to_region(dark_grass, v1, v2, v3);
 	}
 	else if (v3.y > 0.1) {

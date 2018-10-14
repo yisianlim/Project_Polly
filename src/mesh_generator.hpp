@@ -6,6 +6,7 @@
 #include <map>
 #include "noise/noise.hpp"
 
+
 class MeshGenerator {
 	// Various regions of the terrain. 
 	enum Region {

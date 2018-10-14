@@ -17,6 +17,7 @@ add_executable(${CGRA_PROJECT} ${sources})
 
 add_subdirectory(cgra)
 add_subdirectory(noise)
+add_subdirectory(triangulation)
 
 target_source_group_tree(${CGRA_PROJECT})
 
