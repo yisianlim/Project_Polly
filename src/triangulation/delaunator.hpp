@@ -11,6 +11,10 @@
 
 namespace delaunator {
 
+/**
+* Code was taken from: https://github.com/delfrrr/delaunator-cpp.
+* Written by: Vova Bilonenko.
+*/
 //@see https://stackoverflow.com/questions/33333363/built-in-mod-vs-custom-mod-function-improve-the-performance-of-modulus-op/33333636#33333636
 inline size_t fast_mod(const size_t i, const size_t c) {
     return i >= c ? i % c : i;

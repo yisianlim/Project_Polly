@@ -15,7 +15,7 @@
 #include "glm/gtc/matrix_transform.hpp"
 #include "glm/gtx/euler_angles.hpp"
 #include "../libnoise/include/noise/noise.h"
-
+#include "triangulation/delaunay.h"
 
 using namespace noise;
 
@@ -37,8 +37,17 @@ void Application::init() {
 
 	// Generate the terrain
 	m_meshGenerator = MeshGenerator(15, 15, 5);
-	m_mesh = m_meshGenerator.generate();
 	m_terrain_meshes = m_meshGenerator.generateMeshes();
+
+	std::vector<Vector2<float> > points = { Vector2<float>(-1, 1),Vector2<float>(1, 1), Vector2<float>(1, -1), Vector2<float>( -1, -1) };
+
+	Delaunay<float> triangulation;
+	const std::vector<Triangle<float> > triangles = triangulation.triangulate(points);
+	std::cout << triangles.size() << " triangles generated\n";
+	for (const auto &t : triangles)
+		std::cout << t << std::endl;
+
+	
 }
 
 void Application::loadObj(const char *filename) {
@@ -117,12 +126,6 @@ void Application::drawScene() {
 		m_program.setColor(colour);
 		m_terrain_meshes[i].draw();
 	}
-
-	//m_program.setModelMatrix(modelTransform);
-	//m_program.setColor(glm::vec3(1, 0, 1));
-	//m_mesh.draw();
-
-
 }
 
 void Application::doGUI() {

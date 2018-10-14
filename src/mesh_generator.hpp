@@ -3,6 +3,7 @@
 #include "cgra/matrix.hpp"
 #include <stdio.h>
 #include <iostream>
+#include <glm/gtx/normal.hpp>
 #include <map>
 #include "noise/noise.hpp"
 
@@ -15,13 +16,15 @@ class MeshGenerator {
 		RIDGE,
 		DARK_GRASS,
 		LIGHT_GRASS,
-		WATER
+		SAND
 	};
 
 	public:
 		double m_width;
 		double m_height;
 		double m_subdivisions;
+		double minHeight = DBL_MAX;
+		double maxHeight = DBL_MIN;
 
 		std::map<int, glm::vec3> region_to_colour = {
 			{ (int)Region::SNOW, glm::vec3(1, 1, 1) },
@@ -29,18 +32,17 @@ class MeshGenerator {
 		{ (int)Region::RIDGE, glm::vec3(0.74, 0.63, 0.62) },
 		{ (int)Region::DARK_GRASS, glm::vec3(0.6, 0.77, 0.47) },
 		{ (int)Region::LIGHT_GRASS, glm::vec3(0.62, 0.92, 0.36) },
-		{ (int)Region::WATER, glm::vec3(0.22, 0.55, 0.73) },
+		{ (int)Region::SAND, glm::vec3(0.43, 0.38, 0.26) },
 		};
 
 		// Empty constructor.
 		MeshGenerator() {}
 
 		// Overloaded constructor.
+		// points_num determine how many vertices are there in the mesh, which will affect
+		// the low poly look of the mesh.
 		MeshGenerator(double width, double height, int subdivisions) 
 			: m_width(width), m_height(height), m_subdivisions(subdivisions) {}
-
-		// Generates the terrain mesh.
-		cgra::Mesh generate();
 
 		// Generates the meshes of different regions making up the terrain. 
 		std::vector <cgra::Mesh> generateMeshes();
@@ -48,6 +50,8 @@ class MeshGenerator {
 	private:
 		// Looks at the vertices and determine which region it should be in. 
 		void determineRegionForVertices(glm::vec3 v1, glm::vec3 v2, glm::vec3 v3);
+
+		bool majority(float y1, float y2, float y3, float factor);
 
 		// Create a mesh from the vector of vertices. 
 		// 3 consecutive vertices from one triangle. 
@@ -61,6 +65,6 @@ class MeshGenerator {
 		std::vector<glm::vec3> ridge;
 		std::vector<glm::vec3> dark_grass;
 		std::vector<glm::vec3> light_grass;
-		std::vector<glm::vec3> water;
+		std::vector<glm::vec3> sand;
 
 };
