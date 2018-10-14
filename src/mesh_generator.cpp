@@ -37,12 +37,8 @@ cgra::Mesh MeshGenerator::generate() {
 		for (int j = 0; j <= height_subdivisions; j++) {
 			float y = minY + subHeight * j;
 
-			//// Here we combine the different noise map with a weight. 
-			//double height = noise_map_1.noise(x, y) + 0.5 * noise_map_2.noise(x, y) + 0.25 * noise_map_3.noise(x, y);
-			//height = std::pow(height, 2);
 			float scale = ((float)rand() / (float)(RAND_MAX));
 			float ranX = scale;
-			printf("x:%f, ranX:%f\n", x, ranX);
 
 			float scale2 = ((float)rand() / (float)(RAND_MAX));
 			float ranY = scale2;
@@ -58,10 +54,21 @@ cgra::Mesh MeshGenerator::generate() {
 	std::vector<glm::vec3> vertices;
 
 	for (std::size_t i = 0; i < d.triangles.size(); i += 3) {
-		vertices.push_back(glm::vec3(d.coords[2 * d.triangles[i]], 0, d.coords[2 * d.triangles[i] + 1]));
-		vertices.push_back(glm::vec3(d.coords[2 * d.triangles[i + 1]], 0, d.coords[2 * d.triangles[i + 1] + 1]));
-		vertices.push_back(glm::vec3(d.coords[2 * d.triangles[i + 2]], 0, d.coords[2 * d.triangles[i + 2] + 1]));
+		double x1 = d.coords[2 * d.triangles[i]];
+		double y1 = d.coords[2 * d.triangles[i] + 1];
+		double h1 = noise_map_1.noise(x1, y1);
 
+		double x2 = d.coords[2 * d.triangles[i + 1]];
+		double y2 = d.coords[2 * d.triangles[i + 1] + 1];
+		double h2 = noise_map_1.noise(x2, y2);
+
+		double x3 = d.coords[2 * d.triangles[i + 2]];
+		double y3 = d.coords[2 * d.triangles[i + 2] + 1];
+		double h3 = noise_map_1.noise(x3, y3);
+
+		vertices.push_back(glm::vec3(x1, h1, y1));
+		vertices.push_back(glm::vec3(x2, h2, y2));
+		vertices.push_back(glm::vec3(x3, h3, y3));
 	}
 
 	cgra::Mesh mesh = createMeshFromVertices(vertices);
@@ -113,77 +120,96 @@ std::vector<cgra::Mesh> MeshGenerator::generateMeshes() {
 	float subHeight = m_height / height_subdivisions;
 
 	// Generate the coordinates of all vertices making up the mesh.
-	std::vector<glm::vec3> all_vertices;
-	int count = 0;
+	std::vector<double> coords;
 	for (int i = 0; i <= width_subdivisions; i++) {
 		float x = minX + subWidth * i;
 		for (int j = 0; j <= height_subdivisions; j++) {
 			float y = minY + subHeight * j;
 
-			// Here we combine the different noise map with a weight. 
-			double height = noise_map_1.noise(x, y);
-			height = std::pow(height, 2);
+			float scale = ((float)rand() / (float)(RAND_MAX));
+			float ranX = scale;
 
-			// Set the vertices coordinates.
-			all_vertices.push_back(glm::vec3(x, height, y));
+			float scale2 = ((float)rand() / (float)(RAND_MAX));
+			float ranY = scale2;
+
+			// For triangulation.
+			//points.push_back(glm::vec2(ranX, ranY));
+			coords.push_back(minX + ranX * m_width);
+			coords.push_back(minY + ranY * m_height);
 		}
 	}
 
-	count = 0;
-	// Go through all of the vertices and determine which region it is. 
-	for (int x = 0; x < width_subdivisions; x++) {
-		for (int y = 0; y < height_subdivisions; y++) {
-			unsigned int a = x * (width_subdivisions + 1) + y;
-			unsigned int b = (x + 1) * (width_subdivisions + 1) + y;
-			unsigned int c = x * (width_subdivisions + 1) + (y + 1);
-			unsigned int d = (x + 1) * (width_subdivisions + 1) + (y + 1);
-			glm::vec3 vert_a = all_vertices[a];
-			glm::vec3 vert_b = all_vertices[b];
-			glm::vec3 vert_c = all_vertices[c];
-			glm::vec3 vert_d = all_vertices[d];
+	delaunator::Delaunator d(coords);
+	std::vector<glm::vec3> vertices;
+	for (std::size_t i = 0; i < d.triangles.size(); i += 3) {
+		double x1 = d.coords[2 * d.triangles[i]];
+		double y1 = d.coords[2 * d.triangles[i] + 1];
+		double h1 = noise_map_1.noise(x1, y1);
 
-			determineRegionForVertices(vert_d, vert_b, vert_a);
-			determineRegionForVertices(vert_d, vert_a, vert_c);
-		}
+		double x2 = d.coords[2 * d.triangles[i + 1]];
+		double y2 = d.coords[2 * d.triangles[i + 1] + 1];
+		double h2 = noise_map_1.noise(x2, y2);
+
+		double x3 = d.coords[2 * d.triangles[i + 2]];
+		double y3 = d.coords[2 * d.triangles[i + 2] + 1];
+		double h3 = noise_map_1.noise(x3, y3);
+
+		vertices.push_back(glm::vec3(x1, h1, y1));
+		vertices.push_back(glm::vec3(x2, h2, y2));
+		vertices.push_back(glm::vec3(x3, h3, y3));
+	}
+
+	printf("%d\n", vertices.size());
+
+	int count = 0;
+	// Go through all of the vertices and determine which region it is. 
+	for (int i = 0; i < vertices.size(); i+=3) {
+			glm::vec3 vert_a = vertices[i];
+			glm::vec3 vert_b = vertices[i+1];
+			glm::vec3 vert_c = vertices[i+2];
+
+			determineRegionForVertices(vert_a, vert_b, vert_c);
 	}
 
 	// Create the meshes. 
 	cgra::Mesh snow_mesh = createMeshFromVertices(snow);
 	cgra::Mesh rock_mesh = createMeshFromVertices(rock);
-	cgra::Mesh ridge_mesh = createMeshFromVertices(ridge);
-	cgra::Mesh dark_grass_mesh = createMeshFromVertices(dark_grass);
-	cgra::Mesh light_grass_mesh = createMeshFromVertices(light_grass);
-	cgra::Mesh water_mesh = createMeshFromVertices(water);
+	//cgra::Mesh ridge_mesh = createMeshFromVertices(ridge);
+	//cgra::Mesh dark_grass_mesh = createMeshFromVertices(dark_grass);
+	//cgra::Mesh light_grass_mesh = createMeshFromVertices(light_grass);
+	//cgra::Mesh water_mesh = createMeshFromVertices(water);
 
 	// Push the created meshes to be returned.
 	meshes.push_back(snow_mesh);
 	meshes.push_back(rock_mesh);
-	meshes.push_back(ridge_mesh);
-	meshes.push_back(dark_grass_mesh);
-	meshes.push_back(light_grass_mesh);
-	meshes.push_back(water_mesh);
+	//meshes.push_back(ridge_mesh);
+	//meshes.push_back(dark_grass_mesh);
+	//meshes.push_back(light_grass_mesh);
+	//meshes.push_back(water_mesh);
+	printf("snow size %d\n", snow.size());
+	printf("rock size %d\n", rock.size());
 	return meshes;
 }
 
 void MeshGenerator::determineRegionForVertices(glm::vec3 v1, glm::vec3 v2, glm::vec3 v3) {
-	if (v3.y > 2.5) {
+	if (v3.y > 0.1) {
 		push_to_region(snow, v1, v2, v3);
 	}
-	else if (v3.y > 2) {
+	else {
 		push_to_region(rock, v1, v2, v3);
 	}
-	else if (v3.y > 0.8) {
-		push_to_region(ridge, v1, v2, v3);
-	}
-	else if (v3.y > 0.2) {
-		push_to_region(dark_grass, v1, v2, v3);
-	}
-	else if (v3.y > 0.1) {
-		push_to_region(light_grass, v1, v2, v3);
-	}
-	else {
-		push_to_region(water, v1, v2, v3);
-	}
+	//else if (v3.y > 0.8) {
+	//	push_to_region(ridge, v1, v2, v3);
+	//}
+	//else if (v3.y > 0.2) {
+	//	push_to_region(dark_grass, v1, v2, v3);
+	//}
+	//else if (v3.y > 0.1) {
+	//	push_to_region(light_grass, v1, v2, v3);
+	//}
+	//else {
+	//	push_to_region(water, v1, v2, v3);
+	//}
 }
 
 void MeshGenerator::push_to_region(std::vector<glm::vec3> &region, glm::vec3 v1, glm::vec3 v2, glm::vec3 v3) {

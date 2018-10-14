@@ -111,16 +111,16 @@ void Application::drawScene() {
     modelTransform = m_rotationMatrix * modelTransform;
     modelTransform = glm::translate(modelTransform, m_translation);
 
-	//for (int i = 0; i < m_terrain_meshes.size(); i++) {
-	//	m_program.setModelMatrix(modelTransform);
-	//	glm::vec3 colour = m_meshGenerator.region_to_colour.at(i);
-	//	m_program.setColor(colour);
-	//	m_terrain_meshes[i].draw();
-	//}
+	for (int i = 0; i < m_terrain_meshes.size(); i++) {
+		m_program.setModelMatrix(modelTransform);
+		glm::vec3 colour = m_meshGenerator.region_to_colour.at(i);
+		m_program.setColor(colour);
+		m_terrain_meshes[i].draw();
+	}
 
-	m_program.setModelMatrix(modelTransform);
-	m_program.setColor(glm::vec3(1, 0, 1));
-	m_mesh.draw();
+	//m_program.setModelMatrix(modelTransform);
+	//m_program.setColor(glm::vec3(1, 0, 1));
+	//m_mesh.draw();
 
 
 }
