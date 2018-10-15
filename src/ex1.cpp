@@ -35,7 +35,7 @@ void Application::init() {
     m_program.setViewMatrix(viewMatrix);
 
 	// Generate the terrain
-	m_meshGenerator = MeshGenerator(40, 40, 3);
+	m_meshGenerator = MeshGenerator(20, 20, 2);
 	m_terrain_meshes = m_meshGenerator.generateMeshes();
 }
 
@@ -109,12 +109,13 @@ void Application::drawScene() {
     modelTransform = m_rotationMatrix * modelTransform;
     modelTransform = glm::translate(modelTransform, m_translation);
 
-	for (int i = 0; i < m_terrain_meshes.size(); i++) {
-		m_program.setModelMatrix(modelTransform);
-		glm::vec3 colour = m_meshGenerator.region_to_colour.at(i);
-		m_program.setColor(colour);
-		m_terrain_meshes[i].draw();
-	}
+	// Terrain drawing. 
+	//for (int i = 0; i < m_terrain_meshes.size(); i++) {
+	//	m_program.setModelMatrix(modelTransform);
+	//	glm::vec3 colour = m_meshGenerator.region_to_colour.at(i);
+	//	m_program.setColor(colour);
+	//	m_terrain_meshes[i].draw();
+	//}
 }
 
 void Application::doGUI() {

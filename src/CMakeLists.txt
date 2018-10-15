@@ -9,6 +9,9 @@ SET(sources
   mesh_generator.hpp
   mesh_generator.cpp
 
+  castle_generator.hpp
+  castle_generator.cpp
+
   opengl.hpp
   main.cpp
 )

@@ -33,7 +33,7 @@ std::vector<cgra::Mesh> MeshGenerator::generateMeshes() {
 		double x1 = triangulated_points[i].x;
 		double y1 = triangulated_points[i].y;
 		double h1 = std::max(-3.0, noise_map_1.noise(x1, y1));
-		h1 = std::pow(h1, 2);
+		//h1 = std::pow(h1, 2);
 		minHeight = std::min(minHeight, h1);
 		maxHeight = std::max(maxHeight, h1);
 		vertices.push_back(glm::vec3(x1, h1, y1));
