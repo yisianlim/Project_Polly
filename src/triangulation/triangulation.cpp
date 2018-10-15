@@ -7,35 +7,49 @@ void Triangulation::run(glm::vec2 point) {
 	std::vector<Edge> to_remove;
 	std::vector<glm::vec2> m_points; 
 
-	for (int i = m_triangles.size() - 1; i >= 0; i--) {
-		Triangle current = m_triangles[i];
-		// If this point is in the circumcircle of the current triangle.
-		// Put this triangle in the bad_triangles vector. 
+	for (int i = 0; i < m_triangles.size(); i++) {
+		Triangle &current = m_triangles[i];
 		if (inCircumcircle(point, current)) {
+			current.isBad = true;
 			bad_triangles.push_back(current);
-			m_triangles.erase(m_triangles.begin() + i);
+			edges.push_back(Edge(current.a, current.b));
+			edges.push_back(Edge(current.b, current.c));
+			edges.push_back(Edge(current.c, current.a));
 		}
 	}
 
-	for (Triangle tri : bad_triangles) {
-		// For each edge in tri. 
-		// If edge is not shared by any other triangles in bad_triangles.
-		Edge ab = Edge(tri.a, tri.b);
-		Edge bc = Edge(tri.b, tri.c);
-		Edge ac = Edge(tri.a, tri.c);
+	m_triangles.erase(std::remove_if(begin(m_triangles), end(m_triangles), [](Triangle &t) {
+		return t.isBad;
+	}), end(m_triangles));
 
-		if (!addToEdges(ab, edges)) to_remove.push_back(ab);
-		if (!addToEdges(bc, edges)) to_remove.push_back(bc);
-		if (!addToEdges(ac, edges)) to_remove.push_back(ac);
+
+	for (int i = 0; i < edges.size(); i++)
+	{
+		Edge &e1 = edges[i];
+		for (int j = i + 1; j < edges.size(); j++)
+		{
+			Edge &e2 = edges[j];
+
+			if (e1 == e2) 
+			{
+				e1.isBad = true;
+				e2.isBad = true;
+			}
+		}
 	}
 
-	for (Edge e : to_remove) {
-		edges.erase(remove(edges.begin(), edges.end(), e), edges.end());
-	}
+	edges.erase(std::remove_if(begin(edges), end(edges), [](Edge &e) {
+		return e.isBad;
+	}), end(edges));
+
 
 	for (Edge e : edges) {
 		Triangle tri = Triangle(e.a, e.b, point);
 		m_triangles.push_back(tri);
+	}
+
+	for (int i = 0; i < m_triangles.size(); i++) {
+		Triangle current = m_triangles[i];
 	}
 }
 
@@ -50,57 +64,19 @@ bool Triangulation::addToEdges(Edge e, std::vector<Edge> &edges) {
 }
 
 bool Triangulation::inCircumcircle(glm::vec2 point, Triangle triangle) {
-	// First, we need the find the center of the circumcircle of the triangle.
-	// Given the points.
-	glm::vec2 A = triangle.a;
-	glm::vec2 B = triangle.b;
-	glm::vec2 C = triangle.c;
+	const float ab = triangle.a.x * triangle.a.x + triangle.a.y * triangle.a.y;
+	const float cd = triangle.b.x * triangle.b.x + triangle.b.y * triangle.b.y;
+	const float ef = triangle.c.x * triangle.c.x + triangle.c.y * triangle.c.y;
 
-	// Center of the circumcircle.
-	float xc, yc;
+	const float circum_x = (ab * (triangle.c.y - triangle.b.y) + cd * (triangle.a.y - triangle.c.y) + ef * (triangle.b.y - triangle.a.y)) / 
+		(triangle.a.x * (triangle.c.y - triangle.b.y) + triangle.b.x * (triangle.a.y - triangle.c.y) + triangle.c.x * (triangle.b.y - triangle.a.y));
+	const float circum_y = (ab * (triangle.c.x - triangle.b.x) + cd * (triangle.a.x - triangle.c.x) + ef * (triangle.b.x - triangle.a.x)) / 
+		(triangle.a.y * (triangle.c.x - triangle.b.x) + triangle.b.y * (triangle.a.x - triangle.c.x) + triangle.c.y * (triangle.b.x - triangle.a.x));
 
-	// Find the midpoints of the triangle edges.
-	glm::vec2 mid_AB = glm::vec2((A.x + B.x) / 2, (A.y + B.y) / 2);
-	glm::vec2 mid_AC = glm::vec2((A.x + C.x) / 2, (A.y + C.y) / 2);
-
-	// Find the slopes of the perpendicular bisector of the edges.
-	// Which is the negative reciprocal of the given slope of the edges. 
-	float slope_AB = (B.y - A.y) / (B.x - A.x);
-	slope_AB = -1.0f / slope_AB;
-	float slope_AC = (C.y - A.y) / (C.x - A.x);
-	slope_AC = -1.0f / slope_AC;
-
-	float EPSILON = 0.01f;
-
-	// Check for coincident points. 
-	if (std::abs(A.y - B.y) < EPSILON && std::abs(B.y - C.y) < EPSILON) {
-		return false;
-	}
-	else if (std::abs(B.y - A.y) < EPSILON) {
-		xc = (B.x + A.x) / 2.0f;
-		yc = slope_AC * (xc - mid_AC.x) + mid_AC.y;
-	}
-	else if (std::abs(C.y - A.y) < EPSILON) {
-		xc = (C.x + A.x) / 2.0f;
-		yc = slope_AB * (xc - mid_AB.x) + mid_AB.y;
-	}
-	else {
-		xc = (slope_AB * mid_AB.x - slope_AC * mid_AC.x + mid_AC.y - mid_AB.y) / (slope_AB - slope_AC);
-		yc = slope_AB * (xc - mid_AB.x) + mid_AB.y;
-	}
-
-	//printf("points (%f, %f), (%f, %f), (%f, %f)\n", A.x, A.y, B.x, B.y, C.x, C.y);
-	//printf("xc=%f, yc=%f\n", xc, yc);
-
-	// Check if the given point is inside the circumcircle. 
-	float dx = B.x - xc;
-	float dy = B.y - yc;
-	float r2 = dx * dx + dy * dy;
-	float radius = std::sqrt(r2);
-	dx = point.x - xc;
-	dy = point.y - yc;
-	float d2 = dx * dx + dy * dy;
-	return((d2 <= r2) ? true : false);
+	glm::vec2 circum = glm::vec2(circum_x / 2.0f, circum_y / 2.0f);
+	const float dist = glm::distance2(circum, point);
+	const float circum_radius = glm::distance2(triangle.a, circum);
+	return dist <= circum_radius;
 }
 
 std::vector<glm::vec2> Triangulation::getPoints() {
@@ -111,5 +87,4 @@ std::vector<glm::vec2> Triangulation::getPoints() {
 		points.push_back(tri.c);
 	}
 	return points;
-
 }

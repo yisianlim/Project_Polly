@@ -6,7 +6,7 @@
 #include <glm/gtx/normal.hpp>
 #include <map>
 #include "noise/noise.hpp"
-
+#include "triangulation/triangulation.hpp"
 
 class MeshGenerator {
 	// Various regions of the terrain. 

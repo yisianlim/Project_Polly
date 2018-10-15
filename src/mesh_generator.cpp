@@ -11,23 +11,27 @@ std::vector<cgra::Mesh> MeshGenerator::generateMeshes() {
 
 	int num_of_points = m_width * m_height * m_subdivisions * m_subdivisions;
 
+	//// Carry out Delaunay triangulation.
+	//delaunator::Delaunator d(coords);
+
 	// Generate the coordinates of all vertices making up the mesh.
-	std::vector<double> coords;
+	std::vector<glm::vec2> coords;
 	for (int i = 0; i < num_of_points; i++) {
 			float ranX = ((float)rand() / (float)(RAND_MAX));
 			float ranY = ((float)rand() / (float)(RAND_MAX));
-			coords.push_back(minX + ranX * m_width);
-			coords.push_back(minY + ranY * m_height);
+			coords.push_back(glm::vec2(minX + ranX * m_width, minY + ranY * m_height));
 	}
 
 	// Carry out Delaunay triangulation.
-	delaunator::Delaunator d(coords);
+	//delaunator::Delaunator d(coords);
+	Triangulation triangulation = Triangulation(coords);
+	std::vector<glm::vec2> triangulated_points = triangulation.getPoints();
 
 	// Map each vertices generated to a height based on the noise function.
 	std::vector<glm::vec3> vertices;
-	for (std::size_t i = 0; i < d.triangles.size(); i ++) {
-		double x1 = d.coords[2 * d.triangles[i]];
-		double y1 = d.coords[2 * d.triangles[i] + 1];
+	for (std::size_t i = 0; i < triangulated_points.size(); i ++) {
+		double x1 = triangulated_points[i].x;
+		double y1 = triangulated_points[i].y;
 		double h1 = std::max(-3.0, noise_map_1.noise(x1, y1));
 		h1 = std::pow(h1, 2);
 		minHeight = std::min(minHeight, h1);
@@ -43,7 +47,6 @@ std::vector<cgra::Mesh> MeshGenerator::generateMeshes() {
 			glm::vec3 vert_c = vertices[i+2];
 			glm::vec3 norm = glm::triangleNormal(vert_a, vert_b, vert_c);
 			determineRegionForVertices(vert_a, vert_b, vert_c);
-
 	}
 
 	// Create the meshes. 
