@@ -7,6 +7,7 @@
 #include <map>
 #include "noise/noise.hpp"
 #include "triangulation/triangulation.hpp"
+#include <algorithm>
 
 class MeshGenerator {
 	// Various regions of the terrain. 
@@ -27,7 +28,7 @@ class MeshGenerator {
 		double maxHeight = DBL_MIN;
 
 		std::map<int, glm::vec3> region_to_colour = {
-			{ (int)Region::SNOW, glm::vec3(1, 1, 1) },
+		{ (int)Region::SNOW, glm::vec3(1, 1, 1) },
 		{ (int)Region::ROCK, glm::vec3(0.55, 0.49, 0.49) },
 		{ (int)Region::RIDGE, glm::vec3(0.74, 0.63, 0.62) },
 		{ (int)Region::DARK_GRASS, glm::vec3(0.6, 0.77, 0.47) },

@@ -267,6 +267,7 @@ namespace noise
           return *(m_pSourceModule[index]);
         }
 
+
         /// Returns the number of source modules required by this noise
         /// module.
         ///
@@ -334,11 +335,9 @@ namespace noise
           m_pSourceModule[index] = &sourceModule;
         }
 
-      protected:
-
-        /// An array containing the pointers to each source module required by
-        /// this noise module.
-        const Module** m_pSourceModule;
+		/// An array containing the pointers to each source module required by
+		/// this noise module.
+		const Module** m_pSourceModule;
 
       private:
 

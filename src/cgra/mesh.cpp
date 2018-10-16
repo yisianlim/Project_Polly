@@ -168,4 +168,8 @@ namespace cgra {
 		//	m_cbo = 0;
 		//}
     }
+
+	void Mesh::setNull() {
+		null = true;
+	}
 }

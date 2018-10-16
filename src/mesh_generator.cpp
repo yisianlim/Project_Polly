@@ -3,7 +3,8 @@
 
 std::vector<cgra::Mesh> MeshGenerator::generateMeshes() {
 	std::vector<cgra::Mesh> meshes;
-	PerlinNoise noise_map_1 = PerlinNoise(0, 0.1, 0.5, 2);
+	PerlinNoise noise_map_1 = PerlinNoise(0, 0.1, 0.5, 3);
+	//ComplexNoise noise_map_1 = ComplexNoise();
 
 	// Initial positions of the mesh.
 	double minX = -m_width / 2;
@@ -19,7 +20,7 @@ std::vector<cgra::Mesh> MeshGenerator::generateMeshes() {
 	for (int i = 0; i < num_of_points; i++) {
 			float ranX = ((float)rand() / (float)(RAND_MAX));
 			float ranY = ((float)rand() / (float)(RAND_MAX));
-			coords.push_back(glm::vec2(minX + ranX * m_width, minY + ranY * m_height));
+			coords.push_back(glm::vec2(minX + ranX * (m_width), minY + ranY * (m_height)));
 	}
 
 	// Carry out Delaunay triangulation.
@@ -27,13 +28,46 @@ std::vector<cgra::Mesh> MeshGenerator::generateMeshes() {
 	Triangulation triangulation = Triangulation(coords);
 	std::vector<glm::vec2> triangulated_points = triangulation.getPoints();
 
+	// Generate a radial fall off map for each coordinate. 
+	std::vector<float> fallOff;
+	//float centerX = (minX + (m_width * 1.5))/2.0f;
+	//float centerY = (minY + (m_height * 1.5)) / 2.0f; 
+	float centerX = 6;
+	float centerY = 6;
+	float radius = 5;
+	for (int i = 0; i < triangulated_points.size(); i++) {
+		float distanceX = std::pow(centerX - triangulated_points[i].x  , 2);
+		float distanceY = std::pow(centerY - triangulated_points[i].y, 2);
+
+		float distanceToCenter = std::sqrt(distanceX + distanceY);
+
+		if (distanceToCenter < radius) {
+			fallOff.push_back(0);
+		}
+		else {
+			fallOff.push_back(distanceToCenter);
+		}
+	}
+
 	// Map each vertices generated to a height based on the noise function.
 	std::vector<glm::vec3> vertices;
 	for (std::size_t i = 0; i < triangulated_points.size(); i ++) {
 		double x1 = triangulated_points[i].x;
 		double y1 = triangulated_points[i].y;
-		double h1 = std::max(-3.0, noise_map_1.noise(x1, y1));
-		//h1 = std::pow(h1, 2);
+		double h1 = noise_map_1.noise(x1, y1);
+
+		// Scale h1 to be between 0 to 1. 
+		//h1 = h1 - fallOff[i];
+		//printf("h1: %f\n", h1);
+		//if (fallOff[i] < 0) {
+		h1 = (h1 - (-1.0f)) / 2.0f;
+		h1 = (fallOff[i]/(m_width/1.5f)) - h1;
+		//}
+		
+		h1 = h1 <= 0 ? 0 : h1;
+		h1 *= 7;
+		
+
 		minHeight = std::min(minHeight, h1);
 		maxHeight = std::max(maxHeight, h1);
 		vertices.push_back(glm::vec3(x1, h1, y1));
@@ -107,6 +141,11 @@ void MeshGenerator::push_to_region(std::vector<glm::vec3> &region, glm::vec3 v1,
 
 cgra::Mesh MeshGenerator::createMeshFromVertices(std::vector<glm::vec3> v) {
 	cgra::Mesh mesh;
+
+	if (v.size() <= 0) {
+		mesh.setNull();
+		return mesh;
+	}
 	cgra::Matrix<double> vertices(v.size(), 3);
 	cgra::Matrix<unsigned int> triangles(v.size() / 3, 3);
 	int count = 0;

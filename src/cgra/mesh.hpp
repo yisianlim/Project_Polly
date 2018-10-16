@@ -55,6 +55,8 @@ namespace cgra {
 		std::vector<unsigned int> m_indices;
 
     public:
+		bool null = false;
+
         // Set the mesh data using two Matrices.
         //
         // `vertices` is an n x 3 matrix of vertex positions
@@ -77,10 +79,13 @@ namespace cgra {
         // Draw the mesh
         void draw();
 
+		// Flag not to draw the mesh.
+		void setNull();
+
         // Default constructor
         Mesh()
             : m_drawWireframe(false),
-              m_vao(0), m_vbo(0), m_ibo(0) { }
+              m_vao(0), m_vbo(0), m_ibo(0), null(false) { }
 
         // Copy constructor.
         // This copies the vertex and index data, but
@@ -89,7 +94,7 @@ namespace cgra {
             m_vertices(m.m_vertices),
             m_indices(m.m_indices),
             m_drawWireframe(m.m_drawWireframe),
-            m_vao(0), m_vbo(0), m_ibo(0) { }
+            m_vao(0), m_vbo(0), m_ibo(0), null(m.null) { }
 
         // Copy assignment, same as the copy constructor
         // except the GPU objects are released first
@@ -97,6 +102,7 @@ namespace cgra {
             m_vertices = m.m_vertices;
             m_indices = m.m_indices;
             m_drawWireframe = m.m_drawWireframe;
+			null = m.null;
 
             deleteMesh();
 
@@ -113,7 +119,7 @@ namespace cgra {
             : m_vertices(std::move(m.m_vertices)),
               m_indices(std::move(m.m_indices)),
               m_drawWireframe(m.m_drawWireframe),
-              m_vao(m.m_vao), m_vbo(m.m_vbo), m_ibo(m.m_ibo) {
+              m_vao(m.m_vao), m_vbo(m.m_vbo), m_ibo(m.m_ibo), null(m.null) {
             m.m_vao = 0;
             m.m_vbo = 0;
             m.m_ibo = 0;
@@ -125,6 +131,7 @@ namespace cgra {
             m_vertices = std::move(m.m_vertices);
             m_indices = std::move(m.m_indices);
             m_drawWireframe = m.m_drawWireframe;
+			null = m.null;
 
             deleteMesh();
 

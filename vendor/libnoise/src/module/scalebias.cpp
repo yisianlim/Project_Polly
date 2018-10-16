@@ -35,5 +35,5 @@ double ScaleBias::GetValue (double x, double y, double z) const
 {
   assert (m_pSourceModule[0] != NULL);
 
-  return m_pSourceModule[0]->GetValue (x, y, z) * m_scale + m_bias;
+  return GetSourceModule(0).GetValue (x, y, z) * m_scale + m_bias;
 }
