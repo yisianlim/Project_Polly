@@ -1,0 +1,852 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		16ACFB9BBFAA4F928A112043 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2BBF7843204048F9A7F3B681 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				54B10A128CA34FB6AFFD6516 /* CMake Rules */,
+			);
+			dependencies = (
+				016567EDD9FA4A74B130FE32 /* PBXTargetDependency */,
+				F8001452C7DA4BC986D9FE4C /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		568025DB61DB4430B9B3D3D9 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F63BBE215FB14863A50ED3C4 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				E4400F1330E344F6AFD96500 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				9E59A6AA0FF549A08F75E900 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		5AA7CDC57A764CED8051F809 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 11F4805B662B40309ED7045A /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				7BB44A97639647EC9736C5E6 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		053035DBDCDA4DD18B4269F2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/init.c */ = {isa = PBXBuildFile; fileRef = 267BEF0716054CFFA8A7D04C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/init.c */; };
+		0768890875BF422BA9446398 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = 3F9E3BB5FB6046BBA55C7BBD /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/nsgl_context.m */; };
+		1C63E8E0296B4FEA8B959C8A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/window.c */ = {isa = PBXBuildFile; fileRef = 891D94C5281B43C293231609 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/window.c */; };
+		20CEEC380387480CAFD33079 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 2C28384798AC431B936CD85F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/CMakeLists.txt */; };
+		22A69D2D24F641D48625CDA8 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/input.c */ = {isa = PBXBuildFile; fileRef = 62A5D287A770460BAB2BFE78 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/input.c */; };
+		3767163191C34E6EA6A8A060 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = 4244D458E96942B28FAC7744 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_platform.h */; };
+		3D776C9DAF42470FAF3016BE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/internal.h */ = {isa = PBXBuildFile; fileRef = 38DB91B9309844B596EBD84A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/internal.h */; };
+		431BDB06E60E443286D41E37 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/nsgl_context.h */ = {isa = PBXBuildFile; fileRef = D25F82A62A554E66B2F48552 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/nsgl_context.h */; };
+		47B7435B83C84AC882546BF7 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = 21DC8A571E7E475992C19807 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include/GLFW/glfw3native.h */; };
+		4D13C54D668E4FDD8B43C440 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/posix_tls.c */ = {isa = PBXBuildFile; fileRef = 8C0ADC08F7C34020B1CC7FAE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/posix_tls.c */; };
+		6C311574FA1045C4B7679CF7 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/monitor.c */ = {isa = PBXBuildFile; fileRef = 995B4EF166FD455A8ED2FFB2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/monitor.c */; };
+		75F75092DDAA40C28E9583CC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = FFF56552C5E0496C8F27D3B7 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_window.m */; };
+		7C3BA2F54A6A4DDD864011B0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/mach_time.c */ = {isa = PBXBuildFile; fileRef = 87BA2B3646AA468D9E03A0EA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/mach_time.c */; };
+		AB8669DBB380417192751484 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/iokit_joystick.m */ = {isa = PBXBuildFile; fileRef = 9F9FCFB30DF54D2F9DF74453 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/iokit_joystick.m */; };
+		B9028BF3925540D1A3B0CDB3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/glfw_config.h */ = {isa = PBXBuildFile; fileRef = 298C8D0E0D0241F4BAA9D5E5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/glfw_config.h */; };
+		D01A4CB1FF7D4917B7C9482D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = 0414DB041FE349208349F0DC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include/GLFW/glfw3.h */; };
+		DDF33DBFDD5C46EBB34AA0EE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/iokit_joystick.h */ = {isa = PBXBuildFile; fileRef = AB1FED0777444656947A02C3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/iokit_joystick.h */; };
+		DFED92DD51FE4CA395CA7F9B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = 473440E8BDC0462DB10A4DBF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_init.m */; };
+		E8C84C051C39495AB5A462FF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/context.c */ = {isa = PBXBuildFile; fileRef = 0F413A35CED844FBAE8A0B44 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/context.c */; };
+		F353328C15F44E92B90C6A84 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/posix_tls.h */ = {isa = PBXBuildFile; fileRef = 1C67F94661E246D499892B44 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/posix_tls.h */; };
+		FF69B277C8F4489EA6421CBA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = 8FA4A264F86441C1AA3F06C5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_monitor.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		30CF223527DC48B685AEA27E /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		59730CBCEAAA4D38900EE4FA /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		78E5D8B614DB43DB8D15D15B /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		8030EA1CF1B44CE5AB8AC409 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		62FCC5F266B44039A57C1301 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD12AD1FD9B6491497D9E262 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16ACFB9BBFAA4F928A112043;
+			remoteInfo = ALL_BUILD;
+		};
+		7B3C609242144D839733EE70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD12AD1FD9B6491497D9E262 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB42494FC7514D1EA4B70390;
+			remoteInfo = glfw;
+		};
+		C7E7F5C4BE3149F8A9193FED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD12AD1FD9B6491497D9E262 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AA7CDC57A764CED8051F809;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0414DB041FE349208349F0DC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
+		0F413A35CED844FBAE8A0B44 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = src/context.c; sourceTree = SOURCE_ROOT; };
+		1C67F94661E246D499892B44 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/posix_tls.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_tls.h; path = src/posix_tls.h; sourceTree = SOURCE_ROOT; };
+		21DC8A571E7E475992C19807 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = include/GLFW/glfw3native.h; sourceTree = SOURCE_ROOT; };
+		267BEF0716054CFFA8A7D04C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = src/init.c; sourceTree = SOURCE_ROOT; };
+		298C8D0E0D0241F4BAA9D5E5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = src/glfw_config.h; sourceTree = SOURCE_ROOT; };
+		2C28384798AC431B936CD85F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		38DB91B9309844B596EBD84A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = src/internal.h; sourceTree = SOURCE_ROOT; };
+		3F9E3BB5FB6046BBA55C7BBD /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = src/nsgl_context.m; sourceTree = SOURCE_ROOT; };
+		4244D458E96942B28FAC7744 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = src/cocoa_platform.h; sourceTree = SOURCE_ROOT; };
+		473440E8BDC0462DB10A4DBF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = src/cocoa_init.m; sourceTree = SOURCE_ROOT; };
+		62A5D287A770460BAB2BFE78 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = src/input.c; sourceTree = SOURCE_ROOT; };
+		77D8ABE42A31459BA17107F1 /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		87BA2B3646AA468D9E03A0EA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/mach_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mach_time.c; path = src/mach_time.c; sourceTree = SOURCE_ROOT; };
+		891D94C5281B43C293231609 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = src/window.c; sourceTree = SOURCE_ROOT; };
+		8C0ADC08F7C34020B1CC7FAE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/posix_tls.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_tls.c; path = src/posix_tls.c; sourceTree = SOURCE_ROOT; };
+		8FA4A264F86441C1AA3F06C5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = src/cocoa_monitor.m; sourceTree = SOURCE_ROOT; };
+		995B4EF166FD455A8ED2FFB2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = src/monitor.c; sourceTree = SOURCE_ROOT; };
+		9F9FCFB30DF54D2F9DF74453 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/iokit_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = iokit_joystick.m; path = src/iokit_joystick.m; sourceTree = SOURCE_ROOT; };
+		AA2CBE0BDC084970901FBF92 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		AB1FED0777444656947A02C3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/iokit_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = iokit_joystick.h; path = src/iokit_joystick.h; sourceTree = SOURCE_ROOT; };
+		D25F82A62A554E66B2F48552 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = src/nsgl_context.h; sourceTree = SOURCE_ROOT; };
+		FFF56552C5E0496C8F27D3B7 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = src/cocoa_window.m; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		04E35EE8716D4738A29C15E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77D8ABE42A31459BA17107F1 /* glfw */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59AC173819904B1B929D5D68 /* GLFW3 */ = {
+			isa = PBXGroup;
+			children = (
+				5B9AA405F2BE48D7B2C5E635 /* glfw */,
+			);
+			name = GLFW3;
+			sourceTree = "<group>";
+		};
+		5B9AA405F2BE48D7B2C5E635 /* glfw */ = {
+			isa = PBXGroup;
+			children = (
+				E23273F63A6E4888AA619416 /* Source Files */,
+				6565C50F37BC4345BCD5F590 /* Header Files */,
+				2C28384798AC431B936CD85F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/CMakeLists.txt */,
+			);
+			name = glfw;
+			sourceTree = "<group>";
+		};
+		6565C50F37BC4345BCD5F590 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				0414DB041FE349208349F0DC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include/GLFW/glfw3.h */,
+				21DC8A571E7E475992C19807 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include/GLFW/glfw3native.h */,
+				4244D458E96942B28FAC7744 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_platform.h */,
+				298C8D0E0D0241F4BAA9D5E5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/glfw_config.h */,
+				38DB91B9309844B596EBD84A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/internal.h */,
+				AB1FED0777444656947A02C3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/iokit_joystick.h */,
+				D25F82A62A554E66B2F48552 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/nsgl_context.h */,
+				1C67F94661E246D499892B44 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/posix_tls.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		D4FB859DCA424AC2811E510B = {
+			isa = PBXGroup;
+			children = (
+				FD75DDD1D619439D99E52099 /* ALL_BUILD */,
+				59AC173819904B1B929D5D68 /* GLFW3 */,
+				04E35EE8716D4738A29C15E2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E23273F63A6E4888AA619416 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				473440E8BDC0462DB10A4DBF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_init.m */,
+				8FA4A264F86441C1AA3F06C5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_monitor.m */,
+				FFF56552C5E0496C8F27D3B7 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_window.m */,
+				0F413A35CED844FBAE8A0B44 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/context.c */,
+				267BEF0716054CFFA8A7D04C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/init.c */,
+				62A5D287A770460BAB2BFE78 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/input.c */,
+				9F9FCFB30DF54D2F9DF74453 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/iokit_joystick.m */,
+				87BA2B3646AA468D9E03A0EA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/mach_time.c */,
+				995B4EF166FD455A8ED2FFB2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/monitor.c */,
+				3F9E3BB5FB6046BBA55C7BBD /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/nsgl_context.m */,
+				8C0ADC08F7C34020B1CC7FAE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/posix_tls.c */,
+				891D94C5281B43C293231609 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/window.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		FB96009B6E7A40ABB0910688 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		FD75DDD1D619439D99E52099 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				FB96009B6E7A40ABB0910688 /* CMake Rules */,
+				AA2CBE0BDC084970901FBF92 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB42494FC7514D1EA4B70390 /* glfw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6782CECF79A946DA93815754 /* Build configuration list for PBXNativeTarget "glfw" */;
+			buildPhases = (
+				F0ED3ED5239E4DAF9858AFC8 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = glfw;
+			productName = glfw;
+			productReference = 77D8ABE42A31459BA17107F1 /* glfw */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD12AD1FD9B6491497D9E262 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1000;
+			};
+			buildConfigurationList = 4248452001B448BCA5ED41A3 /* Build configuration list for PBXProject "GLFW" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				78E5D8B614DB43DB8D15D15B /* Debug */,
+				59730CBCEAAA4D38900EE4FA /* Release */,
+				8030EA1CF1B44CE5AB8AC409 /* MinSizeRel */,
+				30CF223527DC48B685AEA27E /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = D4FB859DCA424AC2811E510B;
+			projectDirPath = .;
+			projectRoot = "";
+			targets = (
+				16ACFB9BBFAA4F928A112043 /* ALL_BUILD */,
+				5AA7CDC57A764CED8051F809 /* ZERO_CHECK */,
+				568025DB61DB4430B9B3D3D9 /* install */,
+				FB42494FC7514D1EA4B70390 /* glfw */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0201B43D56D44BD8AD797C06 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		54B10A128CA34FB6AFFD6516 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw -f /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		7BB44A97639647EC9736C5E6 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw -f /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		90D3C79FBD334110BA79E52F = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		A8E152041D844E49B128EBDC = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		E4400F1330E344F6AFD96500 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw -f /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F0ED3ED5239E4DAF9858AFC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFED92DD51FE4CA395CA7F9B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_init.m */,
+				FF69B277C8F4489EA6421CBA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_monitor.m */,
+				75F75092DDAA40C28E9583CC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_window.m */,
+				E8C84C051C39495AB5A462FF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/context.c */,
+				053035DBDCDA4DD18B4269F2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/init.c */,
+				22A69D2D24F641D48625CDA8 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/input.c */,
+				AB8669DBB380417192751484 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/iokit_joystick.m */,
+				7C3BA2F54A6A4DDD864011B0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/mach_time.c */,
+				6C311574FA1045C4B7679CF7 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/monitor.c */,
+				0768890875BF422BA9446398 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/nsgl_context.m */,
+				4D13C54D668E4FDD8B43C440 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/posix_tls.c */,
+				1C63E8E0296B4FEA8B959C8A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/window.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		016567EDD9FA4A74B130FE32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB42494FC7514D1EA4B70390 /* glfw */;
+			targetProxy = 7B3C609242144D839733EE70 /* PBXContainerItemProxy */;
+		};
+		9E59A6AA0FF549A08F75E900 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16ACFB9BBFAA4F928A112043 /* ALL_BUILD */;
+			targetProxy = 62FCC5F266B44039A57C1301 /* PBXContainerItemProxy */;
+		};
+		F8001452C7DA4BC986D9FE4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AA7CDC57A764CED8051F809 /* ZERO_CHECK */;
+			targetProxy = C7E7F5C4BE3149F8A9193FED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1B705D8DAF264C98A96EB342 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/build;
+			};
+			name = RelWithDebInfo;
+		};
+		2ADB0C1461D0437F93E579F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		347090F1A7174423958BAEBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Debug;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -w        -fPIC   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		4BC6734798504392A94A76A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/build;
+			};
+			name = Release;
+		};
+		6279BCACFD60446BA5B5D7C4 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		63AC33B5B0444AC3B1043393 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/MinSizeRel;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -w     -DNDEBUG -fPIC   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		71B939B5B99F42E298DD23B4 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		7247649FFC8C48759C968074 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Release;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -w     -DNDEBUG -fPIC   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		77599FA7B5104DDEA5E76219 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/RelWithDebInfo;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -w        -fPIC   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		7FCCB41F713340E2BDB23C6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		8A9EBF15D5A9489EB09FB3C5 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		902FBE6BB196454292A20135 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		90EFFA7562D5435C8982D18C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		99BCBB60515146CF9254B4B2 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		BB8FC097A4C94F28852049FE /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/build;
+			};
+			name = MinSizeRel;
+		};
+		BCD2B0EC07AC4969979E5033 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		CDB1BFFA1B6C442BB5C17785 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		F12C513D031748A38F856912 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/build;
+			};
+			name = Debug;
+		};
+		F5EEC1EA1DBE4EDDADEFD209 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		F97933A79D754F32BF9CB9AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11F4805B662B40309ED7045A /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				902FBE6BB196454292A20135 /* Debug */,
+				7FCCB41F713340E2BDB23C6E /* Release */,
+				8A9EBF15D5A9489EB09FB3C5 /* MinSizeRel */,
+				F5EEC1EA1DBE4EDDADEFD209 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		2BBF7843204048F9A7F3B681 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90EFFA7562D5435C8982D18C /* Debug */,
+				CDB1BFFA1B6C442BB5C17785 /* Release */,
+				BCD2B0EC07AC4969979E5033 /* MinSizeRel */,
+				71B939B5B99F42E298DD23B4 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4248452001B448BCA5ED41A3 /* Build configuration list for PBXProject "GLFW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F12C513D031748A38F856912 /* Debug */,
+				4BC6734798504392A94A76A9 /* Release */,
+				BB8FC097A4C94F28852049FE /* MinSizeRel */,
+				1B705D8DAF264C98A96EB342 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6782CECF79A946DA93815754 /* Build configuration list for PBXNativeTarget "glfw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				347090F1A7174423958BAEBF /* Debug */,
+				7247649FFC8C48759C968074 /* Release */,
+				63AC33B5B0444AC3B1043393 /* MinSizeRel */,
+				77599FA7B5104DDEA5E76219 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F63BBE215FB14863A50ED3C4 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ADB0C1461D0437F93E579F1 /* Debug */,
+				F97933A79D754F32BF9CB9AC /* Release */,
+				99BCBB60515146CF9254B4B2 /* MinSizeRel */,
+				6279BCACFD60446BA5B5D7C4 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BD12AD1FD9B6491497D9E262 /* Project object */;
+}

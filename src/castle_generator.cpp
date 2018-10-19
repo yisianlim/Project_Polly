@@ -1,9 +1,36 @@
 #include "castle_generator.hpp";
-
+#include "glm/ext.hpp"
 
 void CastleGenerator::init() {
 	// Code here. :) 
+    generateSpace();
+}
 
+void CastleGenerator::generateSpace() {
+    //distance from center to corner of keep
+    float keepDist = 0.8f;
+    //the middle of the 4 points
+    glm::vec3 p0;
+    p0 = (p1+p2+p3+p4)/4;
+    // directional vectors from center to corners
+    glm::vec3 d1 = p1-p0;
+    glm::vec3 d2 = p2-p0;
+    glm::vec3 d3 = p3-p0;
+    glm::vec3 d4 = p4-p0;
+    //position vectors of bounding areas of the keep
+    glm::vec3 keep1 = p0 + keepDist*d1;
+    glm::vec3 keep2 = p0 + keepDist*d2;
+    glm::vec3 keep3 = p0 + keepDist*d3;
+    glm::vec3 keep4 = p0 + keepDist*d4;
+    //generate the keep
+    generateKeep(keep1, keep2, keep3, keep4);
+}
+
+void CastleGenerator::generateKeep(glm::vec3 k1, glm::vec3 k2, glm::vec3 k3, glm::vec3 k4) {
+    
+    
+    std::cout<<glm::to_string(k1)<<std::endl;
+    
 }
 
 cgra::Mesh CastleGenerator::loadObj(const char *filename) {

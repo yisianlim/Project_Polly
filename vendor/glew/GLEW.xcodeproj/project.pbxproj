@@ -1,0 +1,806 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		16ACFB9BBFAA4F928A112043 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 6209F3FC65AB4AC69E7BACCC /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				080F51018185407AA1A8AF1E /* CMake Rules */,
+			);
+			dependencies = (
+				3B3EE1458EF84A469061B9CE /* PBXTargetDependency */,
+				F5B76644C07545FCBE24132D /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		568025DB61DB4430B9B3D3D9 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 8B4695A39D544C75BE08EEC9 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				A633C5187E9A485281B42568 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				C6A13954A7254D08AE054B2B /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		5AA7CDC57A764CED8051F809 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 09876D62548C4515B6069E1F /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				F9C8411C76BD4CE1890FA246 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		2EDA098EB9D4493CA939F92A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/glxew.h */ = {isa = PBXBuildFile; fileRef = 246F42E92B694CC4B824BC5C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/glxew.h */; };
+		5FA09A51BDAF48788EC7B447 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = BB3F2197B3A145D1AB745474 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/CMakeLists.txt */; };
+		61E62FE1B22B435BA0AE3AA9 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/src/glew.c */ = {isa = PBXBuildFile; fileRef = 934AF831E6BE4ECB9B5DC37C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/src/glew.c */; };
+		9D49813B0BD64FDFA567C365 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/wglew.h */ = {isa = PBXBuildFile; fileRef = A0CC9D632D494BA9BDE4A739 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/wglew.h */; };
+		E9175E0E777746089B8B3098 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/glew.h */ = {isa = PBXBuildFile; fileRef = 6FCD57E404AC42C9836C0621 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/glew.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		6498864B093540EC87D7E719 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		830012373B2C4E9CB14D21CA /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		FC2B521D8CE143CD8FA45554 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		FC5FC9EE250B4010B2B3D7EB /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		288A2ECDF3244471B5408AB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B7D5C0E0CEC4389850B3954 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0B4A6AB431B4521932D9870;
+			remoteInfo = glew;
+		};
+		31B7752E7B8340B49F69BD76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B7D5C0E0CEC4389850B3954 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AA7CDC57A764CED8051F809;
+			remoteInfo = ZERO_CHECK;
+		};
+		94968C270D3B40F092AC0101 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B7D5C0E0CEC4389850B3954 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AA7CDC57A764CED8051F809;
+			remoteInfo = ZERO_CHECK;
+		};
+		E8731CE5D4E24FEB97B6E3AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B7D5C0E0CEC4389850B3954 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16ACFB9BBFAA4F928A112043;
+			remoteInfo = ALL_BUILD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		246F42E92B694CC4B824BC5C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/glxew.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glxew.h; path = include/GL/glxew.h; sourceTree = SOURCE_ROOT; };
+		26F4DA22B21643ED8EC24748 /* glew */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglew.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FCD57E404AC42C9836C0621 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/glew.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glew.h; path = include/GL/glew.h; sourceTree = SOURCE_ROOT; };
+		934AF831E6BE4ECB9B5DC37C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/src/glew.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glew.c; path = src/glew.c; sourceTree = SOURCE_ROOT; };
+		A0CC9D632D494BA9BDE4A739 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/wglew.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = wglew.h; path = include/GL/wglew.h; sourceTree = SOURCE_ROOT; };
+		BB3F2197B3A145D1AB745474 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		D3E63A90ADEA4B0791F4F6AA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1C603C4C72814B2991105914 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		22D9D9F000E94C3382207689 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				1C603C4C72814B2991105914 /* CMake Rules */,
+				D3E63A90ADEA4B0791F4F6AA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		41B338DE213B442D941EADBA /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				934AF831E6BE4ECB9B5DC37C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/src/glew.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		5A2E6A1BF58C4BAC89C22610 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26F4DA22B21643ED8EC24748 /* glew */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A6F17FB34294B2E8AF166ED /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				6FCD57E404AC42C9836C0621 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/glew.h */,
+				246F42E92B694CC4B824BC5C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/glxew.h */,
+				A0CC9D632D494BA9BDE4A739 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/wglew.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		C702C1E1A8AD4570A08BCECC /* glew */ = {
+			isa = PBXGroup;
+			children = (
+				7A6F17FB34294B2E8AF166ED /* Header Files */,
+				41B338DE213B442D941EADBA /* Source Files */,
+				BB3F2197B3A145D1AB745474 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/CMakeLists.txt */,
+			);
+			name = glew;
+			sourceTree = "<group>";
+		};
+		F10C2916AC2F40088349CACF /* GLEW */ = {
+			isa = PBXGroup;
+			children = (
+				C702C1E1A8AD4570A08BCECC /* glew */,
+			);
+			name = GLEW;
+			sourceTree = "<group>";
+		};
+		F75BC5C942AD4CC590C24624 = {
+			isa = PBXGroup;
+			children = (
+				F10C2916AC2F40088349CACF /* GLEW */,
+				22D9D9F000E94C3382207689 /* ALL_BUILD */,
+				5A2E6A1BF58C4BAC89C22610 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A0B4A6AB431B4521932D9870 /* glew */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F753554394148AC90601C2F /* Build configuration list for PBXNativeTarget "glew" */;
+			buildPhases = (
+				424E413B454947908E0D3978 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0441F54203D341FBA358FD2E /* PBXTargetDependency */,
+			);
+			name = glew;
+			productName = glew;
+			productReference = 26F4DA22B21643ED8EC24748 /* glew */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0B7D5C0E0CEC4389850B3954 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1000;
+			};
+			buildConfigurationList = 982EDC0C2B52426DBA8BD5F7 /* Build configuration list for PBXProject "GLEW" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				FC5FC9EE250B4010B2B3D7EB /* Debug */,
+				6498864B093540EC87D7E719 /* Release */,
+				830012373B2C4E9CB14D21CA /* MinSizeRel */,
+				FC2B521D8CE143CD8FA45554 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = F75BC5C942AD4CC590C24624;
+			projectDirPath = .;
+			projectRoot = "";
+			targets = (
+				16ACFB9BBFAA4F928A112043 /* ALL_BUILD */,
+				5AA7CDC57A764CED8051F809 /* ZERO_CHECK */,
+				A0B4A6AB431B4521932D9870 /* glew */,
+				568025DB61DB4430B9B3D3D9 /* install */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		080F51018185407AA1A8AF1E /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew -f /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		156919AB2C2C4C03B72C2A92 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		8A6CAC7A8F274E9B82A16B34 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		A633C5187E9A485281B42568 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew -f /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		D147EEBC3556419BB93C8EE5 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		F9C8411C76BD4CE1890FA246 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew -f /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		424E413B454947908E0D3978 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61E62FE1B22B435BA0AE3AA9 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/src/glew.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0441F54203D341FBA358FD2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AA7CDC57A764CED8051F809 /* ZERO_CHECK */;
+			targetProxy = 31B7752E7B8340B49F69BD76 /* PBXContainerItemProxy */;
+		};
+		3B3EE1458EF84A469061B9CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0B4A6AB431B4521932D9870 /* glew */;
+			targetProxy = 288A2ECDF3244471B5408AB7 /* PBXContainerItemProxy */;
+		};
+		C6A13954A7254D08AE054B2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16ACFB9BBFAA4F928A112043 /* ALL_BUILD */;
+			targetProxy = E8731CE5D4E24FEB97B6E3AC /* PBXContainerItemProxy */;
+		};
+		F5B76644C07545FCBE24132D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AA7CDC57A764CED8051F809 /* ZERO_CHECK */;
+			targetProxy = 94968C270D3B40F092AC0101 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01E29C165F3A4E54BAAAB125 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/build;
+			};
+			name = RelWithDebInfo;
+		};
+		0777CE86880E4FB08C2F3F6C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		147EE3512FD94E11B02AAF4C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		226FB5A0BEC94BCF99ADA721 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		24B0AA0ECE684F9AB785F563 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		44A9990BF56E4B79B5CF4C73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		4EF13EC9A7E5439AB03A3F20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		50DFDB65622D433BBF6C3AD3 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		56DE8527C85647DAB356BBC6 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/MinSizeRel;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -w     -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		5F4225C8249F4CF09571B347 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		805A4983329441F6A25813A0 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/RelWithDebInfo;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -w         ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		A4131841327A4DB391C33676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		A58436DBC87A47BEB80869FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/build;
+			};
+			name = Debug;
+		};
+		B2870A59D8874E24A2B47CE8 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		C2337814737F4E54918B5E56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Debug;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -w         ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		CB48F0D2A4224C8DAC0A44F8 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/build;
+			};
+			name = MinSizeRel;
+		};
+		CDDA7083563047D9A2B8D370 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Release;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -w     -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		E451BE03BBD942ABA528F683 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		E778BBB9ED8547E494C82D75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/build;
+			};
+			name = Release;
+		};
+		EDC815D3ECC24C18ACB96081 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09876D62548C4515B6069E1F /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4131841327A4DB391C33676 /* Debug */,
+				E451BE03BBD942ABA528F683 /* Release */,
+				EDC815D3ECC24C18ACB96081 /* MinSizeRel */,
+				50DFDB65622D433BBF6C3AD3 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5F753554394148AC90601C2F /* Build configuration list for PBXNativeTarget "glew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2337814737F4E54918B5E56 /* Debug */,
+				CDDA7083563047D9A2B8D370 /* Release */,
+				56DE8527C85647DAB356BBC6 /* MinSizeRel */,
+				805A4983329441F6A25813A0 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6209F3FC65AB4AC69E7BACCC /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24B0AA0ECE684F9AB785F563 /* Debug */,
+				44A9990BF56E4B79B5CF4C73 /* Release */,
+				B2870A59D8874E24A2B47CE8 /* MinSizeRel */,
+				226FB5A0BEC94BCF99ADA721 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8B4695A39D544C75BE08EEC9 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F4225C8249F4CF09571B347 /* Debug */,
+				4EF13EC9A7E5439AB03A3F20 /* Release */,
+				147EE3512FD94E11B02AAF4C /* MinSizeRel */,
+				0777CE86880E4FB08C2F3F6C /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		982EDC0C2B52426DBA8BD5F7 /* Build configuration list for PBXProject "GLEW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A58436DBC87A47BEB80869FA /* Debug */,
+				E778BBB9ED8547E494C82D75 /* Release */,
+				CB48F0D2A4224C8DAC0A44F8 /* MinSizeRel */,
+				01E29C165F3A4E54BAAAB125 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0B7D5C0E0CEC4389850B3954 /* Project object */;
+}

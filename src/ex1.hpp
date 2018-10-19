@@ -5,6 +5,7 @@
 
 #include "glm/glm.hpp"
 #include "mesh_generator.hpp"
+#include "castle_generator.hpp"
 
 class Application {
 public:
@@ -37,6 +38,7 @@ public:
     bool m_mouseButtonDown[3];
 
 	MeshGenerator m_meshGenerator;
+    CastleGenerator m_castleGenerator;
 
     Application(GLFWwindow *win)
         : m_window(win),

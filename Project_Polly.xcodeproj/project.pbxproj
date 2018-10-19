@@ -1,0 +1,2037 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		16ACFB9BBFAA4F928A112043 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9FC85169BA664153A17B5BA3 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				73EF03A66556444C8D3421DE /* CMake Rules */,
+			);
+			dependencies = (
+				EA37BE42BD8C4916848CB3B4 /* PBXTargetDependency */,
+				E3558EDA2BC04E398FFB417A /* PBXTargetDependency */,
+				C438EE560CD44D39B0130654 /* PBXTargetDependency */,
+				A2D4B1BFDE6F487186FF5433 /* PBXTargetDependency */,
+				55787A4C2888446792EE82B0 /* PBXTargetDependency */,
+				1703C8A8B6FD48BF918C089A /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		568025DB61DB4430B9B3D3D9 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E045F1DAF4924968846D5898 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				D53BE6550C4C40B585F73D5F /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				787B43338347453F8C42A1F7 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		5AA7CDC57A764CED8051F809 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C01B63AB729141D0AC7C33E3 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				177F009AE8A140BF8F0DC8AF /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		01B78BA2E07C486FA41505A2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/curve.cpp */ = {isa = PBXBuildFile; fileRef = 1EF8270FAA764530AE1AD3DC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/curve.cpp */; };
+		059FEB2E4273483DBC520BC8 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/internal.h */ = {isa = PBXBuildFile; fileRef = 0747E7D4FB0D45AB8C92F37B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/internal.h */; };
+		06B19D1048D8401A80D33F66 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/clamp.h */ = {isa = PBXBuildFile; fileRef = 5850E806E44F4E17BCD34674 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/clamp.h */; };
+		0A48171516704F69959451E1 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/select.cpp */ = {isa = PBXBuildFile; fileRef = B6CB57FEB79F4F7EA318F563 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/select.cpp */; };
+		0B04815FE8284741B71CEA5A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/triangulation/triangulation.hpp */ = {isa = PBXBuildFile; fileRef = 1A10EC34067742A5B5F15D6E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/triangulation/triangulation.hpp */; };
+		0BA0CFF3C137415FBAAFDD0B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/imgui.cpp */ = {isa = PBXBuildFile; fileRef = 5AD0E16F51564CECB59F0287 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/imgui.cpp */; };
+		0C63FBA9B9224A0E802BFFB1 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/mesh_generator.cpp */ = {isa = PBXBuildFile; fileRef = AD99E47FD0AA47D896D87CEF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/mesh_generator.cpp */; };
+		0E206294EA72411AB007FB4E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = EB531E79D48843489208E445 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/nsgl_context.m */; };
+		11B2F364C26346A5B8793A26 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/opengl.hpp */ = {isa = PBXBuildFile; fileRef = 0448C72B14944EC6A42BEB83 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/opengl.hpp */; };
+		13A26BFB6AA741FF9993710F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = E574431D6D8F4A74954851EB /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_window.m */; };
+		1775E4F295AF4EF39F75A33F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/select.h */ = {isa = PBXBuildFile; fileRef = 9921607A7553456D851E61CD /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/select.h */; };
+		183DF665AB054E2B9EB39134 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/posix_tls.h */ = {isa = PBXBuildFile; fileRef = 525680F838C341EDB287D1B6 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/posix_tls.h */; };
+		1918A5111F8047F092BD518C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/plane.cpp */ = {isa = PBXBuildFile; fileRef = 986CDBBF176F427886EE169F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/plane.cpp */; };
+		191FEAB5924D46139CD63C60 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/line.h */ = {isa = PBXBuildFile; fileRef = 4F7465F7C9554F5AAD579FD4 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/line.h */; };
+		1A5E80F0A1884DC199770918 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/checkerboard.h */ = {isa = PBXBuildFile; fileRef = 1110B5E1568041F3AD151D0F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/checkerboard.h */; };
+		1C13A3DAC5574201B474D5D1 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/glxew.h */ = {isa = PBXBuildFile; fileRef = 16590133AFD84EA7BE04E3FE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/glxew.h */; };
+		24FD309400E0414B987E9EC4 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/line.cpp */ = {isa = PBXBuildFile; fileRef = 86DCEDD3098F47D491C4CA97 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/line.cpp */; };
+		25B19D5535084623942520CC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/wglew.h */ = {isa = PBXBuildFile; fileRef = 0CC86969586C4D36AD83B046 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/wglew.h */; };
+		26C9FF165FD241AB861B6D91 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/basictypes.h */ = {isa = PBXBuildFile; fileRef = 6A9017D58AB3423B893C276B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/basictypes.h */; };
+		29A857F54DE84266955BB069 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/stb_textedit.h */ = {isa = PBXBuildFile; fileRef = C59E42529AC14613850BDBAC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/stb_textedit.h */; };
+		2A05CC5188AE48CCBCC91FAE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/module.h */ = {isa = PBXBuildFile; fileRef = 2BF179BADB104520B85703F5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/module.h */; };
+		2ACB9A5669CB401FA4CCF82D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = B2569D3F6511424E9F35092D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_init.m */; };
+		2C1FE2D8E2BE439EABD5F056 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/noisegen.h */ = {isa = PBXBuildFile; fileRef = DEDA446D77464C3E9947BC05 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/noisegen.h */; };
+		3356A19A71FC4D95B558E02E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/imconfig.h */ = {isa = PBXBuildFile; fileRef = 7F01752E12754556A94786C8 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/imconfig.h */; };
+		33DF3610F22640A79845445B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/iokit_joystick.m */ = {isa = PBXBuildFile; fileRef = A90359A5AED5491A93F0F4BC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/iokit_joystick.m */; };
+		35050FB6EC0C41D19EC1EFF7 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/turbulence.h */ = {isa = PBXBuildFile; fileRef = 3B090D4D676A4DF9A3436D25 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/turbulence.h */; };
+		38813FC6EB4D42E8BB29DBC4 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/terrace.h */ = {isa = PBXBuildFile; fileRef = 5008047605F64DAFA96F50FA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/terrace.h */; };
+		38F51F37CE8543D29DC5C114 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/invert.cpp */ = {isa = PBXBuildFile; fileRef = F0404166BCF4488EB01011CE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/invert.cpp */; };
+		3AF3D381BA504FCA9E92D25B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/ridgedmulti.cpp */ = {isa = PBXBuildFile; fileRef = 449860DAD1D74C42A009FFD9 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/ridgedmulti.cpp */; };
+		4342FC8338984D0A962CBABC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 365827EC9A19409BB4AAA436 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/CMakeLists.txt */; };
+		47CC1B338EC34A8AA10BA225 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/imgui_draw.cpp */ = {isa = PBXBuildFile; fileRef = D7D2CFF840D8460B9A58D368 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/imgui_draw.cpp */; };
+		4A2F3495BE4445E1B14109D6 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/max.h */ = {isa = PBXBuildFile; fileRef = EDBF53EF61D344B3B5FFBFF5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/max.h */; };
+		4B4F4508EAE441AFA544608F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/cylinders.cpp */ = {isa = PBXBuildFile; fileRef = A341F5D4292941A8864D7366 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/cylinders.cpp */; };
+		4E136D2DC3D64077BC3A6806 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/ex1.hpp */ = {isa = PBXBuildFile; fileRef = 10F5296A5F7F4A6E8FBFC989 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/ex1.hpp */; };
+		51C9BD3BC156431395C98C6D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/rotatepoint.cpp */ = {isa = PBXBuildFile; fileRef = 40052C74919944DC8D0AA75A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/rotatepoint.cpp */; };
+		523410202A064ED7BD695C97 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 29FB997FFA294DAB8B5ACDE3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/CMakeLists.txt */; };
+		52DE27F166734C3BAA218106 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/spheres.h */ = {isa = PBXBuildFile; fileRef = 5C30C48D60F14A98AEDA191B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/spheres.h */; };
+		5428F2620FA74D79B767644B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/imgui_internal.h */ = {isa = PBXBuildFile; fileRef = B2E38B4F50FE49D184B4AA67 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/imgui_internal.h */; };
+		56EECC20F0544FEEAE837CBB /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/max.cpp */ = {isa = PBXBuildFile; fileRef = 824D06325AEE404194D5CD75 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/max.cpp */; };
+		58739EB1CD504C03962E59AE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/multiply.cpp */ = {isa = PBXBuildFile; fileRef = 57B4D7243E2441E7A18B3CE2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/multiply.cpp */; };
+		58EDEAE29B5A4C6BB8E54B60 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/noisegen.cpp */ = {isa = PBXBuildFile; fileRef = C8FB5010230F4BD5B4641536 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/noisegen.cpp */; };
+		5A22527F7E354FE9A66774EB /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/modulebase.h */ = {isa = PBXBuildFile; fileRef = 394F10715A4149FD91A64A02 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/modulebase.h */; };
+		5C0B943837F34BEF8120D306 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/triangulation/delaunator.hpp */ = {isa = PBXBuildFile; fileRef = 2D3335AE1E28442D9EF83665 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/triangulation/delaunator.hpp */; };
+		5DBF636D4DA247D9860B71DD /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = 8E94302FF939401FACBA5843 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_monitor.m */; };
+		5E15626037D24436936D9D64 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/power.cpp */ = {isa = PBXBuildFile; fileRef = 63E3315229D7450EA7D3F7B1 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/power.cpp */; };
+		5F055AB8C09B47AD965BE5E0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/mathconsts.h */ = {isa = PBXBuildFile; fileRef = A96583339FDE44DB9360F5BD /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/mathconsts.h */; };
+		5F0B4EEB88C245338E2F1BD0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/vectortable.h */ = {isa = PBXBuildFile; fileRef = 37535E743B344FC5A7072F83 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/vectortable.h */; };
+		5FF0157860524C16BB5B2C5E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = 843CBF9658534F1E9342BED3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_platform.h */; };
+		600F13D85241427C9B733F49 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/displace.cpp */ = {isa = PBXBuildFile; fileRef = 5690E7C3431E467A80511224 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/displace.cpp */; };
+		6197F0EFA8F84D728CDF0DD4 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/exponent.h */ = {isa = PBXBuildFile; fileRef = 60520566C438409387AF46D2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/exponent.h */; };
+		61EEA506B9A445D1932792C7 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/curve.h */ = {isa = PBXBuildFile; fileRef = A5C6B32C47A246A698D72254 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/curve.h */; };
+		63B6612E880F46CDA31C2736 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/scalepoint.cpp */ = {isa = PBXBuildFile; fileRef = 57BA8A8911B84C05B3A277FC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/scalepoint.cpp */; };
+		647C98812477460F86A2AE44 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/latlon.cpp */ = {isa = PBXBuildFile; fileRef = BFECDF45EC9B4BD48CC478A1 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/latlon.cpp */; };
+		64B0CE9B05114ECE9AC4381A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = BAFB8C78B06A476BA20938F3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include/GLFW/glfw3native.h */; };
+		68027F69EE094F97AB0991EB /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/voronoi.cpp */ = {isa = PBXBuildFile; fileRef = 88FC227F991942E8BB96B156 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/voronoi.cpp */; };
+		6F5F6EEE0AA044B3B6CF646B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/input.c */ = {isa = PBXBuildFile; fileRef = 4613D82C26CF4596AF7BBAF3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/input.c */; };
+		721D351521DC4842A896B591 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/perlin.h */ = {isa = PBXBuildFile; fileRef = 505D23A9AE6140999D197972 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/perlin.h */; };
+		7220E321D67944F1833B13D7 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/scalebias.h */ = {isa = PBXBuildFile; fileRef = E1E9C550DA984695B7A035B0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/scalebias.h */; };
+		724485E359A8448AB06EDBD0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/noise/noise.cpp */ = {isa = PBXBuildFile; fileRef = 629AAA965026475A9B649F3A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/noise/noise.cpp */; };
+		72ADA2EEC05941EF8FDC301A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/terrace.cpp */ = {isa = PBXBuildFile; fileRef = 470C31067B1F44B2B3C7DAE3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/terrace.cpp */; };
+		7C45476060FA4389AF1962AC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/billow.cpp */ = {isa = PBXBuildFile; fileRef = 18A5A7368B9C47C69DCB57E9 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/billow.cpp */; };
+		7DD441FACB7543E886778550 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/shader.cpp */ = {isa = PBXBuildFile; fileRef = 26ADC78CEFE142A7B3F73FC9 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/shader.cpp */; };
+		7E7667BE5DAA46909D428451 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/imgui_impl_glfw_gl3.cpp */ = {isa = PBXBuildFile; fileRef = B4257E6D62E741BFA4C15236 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/imgui_impl_glfw_gl3.cpp */; };
+		8252DFEC48774F46A246FE81 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/clamp.cpp */ = {isa = PBXBuildFile; fileRef = 705E59529F36487789B3D8FC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/clamp.cpp */; };
+		855D32812AE1429FB7E32DF7 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/mach_time.c */ = {isa = PBXBuildFile; fileRef = 560D7E8A20AC480CAA15C7ED /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/mach_time.c */; };
+		8952F7538DA64A629AB4072B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/scalebias.cpp */ = {isa = PBXBuildFile; fileRef = 5A0D56BA66D34BCAB6CA9605 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/scalebias.cpp */; };
+		8B1D12D34AEA4B19A6AA1BC3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/main.cpp */ = {isa = PBXBuildFile; fileRef = 9D8FEB60A6214D88815B0762 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/main.cpp */; };
+		8C456B5BDA8148978364FE40 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/voronoi.h */ = {isa = PBXBuildFile; fileRef = A4AA65E24BA448D198C3E3F0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/voronoi.h */; };
+		8CCE942B613D41F688AE751F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/add.cpp */ = {isa = PBXBuildFile; fileRef = F7B9384885FF4CAD9A641F1F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/add.cpp */; };
+		8D47344B000A4E0ABA6017D0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/exponent.cpp */ = {isa = PBXBuildFile; fileRef = DF9AE84EC7F94878A7C42550 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/exponent.cpp */; };
+		8F3315727B954282BCC5B8B3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/translatepoint.h */ = {isa = PBXBuildFile; fileRef = 7E960B8159B942ED862EBD31 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/translatepoint.h */; };
+		93AF82E306764EF2AD95645A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/exception.h */ = {isa = PBXBuildFile; fileRef = E8F911FB9DD04853AFA1649C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/exception.h */; };
+		945371EA2BF142E582B16AD4 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = F5644C7BAA6B456E9741194B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/CMakeLists.txt */; };
+		955F7A5DE6EC4CF4B7F2AEC6 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/glew.h */ = {isa = PBXBuildFile; fileRef = B6D1819A7A1941BC9244C100 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/glew.h */; };
+		981F604E92CD4AF0B2F8B967 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/ex1.cpp */ = {isa = PBXBuildFile; fileRef = 005DB13CF868477699FE9384 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/ex1.cpp */; };
+		9F67742F26AA4302B1BA71BD /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/sphere.h */ = {isa = PBXBuildFile; fileRef = 567A91BEB5F1450591621495 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/sphere.h */; };
+		A11164FBD72C4DF9B45AD9AB /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/castle_generator.cpp */ = {isa = PBXBuildFile; fileRef = 500AF84B758941798CCCB76B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/castle_generator.cpp */; };
+		A759358F4E864DF8A4E39C51 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/abs.h */ = {isa = PBXBuildFile; fileRef = 08533F53E14A4888BE5BD208 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/abs.h */; };
+		A919CAD0454045118FCFF22E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/context.c */ = {isa = PBXBuildFile; fileRef = A4FEF617BAC3487091048282 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/context.c */; };
+		A94351F66A0E420D95FDF7C2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/mesh_generator.hpp */ = {isa = PBXBuildFile; fileRef = D25696098075410997BC5945 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/mesh_generator.hpp */; };
+		A9609D2534534407A23022BC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/spheres.cpp */ = {isa = PBXBuildFile; fileRef = F01DBBED84284A94A77A1F3D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/spheres.cpp */; };
+		AC14A8004AE949599B4D4700 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/modulebase.cpp */ = {isa = PBXBuildFile; fileRef = 5BC9A970CAC34692ACD21C00 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/modulebase.cpp */; };
+		ACECC44AB63B40EC97228C4C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/noise.h */ = {isa = PBXBuildFile; fileRef = 2CB95DA3ADA84BF0B90337D5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/noise.h */; };
+		AD09D2C578A44F1DBF92ADD0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = 9ADF5718460B41319F933FDA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include/GLFW/glfw3.h */; };
+		AFCA0A08E9DE44F3BD7E4CB5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/min.h */ = {isa = PBXBuildFile; fileRef = 3EB6A365E7F143BE95413FEB /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/min.h */; };
+		B5EADC9F70D04266B8710965 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/plane.h */ = {isa = PBXBuildFile; fileRef = 11F19B4C48B948538B483CD3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/plane.h */; };
+		B5FAAD69949243ED89C03EF5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/init.c */ = {isa = PBXBuildFile; fileRef = EFF075E6AA1346B0B212EA6C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/init.c */; };
+		BA4032FF9F7C4593882944CB /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/min.cpp */ = {isa = PBXBuildFile; fileRef = 23719FDA8FEA4287B4F52438 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/min.cpp */; };
+		BAA0107283DC4B5F8D66FDC2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/shader.hpp */ = {isa = PBXBuildFile; fileRef = 556A42D9849D4A3CB320E8A2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/shader.hpp */; };
+		BABF307DC13B488399B3F960 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/ridgedmulti.h */ = {isa = PBXBuildFile; fileRef = 33E2274D54684822880EFE18 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/ridgedmulti.h */; };
+		BB2D349E89554D70A6D53AEE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/posix_tls.c */ = {isa = PBXBuildFile; fileRef = A63C2673A63340E0A95B977C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/posix_tls.c */; };
+		BCB23D3876F644539AB80243 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/model.h */ = {isa = PBXBuildFile; fileRef = 1E4EB0D0C978477B954E40AA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/model.h */; };
+		BD3F9D69DA6E4167B7BE6A8F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/misc.h */ = {isa = PBXBuildFile; fileRef = 53FC5D82A49748AE9F8159EA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/misc.h */; };
+		C1C9FB1B078B4878BF3CEF44 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/castle_generator.hpp */ = {isa = PBXBuildFile; fileRef = 9CFADBFCA5AB45A19BE08F66 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/castle_generator.hpp */; };
+		C2A014EAC8484003A484D1C8 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = D24EAEE6A6B4439DB5A00D92 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/CMakeLists.txt */; };
+		C2CC3B0B4F02444F9B63F422 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/billow.h */ = {isa = PBXBuildFile; fileRef = B94763C4105945BE897054C0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/billow.h */; };
+		C422B80ACDC2440E92434802 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/cylinders.h */ = {isa = PBXBuildFile; fileRef = 5BBC5D02B63949C9BF3FB1CF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/cylinders.h */; };
+		C45913BD692A43559A6BBBAE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/perlin.cpp */ = {isa = PBXBuildFile; fileRef = 3A5C547522D844AAADCA7C04 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/perlin.cpp */; };
+		C469B878F07748D49BCFE46F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/window.c */ = {isa = PBXBuildFile; fileRef = F3E1AD3C1DF34517B74F78B8 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/window.c */; };
+		C5405DFFDB904923A6CAAF65 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/noise/noise.hpp */ = {isa = PBXBuildFile; fileRef = C8523BADED444449A99EB4BF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/noise/noise.hpp */; };
+		C899AFBBB4744F9098D6419C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/interp.h */ = {isa = PBXBuildFile; fileRef = 4A9D1CFAC0064B1B9D6AEF40 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/interp.h */; };
+		C8A1664EE46D4A4983AE257A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/imgui.h */ = {isa = PBXBuildFile; fileRef = 7957E677AE4345B2BD657E7A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/imgui.h */; };
+		CAD06F635EA54268A4608EF5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/const.h */ = {isa = PBXBuildFile; fileRef = AD74EB820A044B9DAD767E4A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/const.h */; };
+		CB7DB376D9624C98A00C2A7E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/mesh.cpp */ = {isa = PBXBuildFile; fileRef = F2838F6CB0D0453CB95FB988 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/mesh.cpp */; };
+		D33B10B8B9534921957BE106 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/multiply.h */ = {isa = PBXBuildFile; fileRef = 5F859934358D463EAE6D0BAA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/multiply.h */; };
+		D35E41072DD94F21A868758C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/glfw_config.h */ = {isa = PBXBuildFile; fileRef = 896202CD29114EB58563AA7B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/glfw_config.h */; };
+		D364EA153BB545B3AE56CDA3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/iokit_joystick.h */ = {isa = PBXBuildFile; fileRef = 56DA42D9E268474ABFC11056 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/iokit_joystick.h */; };
+		D594D1F3099E46A3939E9F66 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/wavefront.hpp */ = {isa = PBXBuildFile; fileRef = 0F468476984B4B63A9F7833E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/wavefront.hpp */; };
+		D5BE4DED54AE48EDA981F43D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/cache.cpp */ = {isa = PBXBuildFile; fileRef = 0F40FD725F8F474494BA4421 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/cache.cpp */; };
+		D6B22378B29A406AB2477777 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/add.h */ = {isa = PBXBuildFile; fileRef = 4B690AB6D90F4B9499B802E2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/add.h */; };
+		D6E0315069EC4911A036F492 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/sphere.cpp */ = {isa = PBXBuildFile; fileRef = F543DBC900D441F0A708D682 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/sphere.cpp */; };
+		D74C1F42517B448EB276A027 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/turbulence.cpp */ = {isa = PBXBuildFile; fileRef = 558CCB0EA8264BDAA3CCDC9B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/turbulence.cpp */; };
+		D758B12A9DBF491494FBBECE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/monitor.c */ = {isa = PBXBuildFile; fileRef = 14395BB32D824D32B9A46684 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/monitor.c */; };
+		D7804E41719C463FB99685A9 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/power.h */ = {isa = PBXBuildFile; fileRef = CDCBDE650D5D4976A1A03E7B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/power.h */; };
+		DA88EFE21AC4407AB0DE1916 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/wavefront.cpp */ = {isa = PBXBuildFile; fileRef = 0BA3EE22FDDE43E8928C5B1C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/wavefront.cpp */; };
+		DDB229118EE8487F8D42BA17 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/latlon.h */ = {isa = PBXBuildFile; fileRef = 3F7339458415473F83CA027E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/latlon.h */; };
+		DE99FE396F59475781308F48 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/const.cpp */ = {isa = PBXBuildFile; fileRef = 915346B8FE874FD4A0C50ED2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/const.cpp */; };
+		E2C0DF27A6FF4714B124FA7C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/checkerboard.cpp */ = {isa = PBXBuildFile; fileRef = CA73566350AF469883851652 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/checkerboard.cpp */; };
+		E2CFF711EAE744F791D76D30 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/triangulation/triangulation.cpp */ = {isa = PBXBuildFile; fileRef = 9D27EC04EA7A4EE88DCD0AE3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/triangulation/triangulation.cpp */; };
+		E4458044E2964EB6A526B0B7 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/matrix.hpp */ = {isa = PBXBuildFile; fileRef = 42E9DD1EFCFE4ED2A2BE7464 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/matrix.hpp */; };
+		E499BF86A3C0424684123146 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/displace.h */ = {isa = PBXBuildFile; fileRef = 459F74F20D3E4F2685D4F8DF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/displace.h */; };
+		E5A00A4D8DE248BF8092BE2B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/src/glew.c */ = {isa = PBXBuildFile; fileRef = A4C62541889F4DD883D8CE13 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/src/glew.c */; };
+		E5F266E689694EF0A0136159 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/imgui_impl_glfw_gl3.h */ = {isa = PBXBuildFile; fileRef = DFACFF53553D4835BCF1BBC3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/imgui_impl_glfw_gl3.h */; };
+		E74C86AD711842C39B230437 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/rotatepoint.h */ = {isa = PBXBuildFile; fileRef = 1141AEE4D91F4FE9993E8478 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/rotatepoint.h */; };
+		E7C7504A2A254DB8B8AFDFF3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/blend.h */ = {isa = PBXBuildFile; fileRef = D5E9A19AB8694562807B6B15 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/blend.h */; };
+		EB4121AD74CD49C4B2B90432 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = F8CFA02537E047DC9B0336D0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/CMakeLists.txt */; };
+		EF8E8714209A4B14B8A941ED /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/cache.h */ = {isa = PBXBuildFile; fileRef = 9891133E51A644198AB45181 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/cache.h */; };
+		F02E4E2B97E54C03A729FE54 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/scalepoint.h */ = {isa = PBXBuildFile; fileRef = 4A6ED0F53FD748838F5D332F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/scalepoint.h */; };
+		F040142B338946A1A321B031 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/cylinder.cpp */ = {isa = PBXBuildFile; fileRef = 1A49EFDF54FE4D69BF425918 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/cylinder.cpp */; };
+		F220CB66A7574E79B741EC4C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/invert.h */ = {isa = PBXBuildFile; fileRef = 34F5A948191A45A18C822297 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/invert.h */; };
+		F2FBD18428F646E1A7BD9C25 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/nsgl_context.h */ = {isa = PBXBuildFile; fileRef = 95EBA8752AA54FC79B67B5CA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/nsgl_context.h */; };
+		F4A19552A3454D8490BA3D01 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/blend.cpp */ = {isa = PBXBuildFile; fileRef = DB94A871FCD240F29DAC39FC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/blend.cpp */; };
+		F6FC8F503DFD4D8EB161D593 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/translatepoint.cpp */ = {isa = PBXBuildFile; fileRef = 300DAAC00FD34974B2B65A42 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/translatepoint.cpp */; };
+		FAA832E4F85B4A8D8D2B94C5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/abs.cpp */ = {isa = PBXBuildFile; fileRef = 027689DAE4074C089CACAECD /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/abs.cpp */; };
+		FB27AFA0171D4095AB148BA3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/mesh.hpp */ = {isa = PBXBuildFile; fileRef = 550CB597D539450CA224AEEF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/mesh.hpp */; };
+		FD11939870EA42B2A896325F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/cylinder.h */ = {isa = PBXBuildFile; fileRef = A83C07589C2741D4ABBA29A1 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/cylinder.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		5A08564F68F5482BBEAAB3EE /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		5D0D248C3E6A4D1A8F2E36A2 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		6C9F43411E86414787FA9605 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		7774A6077B20428AB22D8428 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		2631910378E548F3AE0EF932 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8059B0E9C1854923A87BB854 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E78C660D210049318A072685;
+			remoteInfo = libnoise;
+		};
+		26A97168B40E44C98F526484 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8059B0E9C1854923A87BB854 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16ACFB9BBFAA4F928A112043;
+			remoteInfo = ALL_BUILD;
+		};
+		3DFF914D6F9F4EFE82825024 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8059B0E9C1854923A87BB854 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACB080564AD4435EA3AE3968;
+			remoteInfo = imgui;
+		};
+		59C68D92DC1349988B1FA68C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8059B0E9C1854923A87BB854 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB42494FC7514D1EA4B70390;
+			remoteInfo = glfw;
+		};
+		5ED551FBE22D4EF29F8513F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8059B0E9C1854923A87BB854 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07A25BD783044B37A2967C3F;
+			remoteInfo = Project_Polly;
+		};
+		5F1E1B88718A4D44A9635591 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8059B0E9C1854923A87BB854 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACB080564AD4435EA3AE3968;
+			remoteInfo = imgui;
+		};
+		854DC89304534837B2F76498 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8059B0E9C1854923A87BB854 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AA7CDC57A764CED8051F809;
+			remoteInfo = ZERO_CHECK;
+		};
+		B32D46A64E1143CDB87D5229 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8059B0E9C1854923A87BB854 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0B4A6AB431B4521932D9870;
+			remoteInfo = glew;
+		};
+		D228BCBECC77426FAEFD66E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8059B0E9C1854923A87BB854 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB42494FC7514D1EA4B70390;
+			remoteInfo = glfw;
+		};
+		E4C772EF150A4BFBBB582A20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8059B0E9C1854923A87BB854 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E78C660D210049318A072685;
+			remoteInfo = libnoise;
+		};
+		EF341EAD18AF40C0A95E4162 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8059B0E9C1854923A87BB854 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0B4A6AB431B4521932D9870;
+			remoteInfo = glew;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		005DB13CF868477699FE9384 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/ex1.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ex1.cpp; path = src/ex1.cpp; sourceTree = SOURCE_ROOT; };
+		027689DAE4074C089CACAECD /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/abs.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = abs.cpp; path = vendor/libnoise/src/module/abs.cpp; sourceTree = SOURCE_ROOT; };
+		0448C72B14944EC6A42BEB83 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/opengl.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = opengl.hpp; path = src/opengl.hpp; sourceTree = SOURCE_ROOT; };
+		0747E7D4FB0D45AB8C92F37B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = vendor/glfw/src/internal.h; sourceTree = SOURCE_ROOT; };
+		08533F53E14A4888BE5BD208 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/abs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = abs.h; path = vendor/libnoise/include/noise/module/abs.h; sourceTree = SOURCE_ROOT; };
+		0BA3EE22FDDE43E8928C5B1C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/wavefront.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = wavefront.cpp; path = src/cgra/wavefront.cpp; sourceTree = SOURCE_ROOT; };
+		0CC86969586C4D36AD83B046 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/wglew.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = wglew.h; path = vendor/glew/include/GL/wglew.h; sourceTree = SOURCE_ROOT; };
+		0F40FD725F8F474494BA4421 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/cache.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = cache.cpp; path = vendor/libnoise/src/module/cache.cpp; sourceTree = SOURCE_ROOT; };
+		0F468476984B4B63A9F7833E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/wavefront.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = wavefront.hpp; path = src/cgra/wavefront.hpp; sourceTree = SOURCE_ROOT; };
+		10F5296A5F7F4A6E8FBFC989 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/ex1.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = ex1.hpp; path = src/ex1.hpp; sourceTree = SOURCE_ROOT; };
+		1110B5E1568041F3AD151D0F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/checkerboard.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = checkerboard.h; path = vendor/libnoise/include/noise/module/checkerboard.h; sourceTree = SOURCE_ROOT; };
+		1141AEE4D91F4FE9993E8478 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/rotatepoint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = rotatepoint.h; path = vendor/libnoise/include/noise/module/rotatepoint.h; sourceTree = SOURCE_ROOT; };
+		11F19B4C48B948538B483CD3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/plane.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = plane.h; path = vendor/libnoise/include/noise/model/plane.h; sourceTree = SOURCE_ROOT; };
+		14395BB32D824D32B9A46684 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = vendor/glfw/src/monitor.c; sourceTree = SOURCE_ROOT; };
+		16590133AFD84EA7BE04E3FE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/glxew.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glxew.h; path = vendor/glew/include/GL/glxew.h; sourceTree = SOURCE_ROOT; };
+		17833C38CE1B47C187288A1F /* libnoise */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liblibnoise.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		18A5A7368B9C47C69DCB57E9 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/billow.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = billow.cpp; path = vendor/libnoise/src/module/billow.cpp; sourceTree = SOURCE_ROOT; };
+		1A10EC34067742A5B5F15D6E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/triangulation/triangulation.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = triangulation.hpp; path = src/triangulation/triangulation.hpp; sourceTree = SOURCE_ROOT; };
+		1A49EFDF54FE4D69BF425918 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/cylinder.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = cylinder.cpp; path = vendor/libnoise/src/model/cylinder.cpp; sourceTree = SOURCE_ROOT; };
+		1E4EB0D0C978477B954E40AA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/model.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = model.h; path = vendor/libnoise/include/noise/model/model.h; sourceTree = SOURCE_ROOT; };
+		1EF8270FAA764530AE1AD3DC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/curve.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = curve.cpp; path = vendor/libnoise/src/module/curve.cpp; sourceTree = SOURCE_ROOT; };
+		23719FDA8FEA4287B4F52438 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/min.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = min.cpp; path = vendor/libnoise/src/module/min.cpp; sourceTree = SOURCE_ROOT; };
+		26ADC78CEFE142A7B3F73FC9 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/shader.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = shader.cpp; path = src/cgra/shader.cpp; sourceTree = SOURCE_ROOT; };
+		29FB997FFA294DAB8B5ACDE3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = vendor/glfw/src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		2BF179BADB104520B85703F5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/module.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = module.h; path = vendor/libnoise/include/noise/module/module.h; sourceTree = SOURCE_ROOT; };
+		2CB95DA3ADA84BF0B90337D5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/noise.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = noise.h; path = vendor/libnoise/include/noise/noise.h; sourceTree = SOURCE_ROOT; };
+		2D3335AE1E28442D9EF83665 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/triangulation/delaunator.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = delaunator.hpp; path = src/triangulation/delaunator.hpp; sourceTree = SOURCE_ROOT; };
+		300DAAC00FD34974B2B65A42 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/translatepoint.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = translatepoint.cpp; path = vendor/libnoise/src/module/translatepoint.cpp; sourceTree = SOURCE_ROOT; };
+		33E2274D54684822880EFE18 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/ridgedmulti.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ridgedmulti.h; path = vendor/libnoise/include/noise/module/ridgedmulti.h; sourceTree = SOURCE_ROOT; };
+		34F5A948191A45A18C822297 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/invert.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = invert.h; path = vendor/libnoise/include/noise/module/invert.h; sourceTree = SOURCE_ROOT; };
+		365827EC9A19409BB4AAA436 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		37535E743B344FC5A7072F83 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/vectortable.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = vectortable.h; path = vendor/libnoise/include/noise/vectortable.h; sourceTree = SOURCE_ROOT; };
+		394F10715A4149FD91A64A02 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/modulebase.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = modulebase.h; path = vendor/libnoise/include/noise/module/modulebase.h; sourceTree = SOURCE_ROOT; };
+		3A5C547522D844AAADCA7C04 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/perlin.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = perlin.cpp; path = vendor/libnoise/src/module/perlin.cpp; sourceTree = SOURCE_ROOT; };
+		3B090D4D676A4DF9A3436D25 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/turbulence.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = turbulence.h; path = vendor/libnoise/include/noise/module/turbulence.h; sourceTree = SOURCE_ROOT; };
+		3EB6A365E7F143BE95413FEB /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/min.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = min.h; path = vendor/libnoise/include/noise/module/min.h; sourceTree = SOURCE_ROOT; };
+		3F7339458415473F83CA027E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/latlon.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = latlon.h; path = vendor/libnoise/include/noise/latlon.h; sourceTree = SOURCE_ROOT; };
+		40052C74919944DC8D0AA75A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/rotatepoint.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = rotatepoint.cpp; path = vendor/libnoise/src/module/rotatepoint.cpp; sourceTree = SOURCE_ROOT; };
+		42E9DD1EFCFE4ED2A2BE7464 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/matrix.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = matrix.hpp; path = src/cgra/matrix.hpp; sourceTree = SOURCE_ROOT; };
+		449860DAD1D74C42A009FFD9 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/ridgedmulti.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ridgedmulti.cpp; path = vendor/libnoise/src/module/ridgedmulti.cpp; sourceTree = SOURCE_ROOT; };
+		459F74F20D3E4F2685D4F8DF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/displace.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = displace.h; path = vendor/libnoise/include/noise/module/displace.h; sourceTree = SOURCE_ROOT; };
+		4613D82C26CF4596AF7BBAF3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = vendor/glfw/src/input.c; sourceTree = SOURCE_ROOT; };
+		470C31067B1F44B2B3C7DAE3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/terrace.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = terrace.cpp; path = vendor/libnoise/src/module/terrace.cpp; sourceTree = SOURCE_ROOT; };
+		4A6ED0F53FD748838F5D332F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/scalepoint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = scalepoint.h; path = vendor/libnoise/include/noise/module/scalepoint.h; sourceTree = SOURCE_ROOT; };
+		4A9D1CFAC0064B1B9D6AEF40 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/interp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = interp.h; path = vendor/libnoise/include/noise/interp.h; sourceTree = SOURCE_ROOT; };
+		4B690AB6D90F4B9499B802E2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/add.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = add.h; path = vendor/libnoise/include/noise/module/add.h; sourceTree = SOURCE_ROOT; };
+		4E3D19F6D82541028F1544CC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		4F7465F7C9554F5AAD579FD4 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/line.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = line.h; path = vendor/libnoise/include/noise/model/line.h; sourceTree = SOURCE_ROOT; };
+		5008047605F64DAFA96F50FA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/terrace.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = terrace.h; path = vendor/libnoise/include/noise/module/terrace.h; sourceTree = SOURCE_ROOT; };
+		500AF84B758941798CCCB76B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/castle_generator.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = castle_generator.cpp; path = src/castle_generator.cpp; sourceTree = SOURCE_ROOT; };
+		505D23A9AE6140999D197972 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/perlin.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = perlin.h; path = vendor/libnoise/include/noise/module/perlin.h; sourceTree = SOURCE_ROOT; };
+		525680F838C341EDB287D1B6 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/posix_tls.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_tls.h; path = vendor/glfw/src/posix_tls.h; sourceTree = SOURCE_ROOT; };
+		53FC5D82A49748AE9F8159EA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/misc.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = misc.h; path = vendor/libnoise/include/noise/misc.h; sourceTree = SOURCE_ROOT; };
+		550CB597D539450CA224AEEF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/mesh.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = mesh.hpp; path = src/cgra/mesh.hpp; sourceTree = SOURCE_ROOT; };
+		556A42D9849D4A3CB320E8A2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/shader.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = shader.hpp; path = src/cgra/shader.hpp; sourceTree = SOURCE_ROOT; };
+		558CCB0EA8264BDAA3CCDC9B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/turbulence.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = turbulence.cpp; path = vendor/libnoise/src/module/turbulence.cpp; sourceTree = SOURCE_ROOT; };
+		560D7E8A20AC480CAA15C7ED /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/mach_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mach_time.c; path = vendor/glfw/src/mach_time.c; sourceTree = SOURCE_ROOT; };
+		567A91BEB5F1450591621495 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/sphere.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sphere.h; path = vendor/libnoise/include/noise/model/sphere.h; sourceTree = SOURCE_ROOT; };
+		5690E7C3431E467A80511224 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/displace.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = displace.cpp; path = vendor/libnoise/src/module/displace.cpp; sourceTree = SOURCE_ROOT; };
+		56DA42D9E268474ABFC11056 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/iokit_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = iokit_joystick.h; path = vendor/glfw/src/iokit_joystick.h; sourceTree = SOURCE_ROOT; };
+		57B4D7243E2441E7A18B3CE2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/multiply.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = multiply.cpp; path = vendor/libnoise/src/module/multiply.cpp; sourceTree = SOURCE_ROOT; };
+		57BA8A8911B84C05B3A277FC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/scalepoint.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = scalepoint.cpp; path = vendor/libnoise/src/module/scalepoint.cpp; sourceTree = SOURCE_ROOT; };
+		5850E806E44F4E17BCD34674 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/clamp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = clamp.h; path = vendor/libnoise/include/noise/module/clamp.h; sourceTree = SOURCE_ROOT; };
+		5A0D56BA66D34BCAB6CA9605 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/scalebias.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = scalebias.cpp; path = vendor/libnoise/src/module/scalebias.cpp; sourceTree = SOURCE_ROOT; };
+		5AD0E16F51564CECB59F0287 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/imgui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui.cpp; path = vendor/imgui/imgui.cpp; sourceTree = SOURCE_ROOT; };
+		5BBC5D02B63949C9BF3FB1CF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/cylinders.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cylinders.h; path = vendor/libnoise/include/noise/module/cylinders.h; sourceTree = SOURCE_ROOT; };
+		5BC9A970CAC34692ACD21C00 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/modulebase.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = modulebase.cpp; path = vendor/libnoise/src/module/modulebase.cpp; sourceTree = SOURCE_ROOT; };
+		5C30C48D60F14A98AEDA191B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/spheres.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = spheres.h; path = vendor/libnoise/include/noise/module/spheres.h; sourceTree = SOURCE_ROOT; };
+		5F859934358D463EAE6D0BAA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/multiply.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = multiply.h; path = vendor/libnoise/include/noise/module/multiply.h; sourceTree = SOURCE_ROOT; };
+		60520566C438409387AF46D2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/exponent.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = exponent.h; path = vendor/libnoise/include/noise/module/exponent.h; sourceTree = SOURCE_ROOT; };
+		629AAA965026475A9B649F3A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/noise/noise.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = noise.cpp; path = src/noise/noise.cpp; sourceTree = SOURCE_ROOT; };
+		63E3315229D7450EA7D3F7B1 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/power.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = power.cpp; path = vendor/libnoise/src/module/power.cpp; sourceTree = SOURCE_ROOT; };
+		6A9017D58AB3423B893C276B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/basictypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = basictypes.h; path = vendor/libnoise/include/noise/basictypes.h; sourceTree = SOURCE_ROOT; };
+		705E59529F36487789B3D8FC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/clamp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = clamp.cpp; path = vendor/libnoise/src/module/clamp.cpp; sourceTree = SOURCE_ROOT; };
+		7957E677AE4345B2BD657E7A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/imgui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = imgui.h; path = vendor/imgui/imgui.h; sourceTree = SOURCE_ROOT; };
+		7E960B8159B942ED862EBD31 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/translatepoint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = translatepoint.h; path = vendor/libnoise/include/noise/module/translatepoint.h; sourceTree = SOURCE_ROOT; };
+		7F01752E12754556A94786C8 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/imconfig.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = imconfig.h; path = vendor/imgui/imconfig.h; sourceTree = SOURCE_ROOT; };
+		824D06325AEE404194D5CD75 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/max.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = max.cpp; path = vendor/libnoise/src/module/max.cpp; sourceTree = SOURCE_ROOT; };
+		843CBF9658534F1E9342BED3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = vendor/glfw/src/cocoa_platform.h; sourceTree = SOURCE_ROOT; };
+		86CDDFF9AF384A66AE59E4C7 /* imgui */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libimgui.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		86DCEDD3098F47D491C4CA97 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/line.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = line.cpp; path = vendor/libnoise/src/model/line.cpp; sourceTree = SOURCE_ROOT; };
+		88FC227F991942E8BB96B156 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/voronoi.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = voronoi.cpp; path = vendor/libnoise/src/module/voronoi.cpp; sourceTree = SOURCE_ROOT; };
+		896202CD29114EB58563AA7B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = vendor/glfw/src/glfw_config.h; sourceTree = SOURCE_ROOT; };
+		8E94302FF939401FACBA5843 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = vendor/glfw/src/cocoa_monitor.m; sourceTree = SOURCE_ROOT; };
+		915346B8FE874FD4A0C50ED2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/const.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = const.cpp; path = vendor/libnoise/src/module/const.cpp; sourceTree = SOURCE_ROOT; };
+		95EBA8752AA54FC79B67B5CA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = vendor/glfw/src/nsgl_context.h; sourceTree = SOURCE_ROOT; };
+		986CDBBF176F427886EE169F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/plane.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = plane.cpp; path = vendor/libnoise/src/model/plane.cpp; sourceTree = SOURCE_ROOT; };
+		9891133E51A644198AB45181 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/cache.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cache.h; path = vendor/libnoise/include/noise/module/cache.h; sourceTree = SOURCE_ROOT; };
+		9921607A7553456D851E61CD /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/select.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = select.h; path = vendor/libnoise/include/noise/module/select.h; sourceTree = SOURCE_ROOT; };
+		9ADF5718460B41319F933FDA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = vendor/glfw/include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
+		9CFADBFCA5AB45A19BE08F66 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/castle_generator.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = castle_generator.hpp; path = src/castle_generator.hpp; sourceTree = SOURCE_ROOT; };
+		9D27EC04EA7A4EE88DCD0AE3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/triangulation/triangulation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = triangulation.cpp; path = src/triangulation/triangulation.cpp; sourceTree = SOURCE_ROOT; };
+		9D8FEB60A6214D88815B0762 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		A341F5D4292941A8864D7366 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/cylinders.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = cylinders.cpp; path = vendor/libnoise/src/module/cylinders.cpp; sourceTree = SOURCE_ROOT; };
+		A4AA65E24BA448D198C3E3F0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/voronoi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = voronoi.h; path = vendor/libnoise/include/noise/module/voronoi.h; sourceTree = SOURCE_ROOT; };
+		A4C62541889F4DD883D8CE13 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/src/glew.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glew.c; path = vendor/glew/src/glew.c; sourceTree = SOURCE_ROOT; };
+		A4D55FBF4E6945C192F110A9 /* glew */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglew.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4FEF617BAC3487091048282 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = vendor/glfw/src/context.c; sourceTree = SOURCE_ROOT; };
+		A5C6B32C47A246A698D72254 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/curve.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = curve.h; path = vendor/libnoise/include/noise/module/curve.h; sourceTree = SOURCE_ROOT; };
+		A63C2673A63340E0A95B977C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/posix_tls.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_tls.c; path = vendor/glfw/src/posix_tls.c; sourceTree = SOURCE_ROOT; };
+		A83C07589C2741D4ABBA29A1 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/cylinder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cylinder.h; path = vendor/libnoise/include/noise/model/cylinder.h; sourceTree = SOURCE_ROOT; };
+		A90359A5AED5491A93F0F4BC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/iokit_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = iokit_joystick.m; path = vendor/glfw/src/iokit_joystick.m; sourceTree = SOURCE_ROOT; };
+		A96583339FDE44DB9360F5BD /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/mathconsts.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mathconsts.h; path = vendor/libnoise/include/noise/mathconsts.h; sourceTree = SOURCE_ROOT; };
+		AD74EB820A044B9DAD767E4A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/const.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = const.h; path = vendor/libnoise/include/noise/module/const.h; sourceTree = SOURCE_ROOT; };
+		AD99E47FD0AA47D896D87CEF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/mesh_generator.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mesh_generator.cpp; path = src/mesh_generator.cpp; sourceTree = SOURCE_ROOT; };
+		B2569D3F6511424E9F35092D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = vendor/glfw/src/cocoa_init.m; sourceTree = SOURCE_ROOT; };
+		B2E38B4F50FE49D184B4AA67 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/imgui_internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = imgui_internal.h; path = vendor/imgui/imgui_internal.h; sourceTree = SOURCE_ROOT; };
+		B4257E6D62E741BFA4C15236 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/imgui_impl_glfw_gl3.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_impl_glfw_gl3.cpp; path = src/cgra/imgui_impl_glfw_gl3.cpp; sourceTree = SOURCE_ROOT; };
+		B6CB57FEB79F4F7EA318F563 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/select.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = select.cpp; path = vendor/libnoise/src/module/select.cpp; sourceTree = SOURCE_ROOT; };
+		B6D1819A7A1941BC9244C100 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/glew.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glew.h; path = vendor/glew/include/GL/glew.h; sourceTree = SOURCE_ROOT; };
+		B94763C4105945BE897054C0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/billow.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = billow.h; path = vendor/libnoise/include/noise/module/billow.h; sourceTree = SOURCE_ROOT; };
+		BAFB8C78B06A476BA20938F3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = vendor/glfw/include/GLFW/glfw3native.h; sourceTree = SOURCE_ROOT; };
+		BFECDF45EC9B4BD48CC478A1 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/latlon.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = latlon.cpp; path = vendor/libnoise/src/latlon.cpp; sourceTree = SOURCE_ROOT; };
+		C59E42529AC14613850BDBAC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/stb_textedit.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stb_textedit.h; path = vendor/imgui/stb_textedit.h; sourceTree = SOURCE_ROOT; };
+		C8523BADED444449A99EB4BF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/noise/noise.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = noise.hpp; path = src/noise/noise.hpp; sourceTree = SOURCE_ROOT; };
+		C8FB5010230F4BD5B4641536 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/noisegen.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = noisegen.cpp; path = vendor/libnoise/src/noisegen.cpp; sourceTree = SOURCE_ROOT; };
+		CA73566350AF469883851652 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/checkerboard.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = checkerboard.cpp; path = vendor/libnoise/src/module/checkerboard.cpp; sourceTree = SOURCE_ROOT; };
+		CDCBDE650D5D4976A1A03E7B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/power.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = power.h; path = vendor/libnoise/include/noise/module/power.h; sourceTree = SOURCE_ROOT; };
+		D24EAEE6A6B4439DB5A00D92 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = vendor/libnoise/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		D25696098075410997BC5945 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/mesh_generator.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = mesh_generator.hpp; path = src/mesh_generator.hpp; sourceTree = SOURCE_ROOT; };
+		D5E9A19AB8694562807B6B15 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/blend.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = blend.h; path = vendor/libnoise/include/noise/module/blend.h; sourceTree = SOURCE_ROOT; };
+		D7D2CFF840D8460B9A58D368 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/imgui_draw.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_draw.cpp; path = vendor/imgui/imgui_draw.cpp; sourceTree = SOURCE_ROOT; };
+		DB94A871FCD240F29DAC39FC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/blend.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = blend.cpp; path = vendor/libnoise/src/module/blend.cpp; sourceTree = SOURCE_ROOT; };
+		DEDA446D77464C3E9947BC05 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/noisegen.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = noisegen.h; path = vendor/libnoise/include/noise/noisegen.h; sourceTree = SOURCE_ROOT; };
+		DF9AE84EC7F94878A7C42550 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/exponent.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = exponent.cpp; path = vendor/libnoise/src/module/exponent.cpp; sourceTree = SOURCE_ROOT; };
+		DFACFF53553D4835BCF1BBC3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/imgui_impl_glfw_gl3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = imgui_impl_glfw_gl3.h; path = src/cgra/imgui_impl_glfw_gl3.h; sourceTree = SOURCE_ROOT; };
+		E1E9C550DA984695B7A035B0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/scalebias.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = scalebias.h; path = vendor/libnoise/include/noise/module/scalebias.h; sourceTree = SOURCE_ROOT; };
+		E574431D6D8F4A74954851EB /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = vendor/glfw/src/cocoa_window.m; sourceTree = SOURCE_ROOT; };
+		E85ADD9BE7754D6FBBB420AC /* Project_Polly */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = Project_Polly; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8F911FB9DD04853AFA1649C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/exception.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = exception.h; path = vendor/libnoise/include/noise/exception.h; sourceTree = SOURCE_ROOT; };
+		EB531E79D48843489208E445 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = vendor/glfw/src/nsgl_context.m; sourceTree = SOURCE_ROOT; };
+		EDBF53EF61D344B3B5FFBFF5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/max.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = max.h; path = vendor/libnoise/include/noise/module/max.h; sourceTree = SOURCE_ROOT; };
+		EFF075E6AA1346B0B212EA6C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = vendor/glfw/src/init.c; sourceTree = SOURCE_ROOT; };
+		F01DBBED84284A94A77A1F3D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/spheres.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = spheres.cpp; path = vendor/libnoise/src/module/spheres.cpp; sourceTree = SOURCE_ROOT; };
+		F0404166BCF4488EB01011CE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/invert.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = invert.cpp; path = vendor/libnoise/src/module/invert.cpp; sourceTree = SOURCE_ROOT; };
+		F2838F6CB0D0453CB95FB988 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/mesh.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mesh.cpp; path = src/cgra/mesh.cpp; sourceTree = SOURCE_ROOT; };
+		F3E1AD3C1DF34517B74F78B8 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = vendor/glfw/src/window.c; sourceTree = SOURCE_ROOT; };
+		F543DBC900D441F0A708D682 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/sphere.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = sphere.cpp; path = vendor/libnoise/src/model/sphere.cpp; sourceTree = SOURCE_ROOT; };
+		F5644C7BAA6B456E9741194B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = vendor/imgui/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		F7B9384885FF4CAD9A641F1F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/add.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = add.cpp; path = vendor/libnoise/src/module/add.cpp; sourceTree = SOURCE_ROOT; };
+		F8CFA02537E047DC9B0336D0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = vendor/glew/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		FD5D53DB7F264BFF9AA7C28B /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		12FAEC8FDB2246ACB6CF9071 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				6A9017D58AB3423B893C276B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/basictypes.h */,
+				E8F911FB9DD04853AFA1649C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/exception.h */,
+				4A9D1CFAC0064B1B9D6AEF40 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/interp.h */,
+				3F7339458415473F83CA027E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/latlon.h */,
+				A96583339FDE44DB9360F5BD /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/mathconsts.h */,
+				53FC5D82A49748AE9F8159EA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/misc.h */,
+				A83C07589C2741D4ABBA29A1 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/cylinder.h */,
+				4F7465F7C9554F5AAD579FD4 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/line.h */,
+				1E4EB0D0C978477B954E40AA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/model.h */,
+				11F19B4C48B948538B483CD3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/plane.h */,
+				567A91BEB5F1450591621495 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/sphere.h */,
+				08533F53E14A4888BE5BD208 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/abs.h */,
+				4B690AB6D90F4B9499B802E2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/add.h */,
+				B94763C4105945BE897054C0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/billow.h */,
+				D5E9A19AB8694562807B6B15 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/blend.h */,
+				9891133E51A644198AB45181 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/cache.h */,
+				1110B5E1568041F3AD151D0F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/checkerboard.h */,
+				5850E806E44F4E17BCD34674 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/clamp.h */,
+				AD74EB820A044B9DAD767E4A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/const.h */,
+				A5C6B32C47A246A698D72254 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/curve.h */,
+				5BBC5D02B63949C9BF3FB1CF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/cylinders.h */,
+				459F74F20D3E4F2685D4F8DF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/displace.h */,
+				60520566C438409387AF46D2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/exponent.h */,
+				34F5A948191A45A18C822297 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/invert.h */,
+				EDBF53EF61D344B3B5FFBFF5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/max.h */,
+				3EB6A365E7F143BE95413FEB /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/min.h */,
+				2BF179BADB104520B85703F5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/module.h */,
+				394F10715A4149FD91A64A02 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/modulebase.h */,
+				5F859934358D463EAE6D0BAA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/multiply.h */,
+				505D23A9AE6140999D197972 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/perlin.h */,
+				CDCBDE650D5D4976A1A03E7B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/power.h */,
+				33E2274D54684822880EFE18 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/ridgedmulti.h */,
+				1141AEE4D91F4FE9993E8478 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/rotatepoint.h */,
+				E1E9C550DA984695B7A035B0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/scalebias.h */,
+				4A6ED0F53FD748838F5D332F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/scalepoint.h */,
+				9921607A7553456D851E61CD /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/select.h */,
+				5C30C48D60F14A98AEDA191B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/spheres.h */,
+				5008047605F64DAFA96F50FA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/terrace.h */,
+				7E960B8159B942ED862EBD31 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/translatepoint.h */,
+				3B090D4D676A4DF9A3436D25 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/turbulence.h */,
+				A4AA65E24BA448D198C3E3F0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/voronoi.h */,
+				2CB95DA3ADA84BF0B90337D5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/noise.h */,
+				DEDA446D77464C3E9947BC05 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/noisegen.h */,
+				37535E743B344FC5A7072F83 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/vectortable.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		1732D99113154F928D44CE1A /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFECDF45EC9B4BD48CC478A1 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/latlon.cpp */,
+				1A49EFDF54FE4D69BF425918 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/cylinder.cpp */,
+				86DCEDD3098F47D491C4CA97 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/line.cpp */,
+				986CDBBF176F427886EE169F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/plane.cpp */,
+				F543DBC900D441F0A708D682 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/sphere.cpp */,
+				027689DAE4074C089CACAECD /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/abs.cpp */,
+				F7B9384885FF4CAD9A641F1F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/add.cpp */,
+				18A5A7368B9C47C69DCB57E9 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/billow.cpp */,
+				DB94A871FCD240F29DAC39FC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/blend.cpp */,
+				0F40FD725F8F474494BA4421 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/cache.cpp */,
+				CA73566350AF469883851652 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/checkerboard.cpp */,
+				705E59529F36487789B3D8FC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/clamp.cpp */,
+				915346B8FE874FD4A0C50ED2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/const.cpp */,
+				1EF8270FAA764530AE1AD3DC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/curve.cpp */,
+				A341F5D4292941A8864D7366 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/cylinders.cpp */,
+				5690E7C3431E467A80511224 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/displace.cpp */,
+				DF9AE84EC7F94878A7C42550 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/exponent.cpp */,
+				F0404166BCF4488EB01011CE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/invert.cpp */,
+				824D06325AEE404194D5CD75 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/max.cpp */,
+				23719FDA8FEA4287B4F52438 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/min.cpp */,
+				5BC9A970CAC34692ACD21C00 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/modulebase.cpp */,
+				57B4D7243E2441E7A18B3CE2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/multiply.cpp */,
+				3A5C547522D844AAADCA7C04 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/perlin.cpp */,
+				63E3315229D7450EA7D3F7B1 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/power.cpp */,
+				449860DAD1D74C42A009FFD9 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/ridgedmulti.cpp */,
+				40052C74919944DC8D0AA75A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/rotatepoint.cpp */,
+				5A0D56BA66D34BCAB6CA9605 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/scalebias.cpp */,
+				57BA8A8911B84C05B3A277FC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/scalepoint.cpp */,
+				B6CB57FEB79F4F7EA318F563 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/select.cpp */,
+				F01DBBED84284A94A77A1F3D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/spheres.cpp */,
+				470C31067B1F44B2B3C7DAE3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/terrace.cpp */,
+				300DAAC00FD34974B2B65A42 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/translatepoint.cpp */,
+				558CCB0EA8264BDAA3CCDC9B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/turbulence.cpp */,
+				88FC227F991942E8BB96B156 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/voronoi.cpp */,
+				C8FB5010230F4BD5B4641536 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/noisegen.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		1756A34A1E204606AB6AE980 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				A4C62541889F4DD883D8CE13 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/src/glew.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		1ED14AE4B79140DCB1B55D39 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F01752E12754556A94786C8 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/imconfig.h */,
+				7957E677AE4345B2BD657E7A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/imgui.h */,
+				B2E38B4F50FE49D184B4AA67 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/imgui_internal.h */,
+				C59E42529AC14613850BDBAC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/stb_textedit.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		3AB268861DA543469211761D /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		4A600A08CAFA4D50B7864EA5 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2569D3F6511424E9F35092D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_init.m */,
+				8E94302FF939401FACBA5843 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_monitor.m */,
+				E574431D6D8F4A74954851EB /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_window.m */,
+				A4FEF617BAC3487091048282 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/context.c */,
+				EFF075E6AA1346B0B212EA6C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/init.c */,
+				4613D82C26CF4596AF7BBAF3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/input.c */,
+				A90359A5AED5491A93F0F4BC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/iokit_joystick.m */,
+				560D7E8A20AC480CAA15C7ED /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/mach_time.c */,
+				14395BB32D824D32B9A46684 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/monitor.c */,
+				EB531E79D48843489208E445 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/nsgl_context.m */,
+				A63C2673A63340E0A95B977C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/posix_tls.c */,
+				F3E1AD3C1DF34517B74F78B8 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/window.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		5C471143BC9843EE8509F9E5 /* GLEW */ = {
+			isa = PBXGroup;
+			children = (
+				BC0A2ACBC76C44D7B95B3794 /* glew */,
+			);
+			name = GLEW;
+			sourceTree = "<group>";
+		};
+		5CDC832EBA314C9884B35F26 /* libnoise */ = {
+			isa = PBXGroup;
+			children = (
+				12FAEC8FDB2246ACB6CF9071 /* Header Files */,
+				1732D99113154F928D44CE1A /* Source Files */,
+				D24EAEE6A6B4439DB5A00D92 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/CMakeLists.txt */,
+			);
+			name = libnoise;
+			sourceTree = "<group>";
+		};
+		5D444BCB797845C29E00CFAC /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				3AB268861DA543469211761D /* CMake Rules */,
+				4E3D19F6D82541028F1544CC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		65E8B039E8FB4A8FA54EEDE2 /* glfw */ = {
+			isa = PBXGroup;
+			children = (
+				4A600A08CAFA4D50B7864EA5 /* Source Files */,
+				79A3D4399D5541559DBB5CA8 /* Header Files */,
+				29FB997FFA294DAB8B5ACDE3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/CMakeLists.txt */,
+			);
+			name = glfw;
+			sourceTree = "<group>";
+		};
+		7190CEE5E7D94194BB68F912 /* CGRA */ = {
+			isa = PBXGroup;
+			children = (
+				9A59821FB3254587B307E348 /* Project_Polly */,
+			);
+			name = CGRA;
+			sourceTree = "<group>";
+		};
+		79A3D4399D5541559DBB5CA8 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				9ADF5718460B41319F933FDA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include/GLFW/glfw3.h */,
+				BAFB8C78B06A476BA20938F3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include/GLFW/glfw3native.h */,
+				843CBF9658534F1E9342BED3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_platform.h */,
+				896202CD29114EB58563AA7B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/glfw_config.h */,
+				0747E7D4FB0D45AB8C92F37B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/internal.h */,
+				56DA42D9E268474ABFC11056 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/iokit_joystick.h */,
+				95EBA8752AA54FC79B67B5CA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/nsgl_context.h */,
+				525680F838C341EDB287D1B6 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/posix_tls.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		9359FD6B539D4DD5AB63C3C7 /* noise */ = {
+			isa = PBXGroup;
+			children = (
+				629AAA965026475A9B649F3A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/noise/noise.cpp */,
+				C8523BADED444449A99EB4BF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/noise/noise.hpp */,
+			);
+			name = noise;
+			sourceTree = "<group>";
+		};
+		9A59821FB3254587B307E348 /* Project_Polly */ = {
+			isa = PBXGroup;
+			children = (
+				9BC085CD66F64D8C8C532CC1 /* src */,
+				365827EC9A19409BB4AAA436 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/CMakeLists.txt */,
+			);
+			name = Project_Polly;
+			sourceTree = "<group>";
+		};
+		9BC085CD66F64D8C8C532CC1 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E22C1F208F634AC198F627A1 /* cgra */,
+				9359FD6B539D4DD5AB63C3C7 /* noise */,
+				D52AD29595D5401E95B85FC0 /* triangulation */,
+				500AF84B758941798CCCB76B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/castle_generator.cpp */,
+				9CFADBFCA5AB45A19BE08F66 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/castle_generator.hpp */,
+				005DB13CF868477699FE9384 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/ex1.cpp */,
+				10F5296A5F7F4A6E8FBFC989 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/ex1.hpp */,
+				9D8FEB60A6214D88815B0762 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/main.cpp */,
+				AD99E47FD0AA47D896D87CEF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/mesh_generator.cpp */,
+				D25696098075410997BC5945 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/mesh_generator.hpp */,
+				0448C72B14944EC6A42BEB83 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/opengl.hpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		B448283E958D4C23A0ECBEC3 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				B6D1819A7A1941BC9244C100 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/glew.h */,
+				16590133AFD84EA7BE04E3FE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/glxew.h */,
+				0CC86969586C4D36AD83B046 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include/GL/wglew.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		BC0A2ACBC76C44D7B95B3794 /* glew */ = {
+			isa = PBXGroup;
+			children = (
+				B448283E958D4C23A0ECBEC3 /* Header Files */,
+				1756A34A1E204606AB6AE980 /* Source Files */,
+				F8CFA02537E047DC9B0336D0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/CMakeLists.txt */,
+			);
+			name = glew;
+			sourceTree = "<group>";
+		};
+		BF548022E6694BBD8E3F93AE = {
+			isa = PBXGroup;
+			children = (
+				5D444BCB797845C29E00CFAC /* ALL_BUILD */,
+				5C471143BC9843EE8509F9E5 /* GLEW */,
+				C4361002876D4A53B65C02ED /* GLFW3 */,
+				CDA6F81FFED34D34BBC915C5 /* imgui */,
+				5CDC832EBA314C9884B35F26 /* libnoise */,
+				7190CEE5E7D94194BB68F912 /* CGRA */,
+				E58AAD215B3E4C509AB85224 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C4361002876D4A53B65C02ED /* GLFW3 */ = {
+			isa = PBXGroup;
+			children = (
+				65E8B039E8FB4A8FA54EEDE2 /* glfw */,
+			);
+			name = GLFW3;
+			sourceTree = "<group>";
+		};
+		CBC08344C71C4C139A002D01 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				5AD0E16F51564CECB59F0287 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/imgui.cpp */,
+				D7D2CFF840D8460B9A58D368 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/imgui_draw.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		CDA6F81FFED34D34BBC915C5 /* imgui */ = {
+			isa = PBXGroup;
+			children = (
+				1ED14AE4B79140DCB1B55D39 /* Header Files */,
+				CBC08344C71C4C139A002D01 /* Source Files */,
+				F5644C7BAA6B456E9741194B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/CMakeLists.txt */,
+			);
+			name = imgui;
+			sourceTree = "<group>";
+		};
+		D52AD29595D5401E95B85FC0 /* triangulation */ = {
+			isa = PBXGroup;
+			children = (
+				2D3335AE1E28442D9EF83665 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/triangulation/delaunator.hpp */,
+				9D27EC04EA7A4EE88DCD0AE3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/triangulation/triangulation.cpp */,
+				1A10EC34067742A5B5F15D6E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/triangulation/triangulation.hpp */,
+			);
+			name = triangulation;
+			sourceTree = "<group>";
+		};
+		E22C1F208F634AC198F627A1 /* cgra */ = {
+			isa = PBXGroup;
+			children = (
+				B4257E6D62E741BFA4C15236 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/imgui_impl_glfw_gl3.cpp */,
+				DFACFF53553D4835BCF1BBC3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/imgui_impl_glfw_gl3.h */,
+				42E9DD1EFCFE4ED2A2BE7464 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/matrix.hpp */,
+				F2838F6CB0D0453CB95FB988 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/mesh.cpp */,
+				550CB597D539450CA224AEEF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/mesh.hpp */,
+				26ADC78CEFE142A7B3F73FC9 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/shader.cpp */,
+				556A42D9849D4A3CB320E8A2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/shader.hpp */,
+				0BA3EE22FDDE43E8928C5B1C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/wavefront.cpp */,
+				0F468476984B4B63A9F7833E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/wavefront.hpp */,
+			);
+			name = cgra;
+			sourceTree = "<group>";
+		};
+		E58AAD215B3E4C509AB85224 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4D55FBF4E6945C192F110A9 /* glew */,
+				FD5D53DB7F264BFF9AA7C28B /* glfw */,
+				86CDDFF9AF384A66AE59E4C7 /* imgui */,
+				17833C38CE1B47C187288A1F /* libnoise */,
+				E85ADD9BE7754D6FBBB420AC /* Project_Polly */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07A25BD783044B37A2967C3F /* Project_Polly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 131A1DDA2C0E4487A55B6749 /* Build configuration list for PBXNativeTarget "Project_Polly" */;
+			buildPhases = (
+				2AB65BF065A94D34A1EB864D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF3D18801D464AEFA72C9585 /* PBXTargetDependency */,
+				582DE87F376B429381395290 /* PBXTargetDependency */,
+				44397B7D3D4D4FDD81C313F6 /* PBXTargetDependency */,
+				A7D3EF7DD4734D1AB7B9E901 /* PBXTargetDependency */,
+			);
+			name = Project_Polly;
+			productName = Project_Polly;
+			productReference = E85ADD9BE7754D6FBBB420AC /* Project_Polly */;
+			productType = "com.apple.product-type.tool";
+		};
+		A0B4A6AB431B4521932D9870 /* glew */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30297A56D91742EF94930C0D /* Build configuration list for PBXNativeTarget "glew" */;
+			buildPhases = (
+				0A957D6D51474FD49115E29B /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = glew;
+			productName = glew;
+			productReference = A4D55FBF4E6945C192F110A9 /* glew */;
+			productType = "com.apple.product-type.library.static";
+		};
+		ACB080564AD4435EA3AE3968 /* imgui */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F845D65F6F2D4BB39F630502 /* Build configuration list for PBXNativeTarget "imgui" */;
+			buildPhases = (
+				51F3BB1E380B4381920EF1B6 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = imgui;
+			productName = imgui;
+			productReference = 86CDDFF9AF384A66AE59E4C7 /* imgui */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E78C660D210049318A072685 /* libnoise */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A949D747C34C4B9A94C6B20C /* Build configuration list for PBXNativeTarget "libnoise" */;
+			buildPhases = (
+				29B6F85603F44737AD61BCA7 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libnoise;
+			productName = libnoise;
+			productReference = 17833C38CE1B47C187288A1F /* libnoise */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FB42494FC7514D1EA4B70390 /* glfw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2B5CD35F08043D58066FED9 /* Build configuration list for PBXNativeTarget "glfw" */;
+			buildPhases = (
+				1437DA6388FA4ADA845EB8AB /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = glfw;
+			productName = glfw;
+			productReference = FD5D53DB7F264BFF9AA7C28B /* glfw */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8059B0E9C1854923A87BB854 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1000;
+			};
+			buildConfigurationList = 9B1AF4F8B43F4C9997C3034E /* Build configuration list for PBXProject "Project_Polly" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				5A08564F68F5482BBEAAB3EE /* Debug */,
+				6C9F43411E86414787FA9605 /* Release */,
+				7774A6077B20428AB22D8428 /* MinSizeRel */,
+				5D0D248C3E6A4D1A8F2E36A2 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = BF548022E6694BBD8E3F93AE;
+			projectDirPath = .;
+			projectRoot = "";
+			targets = (
+				16ACFB9BBFAA4F928A112043 /* ALL_BUILD */,
+				5AA7CDC57A764CED8051F809 /* ZERO_CHECK */,
+				568025DB61DB4430B9B3D3D9 /* install */,
+				A0B4A6AB431B4521932D9870 /* glew */,
+				FB42494FC7514D1EA4B70390 /* glfw */,
+				ACB080564AD4435EA3AE3968 /* imgui */,
+				E78C660D210049318A072685 /* libnoise */,
+				07A25BD783044B37A2967C3F /* Project_Polly */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		177F009AE8A140BF8F0DC8AF /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/kathleen/Desktop/projectPolly/Project_Polly -f /Users/kathleen/Desktop/projectPolly/Project_Polly/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		3BBC80DE38E94643BF31851F = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		60F86305BDEC473088BC39D5 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		73EF03A66556444C8D3421DE /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/kathleen/Desktop/projectPolly/Project_Polly -f /Users/kathleen/Desktop/projectPolly/Project_Polly/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		91DC07668569455C96160B33 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		D53BE6550C4C40B585F73D5F /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/kathleen/Desktop/projectPolly/Project_Polly -f /Users/kathleen/Desktop/projectPolly/Project_Polly/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A957D6D51474FD49115E29B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5A00A4D8DE248BF8092BE2B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/src/glew.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1437DA6388FA4ADA845EB8AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ACB9A5669CB401FA4CCF82D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_init.m */,
+				5DBF636D4DA247D9860B71DD /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_monitor.m */,
+				13A26BFB6AA741FF9993710F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/cocoa_window.m */,
+				A919CAD0454045118FCFF22E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/context.c */,
+				B5FAAD69949243ED89C03EF5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/init.c */,
+				6F5F6EEE0AA044B3B6CF646B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/input.c */,
+				33DF3610F22640A79845445B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/iokit_joystick.m */,
+				855D32812AE1429FB7E32DF7 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/mach_time.c */,
+				D758B12A9DBF491494FBBECE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/monitor.c */,
+				0E206294EA72411AB007FB4E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/nsgl_context.m */,
+				BB2D349E89554D70A6D53AEE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/posix_tls.c */,
+				C469B878F07748D49BCFE46F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src/window.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29B6F85603F44737AD61BCA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				647C98812477460F86A2AE44 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/latlon.cpp */,
+				F040142B338946A1A321B031 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/cylinder.cpp */,
+				24FD309400E0414B987E9EC4 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/line.cpp */,
+				1918A5111F8047F092BD518C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/plane.cpp */,
+				D6E0315069EC4911A036F492 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/sphere.cpp */,
+				FAA832E4F85B4A8D8D2B94C5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/abs.cpp */,
+				8CCE942B613D41F688AE751F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/add.cpp */,
+				7C45476060FA4389AF1962AC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/billow.cpp */,
+				F4A19552A3454D8490BA3D01 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/blend.cpp */,
+				D5BE4DED54AE48EDA981F43D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/cache.cpp */,
+				E2C0DF27A6FF4714B124FA7C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/checkerboard.cpp */,
+				8252DFEC48774F46A246FE81 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/clamp.cpp */,
+				DE99FE396F59475781308F48 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/const.cpp */,
+				01B78BA2E07C486FA41505A2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/curve.cpp */,
+				4B4F4508EAE441AFA544608F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/cylinders.cpp */,
+				600F13D85241427C9B733F49 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/displace.cpp */,
+				8D47344B000A4E0ABA6017D0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/exponent.cpp */,
+				38F51F37CE8543D29DC5C114 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/invert.cpp */,
+				56EECC20F0544FEEAE837CBB /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/max.cpp */,
+				BA4032FF9F7C4593882944CB /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/min.cpp */,
+				AC14A8004AE949599B4D4700 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/modulebase.cpp */,
+				58739EB1CD504C03962E59AE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/multiply.cpp */,
+				C45913BD692A43559A6BBBAE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/perlin.cpp */,
+				5E15626037D24436936D9D64 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/power.cpp */,
+				3AF3D381BA504FCA9E92D25B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/ridgedmulti.cpp */,
+				51C9BD3BC156431395C98C6D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/rotatepoint.cpp */,
+				8952F7538DA64A629AB4072B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/scalebias.cpp */,
+				63B6612E880F46CDA31C2736 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/scalepoint.cpp */,
+				0A48171516704F69959451E1 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/select.cpp */,
+				A9609D2534534407A23022BC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/spheres.cpp */,
+				72ADA2EEC05941EF8FDC301A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/terrace.cpp */,
+				F6FC8F503DFD4D8EB161D593 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/translatepoint.cpp */,
+				D74C1F42517B448EB276A027 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/turbulence.cpp */,
+				68027F69EE094F97AB0991EB /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/voronoi.cpp */,
+				58EDEAE29B5A4C6BB8E54B60 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/noisegen.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AB65BF065A94D34A1EB864D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A11164FBD72C4DF9B45AD9AB /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/castle_generator.cpp */,
+				7E7667BE5DAA46909D428451 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/imgui_impl_glfw_gl3.cpp */,
+				CB7DB376D9624C98A00C2A7E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/mesh.cpp */,
+				7DD441FACB7543E886778550 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/shader.cpp */,
+				DA88EFE21AC4407AB0DE1916 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/cgra/wavefront.cpp */,
+				981F604E92CD4AF0B2F8B967 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/ex1.cpp */,
+				8B1D12D34AEA4B19A6AA1BC3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/main.cpp */,
+				0C63FBA9B9224A0E802BFFB1 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/mesh_generator.cpp */,
+				724485E359A8448AB06EDBD0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/noise/noise.cpp */,
+				E2CFF711EAE744F791D76D30 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/src/triangulation/triangulation.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51F3BB1E380B4381920EF1B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BA0CFF3C137415FBAAFDD0B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/imgui.cpp */,
+				47CC1B338EC34A8AA10BA225 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui/imgui_draw.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1703C8A8B6FD48BF918C089A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AA7CDC57A764CED8051F809 /* ZERO_CHECK */;
+			targetProxy = 854DC89304534837B2F76498 /* PBXContainerItemProxy */;
+		};
+		44397B7D3D4D4FDD81C313F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACB080564AD4435EA3AE3968 /* imgui */;
+			targetProxy = 3DFF914D6F9F4EFE82825024 /* PBXContainerItemProxy */;
+		};
+		55787A4C2888446792EE82B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07A25BD783044B37A2967C3F /* Project_Polly */;
+			targetProxy = 5ED551FBE22D4EF29F8513F8 /* PBXContainerItemProxy */;
+		};
+		582DE87F376B429381395290 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB42494FC7514D1EA4B70390 /* glfw */;
+			targetProxy = D228BCBECC77426FAEFD66E6 /* PBXContainerItemProxy */;
+		};
+		787B43338347453F8C42A1F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16ACFB9BBFAA4F928A112043 /* ALL_BUILD */;
+			targetProxy = 26A97168B40E44C98F526484 /* PBXContainerItemProxy */;
+		};
+		A2D4B1BFDE6F487186FF5433 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E78C660D210049318A072685 /* libnoise */;
+			targetProxy = 2631910378E548F3AE0EF932 /* PBXContainerItemProxy */;
+		};
+		A7D3EF7DD4734D1AB7B9E901 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E78C660D210049318A072685 /* libnoise */;
+			targetProxy = E4C772EF150A4BFBBB582A20 /* PBXContainerItemProxy */;
+		};
+		C438EE560CD44D39B0130654 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACB080564AD4435EA3AE3968 /* imgui */;
+			targetProxy = 5F1E1B88718A4D44A9635591 /* PBXContainerItemProxy */;
+		};
+		CF3D18801D464AEFA72C9585 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0B4A6AB431B4521932D9870 /* glew */;
+			targetProxy = EF341EAD18AF40C0A95E4162 /* PBXContainerItemProxy */;
+		};
+		E3558EDA2BC04E398FFB417A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB42494FC7514D1EA4B70390 /* glfw */;
+			targetProxy = 59C68D92DC1349988B1FA68C /* PBXContainerItemProxy */;
+		};
+		EA37BE42BD8C4916848CB3B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0B4A6AB431B4521932D9870 /* glew */;
+			targetProxy = B32D46A64E1143CDB87D5229 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		07F844BA3BC947E38BFBEFBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/build;
+			};
+			name = Release;
+		};
+		08D056A50D1A43ADBCF8909E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/RelWithDebInfo;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -w         ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		1774B13A877A42E19BC8979A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		1D2D3841A70548448CF674D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/build;
+			};
+			name = Debug;
+		};
+		1DACF0EE8DAB43C1A8D49CA3 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/MinSizeRel;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","'CGRA_SRCDIR=\"/Users/kathleen/Desktop/projectPolly/Project_Polly\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/src,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glm,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = " -std=c++1y -fno-operator-names -Wall -Wextra -pedantic -Woverloaded-virtual -Werror=format-security -Werror=return-type     -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -framework OpenGL -framework OpenGL /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/MinSizeRel/libglfw3.a -framework Cocoa -framework OpenGL -framework IOKit -framework CoreFoundation -framework CoreVideo /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/MinSizeRel/libglew.a  /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/MinSizeRel/libimgui.a /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/MinSizeRel/liblibnoise.a -framework OpenGL";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Project_Polly;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		1FE7B78989ED42468620ED28 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/build;
+			};
+			name = RelWithDebInfo;
+		};
+		23A5736F74124F558976C486 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		339DA9EB5B124D1682D1428C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		3FD66F38B52F4E37A8FC502A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/MinSizeRel;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++1y -fno-operator-names -Wall -Wextra -pedantic -Woverloaded-virtual -Werror=format-security -Werror=return-type     -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libnoise;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		488A909495484E8E939DCD72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Debug;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++1y -fno-operator-names -Wall -Wextra -pedantic -Woverloaded-virtual -Werror=format-security -Werror=return-type         ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libnoise;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		4C74A7C89BD24F3DA9BDD62D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		5185F558458B4B7EB0A7CE40 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/RelWithDebInfo;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++1y -fno-operator-names -Wall -Wextra -pedantic -Woverloaded-virtual -Werror=format-security -Werror=return-type         ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libnoise;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		532C48E0500B4C7BA11667C8 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/RelWithDebInfo;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","'CGRA_SRCDIR=\"/Users/kathleen/Desktop/projectPolly/Project_Polly\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/src,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glm,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = " -std=c++1y -fno-operator-names -Wall -Wextra -pedantic -Woverloaded-virtual -Werror=format-security -Werror=return-type         ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -framework OpenGL -framework OpenGL /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/RelWithDebInfo/libglfw3.a -framework Cocoa -framework OpenGL -framework IOKit -framework CoreFoundation -framework CoreVideo /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/RelWithDebInfo/libglew.a  /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/RelWithDebInfo/libimgui.a /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/RelWithDebInfo/liblibnoise.a -framework OpenGL";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Project_Polly;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		53E7046AEDBA4C3DAF316609 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		77D67FB550D941D5A5B07E10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		836FFD1A2FFB4C248C226F99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		8D2E2595BAD545118ED654FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Release;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","'CGRA_SRCDIR=\"/Users/kathleen/Desktop/projectPolly/Project_Polly\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/src,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glm,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = " -std=c++1y -fno-operator-names -Wall -Wextra -pedantic -Woverloaded-virtual -Werror=format-security -Werror=return-type     -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -framework OpenGL -framework OpenGL /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Release/libglfw3.a -framework Cocoa -framework OpenGL -framework IOKit -framework CoreFoundation -framework CoreVideo /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Release/libglew.a  /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Release/libimgui.a /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Release/liblibnoise.a -framework OpenGL";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Project_Polly;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		986FC51F925D47DD8F5E395D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Debug;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","'CGRA_SRCDIR=\"/Users/kathleen/Desktop/projectPolly/Project_Polly\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/src,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glm,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = " -std=c++1y -fno-operator-names -Wall -Wextra -pedantic -Woverloaded-virtual -Werror=format-security -Werror=return-type         ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -framework OpenGL -framework OpenGL /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Debug/libglfw3.a -framework Cocoa -framework OpenGL -framework IOKit -framework CoreFoundation -framework CoreVideo /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Debug/libglew.a  /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Debug/libimgui.a /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Debug/liblibnoise.a -framework OpenGL";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Project_Polly;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		9D472924C5364BA8BB2504F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Debug;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -w         ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		9F69C0BE5DBD4B36B6824CC9 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		A1C0FE17801448398BD12B9F /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/RelWithDebInfo;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++1y -fno-operator-names -Wall -Wextra -pedantic -Woverloaded-virtual -Werror=format-security -Werror=return-type         ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = imgui;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		A3351C423460413A8FA648EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Debug;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -w        -fPIC   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		A66570B8992D43818B724B81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		ACB887D2A1B84796A67227AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Release;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -w     -DNDEBUG -fPIC   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		C4925341724E4DD2B44D2C3B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/MinSizeRel;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -w     -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		C591A24B28D7477B87CA63AD /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/build;
+			};
+			name = MinSizeRel;
+		};
+		C9FAE2EA13FA4ED6A55F8EAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Release;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++1y -fno-operator-names -Wall -Wextra -pedantic -Woverloaded-virtual -Werror=format-security -Werror=return-type     -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = imgui;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		CD3B20225B6740E5B7D48866 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/RelWithDebInfo;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -w        -fPIC   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		D377ACDE555B4A8AA3D0C06E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Release;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew/include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -w     -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		DAD8C7721A1E47DB99C06835 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		E07F54ACF282411D8E763841 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/MinSizeRel;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -w     -DNDEBUG -fPIC   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		E982723472B243389A6EA62C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Release;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++1y -fno-operator-names -Wall -Wextra -pedantic -Woverloaded-virtual -Werror=format-security -Werror=return-type     -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libnoise;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		EC58F46396E44973B4EFA1EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Debug;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++1y -fno-operator-names -Wall -Wextra -pedantic -Woverloaded-virtual -Werror=format-security -Werror=return-type         ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = imgui;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		ECF4D8F6DEDC4B50824D09ED /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		EFCA69D6EA6F4767B8F45846 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		F6463CC5160441658F6AC0E3 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/MinSizeRel;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++1y -fno-operator-names -Wall -Wextra -pedantic -Woverloaded-virtual -Werror=format-security -Werror=return-type     -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = imgui;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/imgui;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		131A1DDA2C0E4487A55B6749 /* Build configuration list for PBXNativeTarget "Project_Polly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				986FC51F925D47DD8F5E395D /* Debug */,
+				8D2E2595BAD545118ED654FB /* Release */,
+				1DACF0EE8DAB43C1A8D49CA3 /* MinSizeRel */,
+				532C48E0500B4C7BA11667C8 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		30297A56D91742EF94930C0D /* Build configuration list for PBXNativeTarget "glew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D472924C5364BA8BB2504F6 /* Debug */,
+				D377ACDE555B4A8AA3D0C06E /* Release */,
+				C4925341724E4DD2B44D2C3B /* MinSizeRel */,
+				08D056A50D1A43ADBCF8909E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9B1AF4F8B43F4C9997C3034E /* Build configuration list for PBXProject "Project_Polly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D2D3841A70548448CF674D1 /* Debug */,
+				07F844BA3BC947E38BFBEFBF /* Release */,
+				C591A24B28D7477B87CA63AD /* MinSizeRel */,
+				1FE7B78989ED42468620ED28 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9FC85169BA664153A17B5BA3 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				339DA9EB5B124D1682D1428C /* Debug */,
+				77D67FB550D941D5A5B07E10 /* Release */,
+				53E7046AEDBA4C3DAF316609 /* MinSizeRel */,
+				4C74A7C89BD24F3DA9BDD62D /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A949D747C34C4B9A94C6B20C /* Build configuration list for PBXNativeTarget "libnoise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				488A909495484E8E939DCD72 /* Debug */,
+				E982723472B243389A6EA62C /* Release */,
+				3FD66F38B52F4E37A8FC502A /* MinSizeRel */,
+				5185F558458B4B7EB0A7CE40 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B2B5CD35F08043D58066FED9 /* Build configuration list for PBXNativeTarget "glfw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3351C423460413A8FA648EF /* Debug */,
+				ACB887D2A1B84796A67227AD /* Release */,
+				E07F54ACF282411D8E763841 /* MinSizeRel */,
+				CD3B20225B6740E5B7D48866 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C01B63AB729141D0AC7C33E3 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1774B13A877A42E19BC8979A /* Debug */,
+				A66570B8992D43818B724B81 /* Release */,
+				23A5736F74124F558976C486 /* MinSizeRel */,
+				ECF4D8F6DEDC4B50824D09ED /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E045F1DAF4924968846D5898 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				836FFD1A2FFB4C248C226F99 /* Debug */,
+				DAD8C7721A1E47DB99C06835 /* Release */,
+				9F69C0BE5DBD4B36B6824CC9 /* MinSizeRel */,
+				EFCA69D6EA6F4767B8F45846 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F845D65F6F2D4BB39F630502 /* Build configuration list for PBXNativeTarget "imgui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC58F46396E44973B4EFA1EB /* Debug */,
+				C9FAE2EA13FA4ED6A55F8EAF /* Release */,
+				F6463CC5160441658F6AC0E3 /* MinSizeRel */,
+				A1C0FE17801448398BD12B9F /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8059B0E9C1854923A87BB854 /* Project object */;
+}

@@ -19,6 +19,8 @@ class CastleGenerator {
 
 		// Initialization of castle generation starts here.
 		void init();
+        void generateSpace();
+        void generateKeep(glm::vec3, glm::vec3, glm::vec3, glm::vec3);
 
 	public:
 		// Empty constructor.

@@ -37,6 +37,7 @@ void Application::init() {
 	// Generate the terrain
 	m_meshGenerator = MeshGenerator(20, 20, 3);
 	m_terrain_meshes = m_meshGenerator.generateMeshes();
+    m_castleGenerator = CastleGenerator(glm::vec3(-10, 0, -10),glm::vec3(10, 0, -10),glm::vec3(-10, 0, 10),glm::vec3(10, 0, 10));
 }
 
 void Application::loadObj(const char *filename) {

@@ -1,0 +1,1057 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		16ACFB9BBFAA4F928A112043 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 20613B5124CB406B923F0FE7 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				15FE898166C8419198DCE598 /* CMake Rules */,
+			);
+			dependencies = (
+				97D87E3F231D499796258A20 /* PBXTargetDependency */,
+				574C070E5D2648EA95F8C0A1 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		568025DB61DB4430B9B3D3D9 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 58189A43815147E1AFB125E7 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				D76769FE9A684FC6B1D6A109 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				A19D98946AF04B0FBCB9FEDB /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		5AA7CDC57A764CED8051F809 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 87994AF4835A41AC93519763 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				3EF69903C6674AAE9AA280E8 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		05A7B8328AE541CAA41A8712 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/perlin.h */ = {isa = PBXBuildFile; fileRef = 853AEADCD58D4472A8E718C6 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/perlin.h */; };
+		0806A5E98FBD458F94FEC660 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/select.cpp */ = {isa = PBXBuildFile; fileRef = 7982D65A1239418AAA7CDC78 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/select.cpp */; };
+		0AE85171FFF94860BA6712FE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/abs.h */ = {isa = PBXBuildFile; fileRef = 677EBCDF12754FEAAA7ECD6B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/abs.h */; };
+		0B4AB976B2394496BCEFD97A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/exponent.cpp */ = {isa = PBXBuildFile; fileRef = 047FFA10D885407DB55A5320 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/exponent.cpp */; };
+		0FE866CE1715493CB394EE80 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/blend.cpp */ = {isa = PBXBuildFile; fileRef = D699ED0FD43F4694A271528D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/blend.cpp */; };
+		12BE0AC3D4A048568902BEE3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/misc.h */ = {isa = PBXBuildFile; fileRef = F73B0A5C4ADA49A081BFFBA5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/misc.h */; };
+		138807CCB18540FC80F07456 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/line.cpp */ = {isa = PBXBuildFile; fileRef = 9EEAAA3D77F842CDBFE80B31 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/line.cpp */; };
+		17BFC4ABAB96453A97E21E26 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/latlon.cpp */ = {isa = PBXBuildFile; fileRef = 3BED69D236C34B3B91234DF5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/latlon.cpp */; };
+		1825A7AB2D874346ABA6534E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/ridgedmulti.h */ = {isa = PBXBuildFile; fileRef = 217F4CF38F294C6E8FFB144E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/ridgedmulti.h */; };
+		19D4FD6DCB024D61B06375E9 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/modulebase.cpp */ = {isa = PBXBuildFile; fileRef = 88D5A09CE17740AD99AB8F0E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/modulebase.cpp */; };
+		1A22D60517A7494691CB2107 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/exponent.h */ = {isa = PBXBuildFile; fileRef = A2B195CD1047404D8E05E3B2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/exponent.h */; };
+		1A3133609CA446E38618A875 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/cache.cpp */ = {isa = PBXBuildFile; fileRef = A6A5C5CC4A004882B0F69BD5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/cache.cpp */; };
+		1B0D8151BC2246B9B55C4F8A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/model.h */ = {isa = PBXBuildFile; fileRef = 441CA4BBAEB0410DACE582BE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/model.h */; };
+		1E6F146A4FB148DD8AC0851D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/multiply.h */ = {isa = PBXBuildFile; fileRef = A1ABEE3FB10C43C1B96E0B6D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/multiply.h */; };
+		2406C78C5140404FB56A6596 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/spheres.cpp */ = {isa = PBXBuildFile; fileRef = E56B080180E34FC38B8E0BC0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/spheres.cpp */; };
+		2445358BF88245C4B01874CB /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/voronoi.cpp */ = {isa = PBXBuildFile; fileRef = 2D3313580D2243CB95D671CE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/voronoi.cpp */; };
+		2504FA9896334466B5DBEECE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/invert.cpp */ = {isa = PBXBuildFile; fileRef = 4AB519C5D7E142DC900927AE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/invert.cpp */; };
+		26C6E6D71CC94ACA89EF323C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/invert.h */ = {isa = PBXBuildFile; fileRef = 4D784220C9DF4DCFAF7C0356 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/invert.h */; };
+		2936B96AAF9B422FB9482457 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/plane.h */ = {isa = PBXBuildFile; fileRef = 51D68DB130E742A596A663D8 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/plane.h */; };
+		2C6D52DBD9D44B58B5C0C57C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/blend.h */ = {isa = PBXBuildFile; fileRef = 426830FE77FF4BDEBA097BC5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/blend.h */; };
+		33EF0EDC475E4591917358C1 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/vectortable.h */ = {isa = PBXBuildFile; fileRef = 4FBC9333424143B4B02AEB27 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/vectortable.h */; };
+		3496050952EA4911BFE64C1B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/abs.cpp */ = {isa = PBXBuildFile; fileRef = 133B63946FB945FD85F11A53 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/abs.cpp */; };
+		3569D1EB907F46DD978555EB /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/checkerboard.cpp */ = {isa = PBXBuildFile; fileRef = 8047258E94884DF39B01D41B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/checkerboard.cpp */; };
+		35CCF8CABF2145C4A864E5D1 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/power.h */ = {isa = PBXBuildFile; fileRef = 600DA39CB98A475A81F67883 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/power.h */; };
+		3E4A15673DAF468FB60B7C1A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/scalepoint.h */ = {isa = PBXBuildFile; fileRef = B8718A6ECDD947019539CF94 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/scalepoint.h */; };
+		3FA38834CABA4D6EB843E056 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/add.h */ = {isa = PBXBuildFile; fileRef = 5D8D66E6919B4ABFAA4D9769 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/add.h */; };
+		45AA8828DBEA4B83BD1685CC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/rotatepoint.cpp */ = {isa = PBXBuildFile; fileRef = 459A62153A444A0A9CEF7CD3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/rotatepoint.cpp */; };
+		48DF3EDB087A42DE93BA88F5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/exception.h */ = {isa = PBXBuildFile; fileRef = 773B8ACC44B74D20AAB1ED74 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/exception.h */; };
+		4C602C533868451AB9842824 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/terrace.cpp */ = {isa = PBXBuildFile; fileRef = 1CD2012AF8F64D1E8266663D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/terrace.cpp */; };
+		4E523A7A4F0943059F96900B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/cylinders.cpp */ = {isa = PBXBuildFile; fileRef = F85EC77936774A9EACCD1631 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/cylinders.cpp */; };
+		4EA67F5988D94CCB9F1B39AF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/min.cpp */ = {isa = PBXBuildFile; fileRef = 02BEECEAE9754460898FCFD3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/min.cpp */; };
+		5037B1F66092422A9D5DF2D1 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/multiply.cpp */ = {isa = PBXBuildFile; fileRef = 8DB88570E03D4E7F93A5EB3D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/multiply.cpp */; };
+		50A4C365EC3149D19CB6A89F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/max.cpp */ = {isa = PBXBuildFile; fileRef = F1CD556E0BE44E8B8E6AF62F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/max.cpp */; };
+		536D5718E0FD4CF4B80883EC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/modulebase.h */ = {isa = PBXBuildFile; fileRef = ABDCDC35631A44C381FBB3BE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/modulebase.h */; };
+		5D1A23958CA440A18A5BDA99 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/displace.cpp */ = {isa = PBXBuildFile; fileRef = A5A0AE5DC5CE433DAD891329 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/displace.cpp */; };
+		62063E29029342E79E69F67D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/mathconsts.h */ = {isa = PBXBuildFile; fileRef = 49FD02058ED94EF693C6AF29 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/mathconsts.h */; };
+		66DB146686E44EFE8FB81D5C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/basictypes.h */ = {isa = PBXBuildFile; fileRef = A5D7D93CE5924EFD9B1F3C4E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/basictypes.h */; };
+		690FE4F4743B4763B9579943 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/noise.h */ = {isa = PBXBuildFile; fileRef = ACB42E165EC34D48811A9AC8 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/noise.h */; };
+		6ACADF38532D4A51A61B1576 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/latlon.h */ = {isa = PBXBuildFile; fileRef = A56AFF8715F1423E9571D349 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/latlon.h */; };
+		6C73FC7B12A34A3EBEBFEF21 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/max.h */ = {isa = PBXBuildFile; fileRef = 810F3FBA032E4A3EA9E25E89 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/max.h */; };
+		749A6E5E0CC94E34B746BFF7 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/clamp.cpp */ = {isa = PBXBuildFile; fileRef = C95C7D4F76CC496A8DFBE865 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/clamp.cpp */; };
+		75ABF189E38649FCB731DE47 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/voronoi.h */ = {isa = PBXBuildFile; fileRef = 43517DB28AC24063AAEEA211 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/voronoi.h */; };
+		77A31922ADC44EE39F0EA7BF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/module.h */ = {isa = PBXBuildFile; fileRef = CBF0ECD79FEB4AE4AB24A893 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/module.h */; };
+		7AAFF3D319774AF2AB408CEA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/translatepoint.h */ = {isa = PBXBuildFile; fileRef = 3332D0D61330487F9DCD39E4 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/translatepoint.h */; };
+		7CC7E946A4244B5AAFBC96C6 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/power.cpp */ = {isa = PBXBuildFile; fileRef = 5A8DF9F8927247BDB3C62A13 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/power.cpp */; };
+		80CCC4122DC545CEB454B63F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/displace.h */ = {isa = PBXBuildFile; fileRef = 61898F80B73D48D1AD878D1D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/displace.h */; };
+		8543C3E9C2414C54B918E3A2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/sphere.cpp */ = {isa = PBXBuildFile; fileRef = 5D7E2886F0F2415B87BD83A5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/sphere.cpp */; };
+		86A46781053741D4BC477581 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/select.h */ = {isa = PBXBuildFile; fileRef = 0F6DF2BD2335456D8028C6D6 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/select.h */; };
+		8B3622EA936740748516FD53 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/scalebias.cpp */ = {isa = PBXBuildFile; fileRef = BC84E5641E9F4D17A1EC73E3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/scalebias.cpp */; };
+		90F147F424634E3E886D463D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/min.h */ = {isa = PBXBuildFile; fileRef = 377E6F6A7F354E4F8F5A05D9 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/min.h */; };
+		91A28B4268FC4BF6B31CF08B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/const.cpp */ = {isa = PBXBuildFile; fileRef = 79CDA43099AE43D1BC3CC534 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/const.cpp */; };
+		92E0744A7BFC42B1B4CF0098 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/turbulence.cpp */ = {isa = PBXBuildFile; fileRef = 0BFF044EFAB142D9A3B43E7F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/turbulence.cpp */; };
+		938BE3D2040942CCA6910962 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/translatepoint.cpp */ = {isa = PBXBuildFile; fileRef = 91DE92A7DABB44B5A5CDADDA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/translatepoint.cpp */; };
+		9BF2764E715A485AA6844377 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/cache.h */ = {isa = PBXBuildFile; fileRef = 481D566AB6F1457B80315EDA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/cache.h */; };
+		A2A3903FEA594EB3AA9E852A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/perlin.cpp */ = {isa = PBXBuildFile; fileRef = CD1C62E2EB3E4010AB8243FA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/perlin.cpp */; };
+		AA8293CF26C94D11A9D33112 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/turbulence.h */ = {isa = PBXBuildFile; fileRef = 479C9EC4FF6C4E83898F067D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/turbulence.h */; };
+		AB95E9F59DE64B38B050D1D1 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/const.h */ = {isa = PBXBuildFile; fileRef = 8186216BA21E4D7D994325F5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/const.h */; };
+		ABDC6E268487451D983AE7BA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/interp.h */ = {isa = PBXBuildFile; fileRef = 41EC917648D9432F99F5A62F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/interp.h */; };
+		B03638CA3326463584AC2093 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/curve.h */ = {isa = PBXBuildFile; fileRef = BDAE04B1F0F04E95A1CF098E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/curve.h */; };
+		B333E9A8425041FEACFBFF1E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/noisegen.cpp */ = {isa = PBXBuildFile; fileRef = 6D72BCA197A14908BD1AA512 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/noisegen.cpp */; };
+		B4E1AE5AD5A44DF2BA411396 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/scalepoint.cpp */ = {isa = PBXBuildFile; fileRef = 103558E7A09D425FB79DF3E2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/scalepoint.cpp */; };
+		B6D6CFD75AFD469F9B217C04 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/clamp.h */ = {isa = PBXBuildFile; fileRef = 6C459D775891405788E9C8B2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/clamp.h */; };
+		B9C8B90760894A8686414140 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/billow.cpp */ = {isa = PBXBuildFile; fileRef = B20121A7543845E6AFCAF37C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/billow.cpp */; };
+		C4B337384D2A488A9406FE54 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/plane.cpp */ = {isa = PBXBuildFile; fileRef = CA721FF583704061B7431210 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/plane.cpp */; };
+		C5F28EFE0C8A460CA71D8C0F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/terrace.h */ = {isa = PBXBuildFile; fileRef = 9A6C2F749E584FC59296018F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/terrace.h */; };
+		C76DB343C6C14D84A47356F6 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/cylinder.cpp */ = {isa = PBXBuildFile; fileRef = 97CE86388EE240FF8A449B44 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/cylinder.cpp */; };
+		C80A394FA5CF4F03976F8633 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 03B4EBC595D54CB5B0D1A796 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/CMakeLists.txt */; };
+		C9855C95364C46E180EDE374 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/scalebias.h */ = {isa = PBXBuildFile; fileRef = 6CD445D8211D475C93F552DF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/scalebias.h */; };
+		D3B405B7923741BB9DCB9D14 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/line.h */ = {isa = PBXBuildFile; fileRef = 72AE9FB6867641BCA4C1E022 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/line.h */; };
+		DC1FF847604A414A9CCA8D87 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/rotatepoint.h */ = {isa = PBXBuildFile; fileRef = 74596F4AE2F3404C8E1BB057 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/rotatepoint.h */; };
+		DC23BBC38C34455592763BF9 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/sphere.h */ = {isa = PBXBuildFile; fileRef = 8E71038CE9214EBDB585B0B6 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/sphere.h */; };
+		DC7F56EDEF794030AF8167A6 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/billow.h */ = {isa = PBXBuildFile; fileRef = 2389AEB6190F4B8AB9F07721 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/billow.h */; };
+		DE0D95AE6D78402EA89B8B61 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/noisegen.h */ = {isa = PBXBuildFile; fileRef = 57DB8D6914E149CB84E607A5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/noisegen.h */; };
+		E41C12E416B749D981B78B0B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/cylinders.h */ = {isa = PBXBuildFile; fileRef = 40430E6C96384A95A37712B5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/cylinders.h */; };
+		E9A22E7F078D4287804AC09A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/cylinder.h */ = {isa = PBXBuildFile; fileRef = EFF7A9CDCE854253B18A7E36 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/cylinder.h */; };
+		EC15537C7F464B42A58B59B9 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/add.cpp */ = {isa = PBXBuildFile; fileRef = 39044CC23FEC43C29B78FE26 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/add.cpp */; };
+		EE80A72246724435BF6EDD43 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/ridgedmulti.cpp */ = {isa = PBXBuildFile; fileRef = 661D6D197A8B4F54B1977EFE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/ridgedmulti.cpp */; };
+		EF83A41606F94911A80B116C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/spheres.h */ = {isa = PBXBuildFile; fileRef = 1FF36586B6144B12A06B2EDB /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/spheres.h */; };
+		F0F22F991A4B40BEB18BEEA5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/curve.cpp */ = {isa = PBXBuildFile; fileRef = 52AFFBA1B854437092F3F622 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/curve.cpp */; };
+		F8896687FDCC46C9A979F4E1 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/checkerboard.h */ = {isa = PBXBuildFile; fileRef = F6115248238B42D6ACFCDD1A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/checkerboard.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		7D9926A172AC410BA0EE9C24 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		D45411AA1A12417F9F1BBFE0 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		D7E8069670E44E0781D879F7 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		EEE5083EB7174D7688577C72 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		01651BCE2FD34FD4A47C914F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C7768007E0C45F3B8595BE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AA7CDC57A764CED8051F809;
+			remoteInfo = ZERO_CHECK;
+		};
+		02C26401BEA649D9BFBB082D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C7768007E0C45F3B8595BE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E78C660D210049318A072685;
+			remoteInfo = libnoise;
+		};
+		4D97D1F027A64730B63A7DFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C7768007E0C45F3B8595BE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AA7CDC57A764CED8051F809;
+			remoteInfo = ZERO_CHECK;
+		};
+		C794419417A4477F8302FA72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C7768007E0C45F3B8595BE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16ACFB9BBFAA4F928A112043;
+			remoteInfo = ALL_BUILD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02BEECEAE9754460898FCFD3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/min.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = min.cpp; path = src/module/min.cpp; sourceTree = SOURCE_ROOT; };
+		03B4EBC595D54CB5B0D1A796 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		047FFA10D885407DB55A5320 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/exponent.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = exponent.cpp; path = src/module/exponent.cpp; sourceTree = SOURCE_ROOT; };
+		0BFF044EFAB142D9A3B43E7F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/turbulence.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = turbulence.cpp; path = src/module/turbulence.cpp; sourceTree = SOURCE_ROOT; };
+		0F6DF2BD2335456D8028C6D6 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/select.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = select.h; path = include/noise/module/select.h; sourceTree = SOURCE_ROOT; };
+		103558E7A09D425FB79DF3E2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/scalepoint.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = scalepoint.cpp; path = src/module/scalepoint.cpp; sourceTree = SOURCE_ROOT; };
+		133B63946FB945FD85F11A53 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/abs.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = abs.cpp; path = src/module/abs.cpp; sourceTree = SOURCE_ROOT; };
+		1CD2012AF8F64D1E8266663D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/terrace.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = terrace.cpp; path = src/module/terrace.cpp; sourceTree = SOURCE_ROOT; };
+		1D589C853A2445A0966BE425 /* libnoise */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liblibnoise.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FF36586B6144B12A06B2EDB /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/spheres.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = spheres.h; path = include/noise/module/spheres.h; sourceTree = SOURCE_ROOT; };
+		217F4CF38F294C6E8FFB144E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/ridgedmulti.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ridgedmulti.h; path = include/noise/module/ridgedmulti.h; sourceTree = SOURCE_ROOT; };
+		2389AEB6190F4B8AB9F07721 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/billow.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = billow.h; path = include/noise/module/billow.h; sourceTree = SOURCE_ROOT; };
+		2D3313580D2243CB95D671CE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/voronoi.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = voronoi.cpp; path = src/module/voronoi.cpp; sourceTree = SOURCE_ROOT; };
+		3332D0D61330487F9DCD39E4 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/translatepoint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = translatepoint.h; path = include/noise/module/translatepoint.h; sourceTree = SOURCE_ROOT; };
+		377E6F6A7F354E4F8F5A05D9 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/min.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = min.h; path = include/noise/module/min.h; sourceTree = SOURCE_ROOT; };
+		39044CC23FEC43C29B78FE26 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/add.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = add.cpp; path = src/module/add.cpp; sourceTree = SOURCE_ROOT; };
+		3BED69D236C34B3B91234DF5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/latlon.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = latlon.cpp; path = src/latlon.cpp; sourceTree = SOURCE_ROOT; };
+		40430E6C96384A95A37712B5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/cylinders.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cylinders.h; path = include/noise/module/cylinders.h; sourceTree = SOURCE_ROOT; };
+		41EC917648D9432F99F5A62F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/interp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = interp.h; path = include/noise/interp.h; sourceTree = SOURCE_ROOT; };
+		426830FE77FF4BDEBA097BC5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/blend.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = blend.h; path = include/noise/module/blend.h; sourceTree = SOURCE_ROOT; };
+		43517DB28AC24063AAEEA211 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/voronoi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = voronoi.h; path = include/noise/module/voronoi.h; sourceTree = SOURCE_ROOT; };
+		441CA4BBAEB0410DACE582BE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/model.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = model.h; path = include/noise/model/model.h; sourceTree = SOURCE_ROOT; };
+		459A62153A444A0A9CEF7CD3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/rotatepoint.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = rotatepoint.cpp; path = src/module/rotatepoint.cpp; sourceTree = SOURCE_ROOT; };
+		479C9EC4FF6C4E83898F067D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/turbulence.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = turbulence.h; path = include/noise/module/turbulence.h; sourceTree = SOURCE_ROOT; };
+		481D566AB6F1457B80315EDA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/cache.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cache.h; path = include/noise/module/cache.h; sourceTree = SOURCE_ROOT; };
+		49FD02058ED94EF693C6AF29 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/mathconsts.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mathconsts.h; path = include/noise/mathconsts.h; sourceTree = SOURCE_ROOT; };
+		4AB519C5D7E142DC900927AE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/invert.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = invert.cpp; path = src/module/invert.cpp; sourceTree = SOURCE_ROOT; };
+		4D784220C9DF4DCFAF7C0356 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/invert.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = invert.h; path = include/noise/module/invert.h; sourceTree = SOURCE_ROOT; };
+		4FBC9333424143B4B02AEB27 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/vectortable.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = vectortable.h; path = include/noise/vectortable.h; sourceTree = SOURCE_ROOT; };
+		51D68DB130E742A596A663D8 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/plane.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = plane.h; path = include/noise/model/plane.h; sourceTree = SOURCE_ROOT; };
+		52AFFBA1B854437092F3F622 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/curve.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = curve.cpp; path = src/module/curve.cpp; sourceTree = SOURCE_ROOT; };
+		57DB8D6914E149CB84E607A5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/noisegen.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = noisegen.h; path = include/noise/noisegen.h; sourceTree = SOURCE_ROOT; };
+		5A8DF9F8927247BDB3C62A13 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/power.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = power.cpp; path = src/module/power.cpp; sourceTree = SOURCE_ROOT; };
+		5D7E2886F0F2415B87BD83A5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/sphere.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = sphere.cpp; path = src/model/sphere.cpp; sourceTree = SOURCE_ROOT; };
+		5D8D66E6919B4ABFAA4D9769 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/add.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = add.h; path = include/noise/module/add.h; sourceTree = SOURCE_ROOT; };
+		600DA39CB98A475A81F67883 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/power.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = power.h; path = include/noise/module/power.h; sourceTree = SOURCE_ROOT; };
+		61898F80B73D48D1AD878D1D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/displace.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = displace.h; path = include/noise/module/displace.h; sourceTree = SOURCE_ROOT; };
+		661D6D197A8B4F54B1977EFE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/ridgedmulti.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ridgedmulti.cpp; path = src/module/ridgedmulti.cpp; sourceTree = SOURCE_ROOT; };
+		677EBCDF12754FEAAA7ECD6B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/abs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = abs.h; path = include/noise/module/abs.h; sourceTree = SOURCE_ROOT; };
+		6C459D775891405788E9C8B2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/clamp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = clamp.h; path = include/noise/module/clamp.h; sourceTree = SOURCE_ROOT; };
+		6CD445D8211D475C93F552DF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/scalebias.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = scalebias.h; path = include/noise/module/scalebias.h; sourceTree = SOURCE_ROOT; };
+		6D72BCA197A14908BD1AA512 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/noisegen.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = noisegen.cpp; path = src/noisegen.cpp; sourceTree = SOURCE_ROOT; };
+		72AE9FB6867641BCA4C1E022 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/line.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = line.h; path = include/noise/model/line.h; sourceTree = SOURCE_ROOT; };
+		74596F4AE2F3404C8E1BB057 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/rotatepoint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = rotatepoint.h; path = include/noise/module/rotatepoint.h; sourceTree = SOURCE_ROOT; };
+		773B8ACC44B74D20AAB1ED74 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/exception.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = exception.h; path = include/noise/exception.h; sourceTree = SOURCE_ROOT; };
+		7982D65A1239418AAA7CDC78 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/select.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = select.cpp; path = src/module/select.cpp; sourceTree = SOURCE_ROOT; };
+		79CDA43099AE43D1BC3CC534 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/const.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = const.cpp; path = src/module/const.cpp; sourceTree = SOURCE_ROOT; };
+		8047258E94884DF39B01D41B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/checkerboard.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = checkerboard.cpp; path = src/module/checkerboard.cpp; sourceTree = SOURCE_ROOT; };
+		810F3FBA032E4A3EA9E25E89 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/max.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = max.h; path = include/noise/module/max.h; sourceTree = SOURCE_ROOT; };
+		8186216BA21E4D7D994325F5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/const.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = const.h; path = include/noise/module/const.h; sourceTree = SOURCE_ROOT; };
+		853AEADCD58D4472A8E718C6 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/perlin.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = perlin.h; path = include/noise/module/perlin.h; sourceTree = SOURCE_ROOT; };
+		88D5A09CE17740AD99AB8F0E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/modulebase.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = modulebase.cpp; path = src/module/modulebase.cpp; sourceTree = SOURCE_ROOT; };
+		8DB88570E03D4E7F93A5EB3D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/multiply.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = multiply.cpp; path = src/module/multiply.cpp; sourceTree = SOURCE_ROOT; };
+		8E71038CE9214EBDB585B0B6 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/sphere.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sphere.h; path = include/noise/model/sphere.h; sourceTree = SOURCE_ROOT; };
+		91DE92A7DABB44B5A5CDADDA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/translatepoint.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = translatepoint.cpp; path = src/module/translatepoint.cpp; sourceTree = SOURCE_ROOT; };
+		97CE86388EE240FF8A449B44 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/cylinder.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = cylinder.cpp; path = src/model/cylinder.cpp; sourceTree = SOURCE_ROOT; };
+		9A6C2F749E584FC59296018F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/terrace.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = terrace.h; path = include/noise/module/terrace.h; sourceTree = SOURCE_ROOT; };
+		9EEAAA3D77F842CDBFE80B31 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/line.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = line.cpp; path = src/model/line.cpp; sourceTree = SOURCE_ROOT; };
+		A1ABEE3FB10C43C1B96E0B6D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/multiply.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = multiply.h; path = include/noise/module/multiply.h; sourceTree = SOURCE_ROOT; };
+		A2B195CD1047404D8E05E3B2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/exponent.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = exponent.h; path = include/noise/module/exponent.h; sourceTree = SOURCE_ROOT; };
+		A56AFF8715F1423E9571D349 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/latlon.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = latlon.h; path = include/noise/latlon.h; sourceTree = SOURCE_ROOT; };
+		A5A0AE5DC5CE433DAD891329 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/displace.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = displace.cpp; path = src/module/displace.cpp; sourceTree = SOURCE_ROOT; };
+		A5D7D93CE5924EFD9B1F3C4E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/basictypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = basictypes.h; path = include/noise/basictypes.h; sourceTree = SOURCE_ROOT; };
+		A6A5C5CC4A004882B0F69BD5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/cache.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = cache.cpp; path = src/module/cache.cpp; sourceTree = SOURCE_ROOT; };
+		ABDCDC35631A44C381FBB3BE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/modulebase.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = modulebase.h; path = include/noise/module/modulebase.h; sourceTree = SOURCE_ROOT; };
+		ACB42E165EC34D48811A9AC8 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/noise.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = noise.h; path = include/noise/noise.h; sourceTree = SOURCE_ROOT; };
+		B20121A7543845E6AFCAF37C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/billow.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = billow.cpp; path = src/module/billow.cpp; sourceTree = SOURCE_ROOT; };
+		B750D7BB44884E2F93DCDBEA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		B8718A6ECDD947019539CF94 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/scalepoint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = scalepoint.h; path = include/noise/module/scalepoint.h; sourceTree = SOURCE_ROOT; };
+		BC84E5641E9F4D17A1EC73E3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/scalebias.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = scalebias.cpp; path = src/module/scalebias.cpp; sourceTree = SOURCE_ROOT; };
+		BDAE04B1F0F04E95A1CF098E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/curve.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = curve.h; path = include/noise/module/curve.h; sourceTree = SOURCE_ROOT; };
+		C95C7D4F76CC496A8DFBE865 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/clamp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = clamp.cpp; path = src/module/clamp.cpp; sourceTree = SOURCE_ROOT; };
+		CA721FF583704061B7431210 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/plane.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = plane.cpp; path = src/model/plane.cpp; sourceTree = SOURCE_ROOT; };
+		CBF0ECD79FEB4AE4AB24A893 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/module.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = module.h; path = include/noise/module/module.h; sourceTree = SOURCE_ROOT; };
+		CD1C62E2EB3E4010AB8243FA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/perlin.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = perlin.cpp; path = src/module/perlin.cpp; sourceTree = SOURCE_ROOT; };
+		D699ED0FD43F4694A271528D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/blend.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = blend.cpp; path = src/module/blend.cpp; sourceTree = SOURCE_ROOT; };
+		E56B080180E34FC38B8E0BC0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/spheres.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = spheres.cpp; path = src/module/spheres.cpp; sourceTree = SOURCE_ROOT; };
+		EFF7A9CDCE854253B18A7E36 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/cylinder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cylinder.h; path = include/noise/model/cylinder.h; sourceTree = SOURCE_ROOT; };
+		F1CD556E0BE44E8B8E6AF62F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/max.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = max.cpp; path = src/module/max.cpp; sourceTree = SOURCE_ROOT; };
+		F6115248238B42D6ACFCDD1A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/checkerboard.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = checkerboard.h; path = include/noise/module/checkerboard.h; sourceTree = SOURCE_ROOT; };
+		F73B0A5C4ADA49A081BFFBA5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/misc.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = misc.h; path = include/noise/misc.h; sourceTree = SOURCE_ROOT; };
+		F85EC77936774A9EACCD1631 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/cylinders.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = cylinders.cpp; path = src/module/cylinders.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		007B5E7BCC184D82BB4FE8A8 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BED69D236C34B3B91234DF5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/latlon.cpp */,
+				97CE86388EE240FF8A449B44 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/cylinder.cpp */,
+				9EEAAA3D77F842CDBFE80B31 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/line.cpp */,
+				CA721FF583704061B7431210 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/plane.cpp */,
+				5D7E2886F0F2415B87BD83A5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/sphere.cpp */,
+				133B63946FB945FD85F11A53 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/abs.cpp */,
+				39044CC23FEC43C29B78FE26 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/add.cpp */,
+				B20121A7543845E6AFCAF37C /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/billow.cpp */,
+				D699ED0FD43F4694A271528D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/blend.cpp */,
+				A6A5C5CC4A004882B0F69BD5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/cache.cpp */,
+				8047258E94884DF39B01D41B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/checkerboard.cpp */,
+				C95C7D4F76CC496A8DFBE865 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/clamp.cpp */,
+				79CDA43099AE43D1BC3CC534 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/const.cpp */,
+				52AFFBA1B854437092F3F622 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/curve.cpp */,
+				F85EC77936774A9EACCD1631 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/cylinders.cpp */,
+				A5A0AE5DC5CE433DAD891329 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/displace.cpp */,
+				047FFA10D885407DB55A5320 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/exponent.cpp */,
+				4AB519C5D7E142DC900927AE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/invert.cpp */,
+				F1CD556E0BE44E8B8E6AF62F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/max.cpp */,
+				02BEECEAE9754460898FCFD3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/min.cpp */,
+				88D5A09CE17740AD99AB8F0E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/modulebase.cpp */,
+				8DB88570E03D4E7F93A5EB3D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/multiply.cpp */,
+				CD1C62E2EB3E4010AB8243FA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/perlin.cpp */,
+				5A8DF9F8927247BDB3C62A13 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/power.cpp */,
+				661D6D197A8B4F54B1977EFE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/ridgedmulti.cpp */,
+				459A62153A444A0A9CEF7CD3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/rotatepoint.cpp */,
+				BC84E5641E9F4D17A1EC73E3 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/scalebias.cpp */,
+				103558E7A09D425FB79DF3E2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/scalepoint.cpp */,
+				7982D65A1239418AAA7CDC78 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/select.cpp */,
+				E56B080180E34FC38B8E0BC0 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/spheres.cpp */,
+				1CD2012AF8F64D1E8266663D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/terrace.cpp */,
+				91DE92A7DABB44B5A5CDADDA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/translatepoint.cpp */,
+				0BFF044EFAB142D9A3B43E7F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/turbulence.cpp */,
+				2D3313580D2243CB95D671CE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/voronoi.cpp */,
+				6D72BCA197A14908BD1AA512 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/noisegen.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		301E4075A26244E6964BCB44 /* libnoise */ = {
+			isa = PBXGroup;
+			children = (
+				E6E8C6E3BAA64E98A72D936A /* Header Files */,
+				007B5E7BCC184D82BB4FE8A8 /* Source Files */,
+				03B4EBC595D54CB5B0D1A796 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/CMakeLists.txt */,
+			);
+			name = libnoise;
+			sourceTree = "<group>";
+		};
+		38BA573E7BD64194B8DA89F8 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		3F651D11CA064C9E808E58A7 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				38BA573E7BD64194B8DA89F8 /* CMake Rules */,
+				B750D7BB44884E2F93DCDBEA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		53F3F2366E0847AEA4348805 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D589C853A2445A0966BE425 /* libnoise */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A9D3AB81FBE4D41AC8A5A8E = {
+			isa = PBXGroup;
+			children = (
+				301E4075A26244E6964BCB44 /* libnoise */,
+				3F651D11CA064C9E808E58A7 /* ALL_BUILD */,
+				53F3F2366E0847AEA4348805 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E6E8C6E3BAA64E98A72D936A /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5D7D93CE5924EFD9B1F3C4E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/basictypes.h */,
+				773B8ACC44B74D20AAB1ED74 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/exception.h */,
+				41EC917648D9432F99F5A62F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/interp.h */,
+				A56AFF8715F1423E9571D349 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/latlon.h */,
+				49FD02058ED94EF693C6AF29 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/mathconsts.h */,
+				F73B0A5C4ADA49A081BFFBA5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/misc.h */,
+				EFF7A9CDCE854253B18A7E36 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/cylinder.h */,
+				72AE9FB6867641BCA4C1E022 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/line.h */,
+				441CA4BBAEB0410DACE582BE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/model.h */,
+				51D68DB130E742A596A663D8 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/plane.h */,
+				8E71038CE9214EBDB585B0B6 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/model/sphere.h */,
+				677EBCDF12754FEAAA7ECD6B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/abs.h */,
+				5D8D66E6919B4ABFAA4D9769 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/add.h */,
+				2389AEB6190F4B8AB9F07721 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/billow.h */,
+				426830FE77FF4BDEBA097BC5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/blend.h */,
+				481D566AB6F1457B80315EDA /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/cache.h */,
+				F6115248238B42D6ACFCDD1A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/checkerboard.h */,
+				6C459D775891405788E9C8B2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/clamp.h */,
+				8186216BA21E4D7D994325F5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/const.h */,
+				BDAE04B1F0F04E95A1CF098E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/curve.h */,
+				40430E6C96384A95A37712B5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/cylinders.h */,
+				61898F80B73D48D1AD878D1D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/displace.h */,
+				A2B195CD1047404D8E05E3B2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/exponent.h */,
+				4D784220C9DF4DCFAF7C0356 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/invert.h */,
+				810F3FBA032E4A3EA9E25E89 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/max.h */,
+				377E6F6A7F354E4F8F5A05D9 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/min.h */,
+				CBF0ECD79FEB4AE4AB24A893 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/module.h */,
+				ABDCDC35631A44C381FBB3BE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/modulebase.h */,
+				A1ABEE3FB10C43C1B96E0B6D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/multiply.h */,
+				853AEADCD58D4472A8E718C6 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/perlin.h */,
+				600DA39CB98A475A81F67883 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/power.h */,
+				217F4CF38F294C6E8FFB144E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/ridgedmulti.h */,
+				74596F4AE2F3404C8E1BB057 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/rotatepoint.h */,
+				6CD445D8211D475C93F552DF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/scalebias.h */,
+				B8718A6ECDD947019539CF94 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/scalepoint.h */,
+				0F6DF2BD2335456D8028C6D6 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/select.h */,
+				1FF36586B6144B12A06B2EDB /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/spheres.h */,
+				9A6C2F749E584FC59296018F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/terrace.h */,
+				3332D0D61330487F9DCD39E4 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/translatepoint.h */,
+				479C9EC4FF6C4E83898F067D /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/turbulence.h */,
+				43517DB28AC24063AAEEA211 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/module/voronoi.h */,
+				ACB42E165EC34D48811A9AC8 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/noise.h */,
+				57DB8D6914E149CB84E607A5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/noisegen.h */,
+				4FBC9333424143B4B02AEB27 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise/vectortable.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E78C660D210049318A072685 /* libnoise */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A5526B8060840CDBEDB21DD /* Build configuration list for PBXNativeTarget "libnoise" */;
+			buildPhases = (
+				80A77229424A4995A8F0C51C /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA6FB47F975E4CBAAF5AF584 /* PBXTargetDependency */,
+			);
+			name = libnoise;
+			productName = libnoise;
+			productReference = 1D589C853A2445A0966BE425 /* libnoise */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C7768007E0C45F3B8595BE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1000;
+			};
+			buildConfigurationList = 582DBFBDE17E4722B2294AB1 /* Build configuration list for PBXProject "libnoise" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				D7E8069670E44E0781D879F7 /* Debug */,
+				7D9926A172AC410BA0EE9C24 /* Release */,
+				D45411AA1A12417F9F1BBFE0 /* MinSizeRel */,
+				EEE5083EB7174D7688577C72 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 7A9D3AB81FBE4D41AC8A5A8E;
+			projectDirPath = .;
+			projectRoot = "";
+			targets = (
+				16ACFB9BBFAA4F928A112043 /* ALL_BUILD */,
+				5AA7CDC57A764CED8051F809 /* ZERO_CHECK */,
+				568025DB61DB4430B9B3D3D9 /* install */,
+				E78C660D210049318A072685 /* libnoise */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15FE898166C8419198DCE598 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise -f /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		3EF69903C6674AAE9AA280E8 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise -f /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		474B281C26744530BBA19A6D = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		B740777F2DBB4AD28F51B020 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		BA2D41E453694DEEB6676569 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		D76769FE9A684FC6B1D6A109 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise -f /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		80A77229424A4995A8F0C51C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17BFC4ABAB96453A97E21E26 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/latlon.cpp */,
+				C76DB343C6C14D84A47356F6 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/cylinder.cpp */,
+				138807CCB18540FC80F07456 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/line.cpp */,
+				C4B337384D2A488A9406FE54 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/plane.cpp */,
+				8543C3E9C2414C54B918E3A2 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/model/sphere.cpp */,
+				3496050952EA4911BFE64C1B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/abs.cpp */,
+				EC15537C7F464B42A58B59B9 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/add.cpp */,
+				B9C8B90760894A8686414140 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/billow.cpp */,
+				0FE866CE1715493CB394EE80 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/blend.cpp */,
+				1A3133609CA446E38618A875 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/cache.cpp */,
+				3569D1EB907F46DD978555EB /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/checkerboard.cpp */,
+				749A6E5E0CC94E34B746BFF7 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/clamp.cpp */,
+				91A28B4268FC4BF6B31CF08B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/const.cpp */,
+				F0F22F991A4B40BEB18BEEA5 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/curve.cpp */,
+				4E523A7A4F0943059F96900B /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/cylinders.cpp */,
+				5D1A23958CA440A18A5BDA99 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/displace.cpp */,
+				0B4AB976B2394496BCEFD97A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/exponent.cpp */,
+				2504FA9896334466B5DBEECE /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/invert.cpp */,
+				50A4C365EC3149D19CB6A89F /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/max.cpp */,
+				4EA67F5988D94CCB9F1B39AF /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/min.cpp */,
+				19D4FD6DCB024D61B06375E9 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/modulebase.cpp */,
+				5037B1F66092422A9D5DF2D1 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/multiply.cpp */,
+				A2A3903FEA594EB3AA9E852A /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/perlin.cpp */,
+				7CC7E946A4244B5AAFBC96C6 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/power.cpp */,
+				EE80A72246724435BF6EDD43 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/ridgedmulti.cpp */,
+				45AA8828DBEA4B83BD1685CC /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/rotatepoint.cpp */,
+				8B3622EA936740748516FD53 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/scalebias.cpp */,
+				B4E1AE5AD5A44DF2BA411396 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/scalepoint.cpp */,
+				0806A5E98FBD458F94FEC660 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/select.cpp */,
+				2406C78C5140404FB56A6596 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/spheres.cpp */,
+				4C602C533868451AB9842824 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/terrace.cpp */,
+				938BE3D2040942CCA6910962 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/translatepoint.cpp */,
+				92E0744A7BFC42B1B4CF0098 /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/turbulence.cpp */,
+				2445358BF88245C4B01874CB /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/module/voronoi.cpp */,
+				B333E9A8425041FEACFBFF1E /* /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/src/noisegen.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		574C070E5D2648EA95F8C0A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E78C660D210049318A072685 /* libnoise */;
+			targetProxy = 02C26401BEA649D9BFBB082D /* PBXContainerItemProxy */;
+		};
+		97D87E3F231D499796258A20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AA7CDC57A764CED8051F809 /* ZERO_CHECK */;
+			targetProxy = 01651BCE2FD34FD4A47C914F /* PBXContainerItemProxy */;
+		};
+		A19D98946AF04B0FBCB9FEDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16ACFB9BBFAA4F928A112043 /* ALL_BUILD */;
+			targetProxy = C794419417A4477F8302FA72 /* PBXContainerItemProxy */;
+		};
+		CA6FB47F975E4CBAAF5AF584 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AA7CDC57A764CED8051F809 /* ZERO_CHECK */;
+			targetProxy = 4D97D1F027A64730B63A7DFB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01FA2538FF5642C28DA3F775 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		0F662B79B60346BCA4DDFA7D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/build;
+			};
+			name = MinSizeRel;
+		};
+		2453FF23E62245D5B39A7823 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		302F0D5D122D4BEB871731A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		3135E346321B4EF8865E7AE7 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		32C7F317ADF9414F9C9C98A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/build;
+			};
+			name = Release;
+		};
+		49A2B8C9650144928D6C9C9A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		8D4F546BAD5545B386E53827 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		A2A3ABEF234E454B9BC088C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Debug;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++1y -fno-operator-names -Wall -Wextra -pedantic -Woverloaded-virtual -Werror=format-security -Werror=return-type         ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libnoise;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		A393949C67E649E2BC1DD6D7 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		A653328C5C7348E99FAA1E6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		B0007045773E496FB47FE5A2 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		B095912A49D34242B91D5531 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/RelWithDebInfo;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++1y -fno-operator-names -Wall -Wextra -pedantic -Woverloaded-virtual -Werror=format-security -Werror=return-type         ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libnoise;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		B3A64CE2581F4DFBB085E6C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		B5D99DE7EA324D5EB54EE038 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/MinSizeRel;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++1y -fno-operator-names -Wall -Wextra -pedantic -Woverloaded-virtual -Werror=format-security -Werror=return-type     -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libnoise;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		CDEBBDB9EDDF4DEE83669392 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/build;
+			};
+			name = RelWithDebInfo;
+		};
+		D22BA474611C4EACA99D441F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kathleen/Desktop/projectPolly/Project_Polly/bin/Release;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/glfw/include,/Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/include/noise);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++1y -fno-operator-names -Wall -Wextra -pedantic -Woverloaded-virtual -Werror=format-security -Werror=return-type     -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libnoise;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		DF2169628A2E42D69DF7251A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		DFFD6D44F3FE4B179CD849ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise/build;
+			};
+			name = Debug;
+		};
+		F39EA153D3F74252A4D95A8E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/kathleen/Desktop/projectPolly/Project_Polly/vendor/libnoise;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20613B5124CB406B923F0FE7 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01FA2538FF5642C28DA3F775 /* Debug */,
+				8D4F546BAD5545B386E53827 /* Release */,
+				3135E346321B4EF8865E7AE7 /* MinSizeRel */,
+				F39EA153D3F74252A4D95A8E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		58189A43815147E1AFB125E7 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3A64CE2581F4DFBB085E6C8 /* Debug */,
+				2453FF23E62245D5B39A7823 /* Release */,
+				A393949C67E649E2BC1DD6D7 /* MinSizeRel */,
+				DF2169628A2E42D69DF7251A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		582DBFBDE17E4722B2294AB1 /* Build configuration list for PBXProject "libnoise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFFD6D44F3FE4B179CD849ED /* Debug */,
+				32C7F317ADF9414F9C9C98A1 /* Release */,
+				0F662B79B60346BCA4DDFA7D /* MinSizeRel */,
+				CDEBBDB9EDDF4DEE83669392 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6A5526B8060840CDBEDB21DD /* Build configuration list for PBXNativeTarget "libnoise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2A3ABEF234E454B9BC088C8 /* Debug */,
+				D22BA474611C4EACA99D441F /* Release */,
+				B5D99DE7EA324D5EB54EE038 /* MinSizeRel */,
+				B095912A49D34242B91D5531 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		87994AF4835A41AC93519763 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				302F0D5D122D4BEB871731A0 /* Debug */,
+				A653328C5C7348E99FAA1E6C /* Release */,
+				49A2B8C9650144928D6C9C9A /* MinSizeRel */,
+				B0007045773E496FB47FE5A2 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C7768007E0C45F3B8595BE1 /* Project object */;
+}
