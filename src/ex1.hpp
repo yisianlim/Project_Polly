@@ -16,8 +16,10 @@ public:
 
     // The mesh data
     std::vector<cgra::Mesh> m_terrain_meshes;
-
 	cgra::Mesh m_mesh;
+	cgra::Mesh foliage;
+	cgra::Mesh island;
+	cgra::Mesh water;
 
     // The current size of the viewport
     glm::vec2 m_viewportSize;
@@ -37,6 +39,7 @@ public:
     bool m_mouseButtonDown[3];
 
 	MeshGenerator m_meshGenerator;
+	std::vector<glm::vec3> m_foliage_coords;
 
     Application(GLFWwindow *win)
         : m_window(win),
@@ -54,9 +57,10 @@ public:
 
     void init();
 
-    void loadObj(const char *filename);
+    cgra::Mesh loadObj(const char *filename);
 
     void drawScene();
+	void drawFoliage();
     void doGUI();
 
     void onKey(int key, int scancode, int action, int mods);

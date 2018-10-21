@@ -35,18 +35,24 @@ void Application::init() {
     m_program.setViewMatrix(viewMatrix);
 
 	// Generate the terrain
-	m_meshGenerator = MeshGenerator(20, 20, 3);
-	m_terrain_meshes = m_meshGenerator.generateMeshes();
+	m_meshGenerator = MeshGenerator(40, 40, 2);
+	m_terrain_meshes = m_meshGenerator.generateMeshes(PerlinNoise(0, 0.1, 0.35, 2.0, 6), 5, 2);
+	m_foliage_coords = m_meshGenerator.getFoliagePlacementCoordinates(PerlinNoise(0, 0.2, 0.1, 2.0, 6), 15);
+	water = m_meshGenerator.generateWaterMesh(glfwGetTime());
+
+	foliage = loadObj(CGRA_SRCDIR "/res/models/tree_leaves.obj");
+	island = loadObj(CGRA_SRCDIR "/res/models/island.obj");
 }
 
-void Application::loadObj(const char *filename) {
+cgra::Mesh Application::loadObj(const char *filename) {
+	cgra::Mesh mesh;
     cgra::Wavefront obj;
     // Wrap the loading in a try..catch block
     try {
         obj = cgra::Wavefront::load(filename);
     } catch (std::exception e) {
         std::cerr << "Couldn't load file: '" << e.what() << "'" << std::endl;
-        return;
+        return mesh;
     }
 
     /************************************************************
@@ -80,7 +86,8 @@ void Application::loadObj(const char *filename) {
     	}
     }
 
-    m_mesh.setData(vertices, triangles);
+    mesh.setData(vertices, triangles);
+	return mesh;
 }
 
 void Application::drawScene() {
@@ -119,11 +126,31 @@ void Application::drawScene() {
 		m_program.setColor(colour);
 		m_terrain_meshes[i].draw();
 	}
+
+	for (glm::vec3 coord : m_foliage_coords) {
+		m_program.setModelMatrix(glm::translate(modelTransform, coord));
+		drawFoliage();
+	}
+
+	//modelTransform = glm::scale(modelTransform, glm::vec3(1.65, 2, 1.65));
+	//m_program.setModelMatrix(modelTransform);
+	//m_program.setColor(glm::vec3(0.43, 0.38, 0.26));
+	//island.draw();
+
+	m_program.setModelMatrix(modelTransform);
+	m_program.setColor(glm::vec3(0.16, 0.5, 0.6));
+	m_meshGenerator.generateWaterMesh(glfwGetTime()).draw();
+
+}
+
+void Application::drawFoliage() {
+	m_program.setColor(glm::vec3(0.61, 0.77, 0.18));
+	foliage.draw();
 }
 
 void Application::doGUI() {
     ImGui::SetNextWindowSize(ImVec2(250, 250), ImGuiSetCond_FirstUseEver);
-    ImGui::Begin("Shapes");
+    ImGui::Begin("Map Generator");
 
     /************************************************************
      *                                                          *
@@ -144,41 +171,63 @@ void Application::doGUI() {
      *  mode.                                                   *
      ************************************************************/
 
-    // Interface for manual transforms.
-    static glm::vec3 rotation(0, 0, 0);
-    if (ImGui::InputFloat3("Rotation", &rotation[0])) {
-    	m_rotationMatrix = glm::eulerAngleXYZ(rotation.x, rotation.y, rotation.z);
-    }
+	static float frequency = 0.35;
+	static float persistence = 0.1;
+	static float lacunarity = 2.0;
+	static int octave = 6;
+	static int seed = 0;
+	static float height = 5;
+	static float redistribution_factor = 2.0;
+	static int foliage_sparseness = 15;
 
-    static glm::vec3 translation(0, 0, 0);
-    if (ImGui::InputFloat3("Translation", &translation[0])) {
-        m_translation = translation;
-    }
+	// Change the frequency. 
+	if (ImGui::SliderFloat("Distance between peaks \n(Frequency)", &frequency, 0.0f, 2.0f, "%.3f")) {
+		m_terrain_meshes = m_meshGenerator.generateMeshes(PerlinNoise(seed, persistence, frequency, lacunarity, octave),
+			height, redistribution_factor);
+		m_foliage_coords = m_meshGenerator.getFoliagePlacementCoordinates(PerlinNoise(0, 0.1, 0.1, 2.0, 6), foliage_sparseness);
+	}
 
-    static float scale;
-    if (ImGui::InputFloat("Scale", &scale)) {
-        m_scale = scale;
-    }
+	// Change the persistence (controls the roughness of the Perlin noise)
+	if (ImGui::SliderFloat("Mountain roughness \n(Persistence) ", &persistence, 0.0f, 1.0f, "%.3f")) {
+		m_terrain_meshes = m_meshGenerator.generateMeshes(PerlinNoise(seed, persistence, frequency, lacunarity, octave),
+			height, redistribution_factor);
+		m_foliage_coords = m_meshGenerator.getFoliagePlacementCoordinates(PerlinNoise(0, 0.1, 0.1, 2.0, 6), foliage_sparseness);
+	}
 
-    // Interface to load .obj file.
-    static std::string filename;
-    filename.resize(200);
-    ImGui::InputText(".obj File", &filename[0], filename.size());
+	// Change the lacunarity (frequency multiplier between successive octaves)
+	if (ImGui::SliderFloat("Rate of frequency changes \n(Lacunarity)", &lacunarity, 0.0f, 4.0f, "%.3f")) {
+		m_terrain_meshes = m_meshGenerator.generateMeshes(PerlinNoise(seed, persistence, frequency, lacunarity, octave),
+			height, redistribution_factor);
+		m_foliage_coords = m_meshGenerator.getFoliagePlacementCoordinates(PerlinNoise(0, 0.1, 0.1, 2.0, 6), foliage_sparseness);
+	}
 
-   ImGui::SameLine();
-    if(ImGui::Button("Load")){
-    	loadObj(&filename[0]);
-    }
+	// Change the height.
+	if (ImGui::SliderFloat("Height", &height, 0.0f, 50.0f, "%.3f")) {
+		m_terrain_meshes = m_meshGenerator.generateMeshes(PerlinNoise(seed, persistence, frequency, lacunarity, octave),
+			height, redistribution_factor);
+		m_foliage_coords = m_meshGenerator.getFoliagePlacementCoordinates(PerlinNoise(0, 0.1, 0.1, 2.0, 6), foliage_sparseness);
+	}
 
-    // Checkbox for wireframe rendering.
-    static bool checked = false;
-    ImGui::Checkbox("Draw wireframe", &checked);
+	// Change the redistribution factor.
+	if (ImGui::SliderFloat("Redistribution factor", &redistribution_factor, 0.0f, 10.0f, "%.3f")) {
+		m_terrain_meshes = m_meshGenerator.generateMeshes(PerlinNoise(seed, persistence, frequency, lacunarity, octave),
+			height, redistribution_factor);
+		m_foliage_coords = m_meshGenerator.getFoliagePlacementCoordinates(PerlinNoise(0, 0.1, 0.1, 2.0, 6), foliage_sparseness);
+	}
 
-    if(checked){
-    	m_mesh.setDrawWireframe(true);
-    } else {
-    	m_mesh.setDrawWireframe(false);
-    }
+
+	if (ImGui::SliderInt("Foliage Sparseness Factor \n", &foliage_sparseness, 2, 100, "%f")) {
+		m_terrain_meshes = m_meshGenerator.generateMeshes(PerlinNoise(seed, persistence, frequency, lacunarity, octave),
+			height, redistribution_factor);
+		m_foliage_coords = m_meshGenerator.getFoliagePlacementCoordinates(PerlinNoise(0, 0.1, 0.1, 2.0, 6), foliage_sparseness);
+	}
+
+	// Change the seed.
+	if (ImGui::InputInt("Regenerate (Seed)", &seed)) {
+		m_terrain_meshes = m_meshGenerator.generateMeshes(PerlinNoise(seed, persistence, frequency, lacunarity, octave),
+			height, redistribution_factor);
+		m_foliage_coords = m_meshGenerator.getFoliagePlacementCoordinates(PerlinNoise(seed, 0.1, 0.1, 2.0, 6), foliage_sparseness);
+	}
 
     ImGui::End();
 }

@@ -15,13 +15,13 @@ public:
 class PerlinNoise : public Noise {
 private:
 	module::Perlin m_perlinModule;
-	int m_heightMultiplier;
 public:
-	PerlinNoise(int seed, float persistence, float frequency, int heightMultiplier) {
+	PerlinNoise(int seed, float persistence, float frequency, float lacunarity, int octave) {
 		m_perlinModule.SetSeed(seed);
 		m_perlinModule.SetPersistence(persistence);
 		m_perlinModule.SetFrequency(frequency);
-		m_heightMultiplier = heightMultiplier;
+		m_perlinModule.SetLacunarity(lacunarity);
+		m_perlinModule.SetOctaveCount(octave);
 	}
 	virtual double noise(double x, double y) override;
 };

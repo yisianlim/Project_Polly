@@ -17,7 +17,8 @@ class MeshGenerator {
 		RIDGE,
 		DARK_GRASS,
 		LIGHT_GRASS,
-		SAND
+		SAND,
+		DARK_SAND,
 	};
 
 	public:
@@ -26,14 +27,19 @@ class MeshGenerator {
 		double m_subdivisions;
 		double minHeight = DBL_MAX;
 		double maxHeight = DBL_MIN;
+		std::vector<glm::vec2> triangulated_points;
+		std::vector<float> fall_off_castle;
+		std::vector<float> trim_edge;
+		std::vector<glm::vec3> m_vertices;
 
 		std::map<int, glm::vec3> region_to_colour = {
 		{ (int)Region::SNOW, glm::vec3(1, 1, 1) },
-		{ (int)Region::ROCK, glm::vec3(0.55, 0.49, 0.49) },
-		{ (int)Region::RIDGE, glm::vec3(0.74, 0.63, 0.62) },
+		{ (int)Region::ROCK, glm::vec3(0.56, 0.56, 0.56) },
+		{ (int)Region::RIDGE, glm::vec3(0.29, 0.29, 0.29) },
 		{ (int)Region::DARK_GRASS, glm::vec3(0.6, 0.77, 0.47) },
 		{ (int)Region::LIGHT_GRASS, glm::vec3(0.62, 0.92, 0.36) },
 		{ (int)Region::SAND, glm::vec3(0.43, 0.38, 0.26) },
+		{ (int)Region::DARK_SAND, glm::vec3(0.16, 0.5, 0.6) },
 		};
 
 		// Empty constructor.
@@ -43,10 +49,20 @@ class MeshGenerator {
 		// points_num determine how many vertices are there in the mesh, which will affect
 		// the low poly look of the mesh.
 		MeshGenerator(double width, double height, int subdivisions) 
-			: m_width(width), m_height(height), m_subdivisions(subdivisions) {}
+			: m_width(width), m_height(height), m_subdivisions(subdivisions) {
+			init();
+		}
 
 		// Generates the meshes of different regions making up the terrain. 
-		std::vector <cgra::Mesh> generateMeshes();
+		void init();
+		std::vector<cgra::Mesh> generateMeshes(Noise &n, float height, float redistribution_factor);
+
+		cgra::Mesh generateWaterMesh(double time);
+
+		// Using a noise map to generate the coordinates for tree placements. 
+		std::vector<glm::vec3> getFoliagePlacementCoordinates(Noise &n, int number_of_trees);
+
+		float generateOffset(glm::vec2 coord, double time);
 
 	private:
 		// Looks at the vertices and determine which region it should be in. 
@@ -67,5 +83,6 @@ class MeshGenerator {
 		std::vector<glm::vec3> dark_grass;
 		std::vector<glm::vec3> light_grass;
 		std::vector<glm::vec3> sand;
+		std::vector<glm::vec3> dark_sand;
 
 };
