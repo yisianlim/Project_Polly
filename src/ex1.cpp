@@ -29,19 +29,34 @@ void Application::init() {
     // Create a view matrix.
     glm::mat4 viewMatrix(1);
 	viewMatrix = glm::lookAt(
-					glm::vec3(4, 3, 10), 
+					glm::vec3(4, 10, 23), 
 					glm::vec3(0, 0, 0), 
 					glm::vec3(0, 1, 0));
     m_program.setViewMatrix(viewMatrix);
 
 	// Generate the terrain
 	m_meshGenerator = MeshGenerator(40, 40, 2);
-	m_terrain_meshes = m_meshGenerator.generateMeshes(PerlinNoise(0, 0.1, 0.35, 2.0, 6), 5, 2);
-	m_foliage_coords = m_meshGenerator.getFoliagePlacementCoordinates(PerlinNoise(0, 0.2, 0.1, 2.0, 6), 15);
+	m_terrain_meshes = m_meshGenerator.generateMeshes(PerlinNoise(0, 0.1, 0.35, 2.0, 6), 5, 2, 28);
+	m_foliage_coords = m_meshGenerator.getFoliagePlacementCoordinates(PerlinNoise(0, 0.2, 0.1, 2.0, 6), 28);
 	water = m_meshGenerator.generateWaterMesh(glfwGetTime());
 
 	foliage = loadObj(CGRA_SRCDIR "/res/models/tree_leaves.obj");
-	island = loadObj(CGRA_SRCDIR "/res/models/island.obj");
+
+	// Test plane. 
+	cgra::Matrix<double> vertices(4, 3);
+	cgra::Matrix<unsigned int> triangles(2, 3);
+
+	int size = 5;
+
+	vertices.setRow(0, { 3.0 + size,  0.2,  13.5 + size });
+	vertices.setRow(1, { 1,  0.2,  13.5 + size});
+	vertices.setRow(2, { 3.0 + size,  0.2, 11.5});
+	vertices.setRow(3, { 1,  0.2, 11.5});
+
+	triangles.setRow(0, { 1, 0, 2 });
+	triangles.setRow(1, { 2, 3, 1 });
+
+	m_mesh.setData(vertices, triangles);
 }
 
 cgra::Mesh Application::loadObj(const char *filename) {
@@ -132,14 +147,12 @@ void Application::drawScene() {
 		drawFoliage();
 	}
 
-	//modelTransform = glm::scale(modelTransform, glm::vec3(1.65, 2, 1.65));
-	//m_program.setModelMatrix(modelTransform);
-	//m_program.setColor(glm::vec3(0.43, 0.38, 0.26));
-	//island.draw();
-
 	m_program.setModelMatrix(modelTransform);
 	m_program.setColor(glm::vec3(0.16, 0.5, 0.6));
 	m_meshGenerator.generateWaterMesh(glfwGetTime()).draw();
+
+	m_program.setColor(glm::vec3(1, 0, 0));
+	//m_mesh.draw();
 
 }
 
@@ -179,53 +192,61 @@ void Application::doGUI() {
 	static float height = 5;
 	static float redistribution_factor = 2.0;
 	static int foliage_sparseness = 15;
+	static int lake_size = 28;
 
 	// Change the frequency. 
 	if (ImGui::SliderFloat("Distance between peaks \n(Frequency)", &frequency, 0.0f, 2.0f, "%.3f")) {
 		m_terrain_meshes = m_meshGenerator.generateMeshes(PerlinNoise(seed, persistence, frequency, lacunarity, octave),
-			height, redistribution_factor);
+			height, redistribution_factor, lake_size);
 		m_foliage_coords = m_meshGenerator.getFoliagePlacementCoordinates(PerlinNoise(0, 0.1, 0.1, 2.0, 6), foliage_sparseness);
 	}
 
 	// Change the persistence (controls the roughness of the Perlin noise)
 	if (ImGui::SliderFloat("Mountain roughness \n(Persistence) ", &persistence, 0.0f, 1.0f, "%.3f")) {
 		m_terrain_meshes = m_meshGenerator.generateMeshes(PerlinNoise(seed, persistence, frequency, lacunarity, octave),
-			height, redistribution_factor);
+			height, redistribution_factor, lake_size);
 		m_foliage_coords = m_meshGenerator.getFoliagePlacementCoordinates(PerlinNoise(0, 0.1, 0.1, 2.0, 6), foliage_sparseness);
 	}
 
 	// Change the lacunarity (frequency multiplier between successive octaves)
 	if (ImGui::SliderFloat("Rate of frequency changes \n(Lacunarity)", &lacunarity, 0.0f, 4.0f, "%.3f")) {
 		m_terrain_meshes = m_meshGenerator.generateMeshes(PerlinNoise(seed, persistence, frequency, lacunarity, octave),
-			height, redistribution_factor);
+			height, redistribution_factor, lake_size);
 		m_foliage_coords = m_meshGenerator.getFoliagePlacementCoordinates(PerlinNoise(0, 0.1, 0.1, 2.0, 6), foliage_sparseness);
 	}
 
 	// Change the height.
 	if (ImGui::SliderFloat("Height", &height, 0.0f, 50.0f, "%.3f")) {
 		m_terrain_meshes = m_meshGenerator.generateMeshes(PerlinNoise(seed, persistence, frequency, lacunarity, octave),
-			height, redistribution_factor);
+			height, redistribution_factor, lake_size);
 		m_foliage_coords = m_meshGenerator.getFoliagePlacementCoordinates(PerlinNoise(0, 0.1, 0.1, 2.0, 6), foliage_sparseness);
 	}
 
 	// Change the redistribution factor.
 	if (ImGui::SliderFloat("Redistribution factor", &redistribution_factor, 0.0f, 10.0f, "%.3f")) {
 		m_terrain_meshes = m_meshGenerator.generateMeshes(PerlinNoise(seed, persistence, frequency, lacunarity, octave),
-			height, redistribution_factor);
+			height, redistribution_factor, lake_size);
 		m_foliage_coords = m_meshGenerator.getFoliagePlacementCoordinates(PerlinNoise(0, 0.1, 0.1, 2.0, 6), foliage_sparseness);
 	}
 
 
 	if (ImGui::SliderInt("Foliage Sparseness Factor \n", &foliage_sparseness, 2, 100, "%f")) {
 		m_terrain_meshes = m_meshGenerator.generateMeshes(PerlinNoise(seed, persistence, frequency, lacunarity, octave),
-			height, redistribution_factor);
+			height, redistribution_factor, lake_size);
+		m_foliage_coords = m_meshGenerator.getFoliagePlacementCoordinates(PerlinNoise(0, 0.1, 0.1, 2.0, 6), foliage_sparseness);
+	}
+
+	// Adjust the size of the lake.
+	if (ImGui::SliderInt("Lake size \n", &lake_size, 0, 30, "%f")) {
+		m_terrain_meshes = m_meshGenerator.generateMeshes(PerlinNoise(seed, persistence, frequency, lacunarity, octave),
+			height, redistribution_factor, lake_size);
 		m_foliage_coords = m_meshGenerator.getFoliagePlacementCoordinates(PerlinNoise(0, 0.1, 0.1, 2.0, 6), foliage_sparseness);
 	}
 
 	// Change the seed.
 	if (ImGui::InputInt("Regenerate (Seed)", &seed)) {
 		m_terrain_meshes = m_meshGenerator.generateMeshes(PerlinNoise(seed, persistence, frequency, lacunarity, octave),
-			height, redistribution_factor);
+			height, redistribution_factor, lake_size);
 		m_foliage_coords = m_meshGenerator.getFoliagePlacementCoordinates(PerlinNoise(seed, 0.1, 0.1, 2.0, 6), foliage_sparseness);
 	}
 
@@ -243,13 +264,6 @@ void Application::onMouseButton(int button, int action, int) {
 }
 
 void Application::onCursorPos(double xpos, double ypos) {
-    /**********************************************************
-     * 4. Interactive Transforms                              *
-     *                                                        *
-     * Change `translation`, `scale` and `rotation` based on  *
-     * `mousePositionDelta`.                                  *
-     **********************************************************/
-
     // Make a vec2 with the current mouse position
     glm::vec2 currentMousePosition(xpos, ypos);
 
@@ -257,61 +271,35 @@ void Application::onCursorPos(double xpos, double ypos) {
     glm::vec2 mousePositionDelta = currentMousePosition - m_mousePosition;
 
     if (m_mouseButtonDown[GLFW_MOUSE_BUTTON_LEFT]) {
-    	// Get the pixel coordinates and convert them to viewport coordinates.
-    	// p1 is the previous position.
-    	// p2 is the current position.
-    	float p1_x = (m_mousePosition.x - ((float)m_viewportSize.x/2.0)) / ((float)m_viewportSize.x/2.0);
-    	float p1_y = (m_mousePosition.y - ((float)m_viewportSize.y/2.0)) / ((float)m_viewportSize.y/2.0);
-    	float p2_x = (currentMousePosition.x - ((float)m_viewportSize.x/2.0)) / ((float)m_viewportSize.x/2.0);
-    	float p2_y = (currentMousePosition.y - ((float)m_viewportSize.y/2.0)) / ((float)m_viewportSize.y/2.0);
-    	glm::vec2 prevPoint (p1_x, p1_y);
-    	glm::vec2 currentPoint (p2_x, p2_y);
-
-    	// Convert them into 3D vectors.
-    	glm::vec3 prevVector = turnTo3DVector(prevPoint);
-    	glm::vec3 currentVector= turnTo3DVector(currentPoint);
-
-    	// Calculate the angle between the two vectors.
-    	float angle = std::acos(glm::dot(prevVector, currentVector));
-
-    	// Calculate the axis.
-    	glm::vec3 axis = glm::cross(prevVector, currentVector);
-    	axis.y = -axis.y;
-
-    	// Form the rotation matrix.
-    	if(glm::length(axis) > 0){
-    		glm::mat4 rot = glm::rotate(glm::mat4(1), angle, axis);
-    		m_rotationMatrix = glm::inverse(rot) * m_rotationMatrix;
-    	}
+		// Rotate around the y-axis. 
+		float delta = glm::length(mousePositionDelta) / 100.0f;
+		delta = mousePositionDelta.x < 0 ? -delta : delta;
+		m_angle += delta;
     } else if (m_mouseButtonDown[GLFW_MOUSE_BUTTON_MIDDLE]) {
-    	glm::vec3 translation((mousePositionDelta.x/(m_viewportSize.x/2))-1, -((mousePositionDelta.y/(m_viewportSize.y/2))-1), 0);
-    	glm::vec2 pos = mousePositionDelta / m_viewportSize;
+		// Adjust the y position of the camera. 
+    	glm::vec2 pos = mousePositionDelta / glm::vec2(20);
     	pos.y = -pos.y;
-    	m_translation += glm::vec3(pos, 0);
+		y_look_at += pos.y;
 
     } else if (m_mouseButtonDown[GLFW_MOUSE_BUTTON_RIGHT]) {
+		// Zoom into the scene. 
     	float scale = currentMousePosition.y/(m_viewportSize.y/2);
     	if(scale > 0){
     		m_scale = scale;
     	}
     }
 
+	// Set the view matrix. 
+	float radius = 25.0f;
+	float camX = sin(m_angle) * radius;
+	float camZ = cos(m_angle) * radius;
+	glm::mat4 view;
+	view = glm::lookAt(glm::vec3(camX, y_look_at, camZ), glm::vec3(0.0, 0.0, 0.0), glm::vec3(0.0, 1.0, 0.0));
+	m_program.setViewMatrix(view);
+
     // Update the mouse position to the current one
     m_mousePosition = currentMousePosition;
 
-}
-
-glm::vec3 Application::turnTo3DVector(glm::vec2 vector){
-	float len = glm::length(vector);
-	glm::vec3 vec_3d;
-	if(len > 1){
-		glm::vec2 vec_normalized = glm::normalize(vector);
-		vec_3d = glm::vec3(vec_normalized.x, vec_normalized.y, 0);
-	} else {
-		float z = glm::sqrt(1-(len*len)); // square root of 1 - x^2 + y^2
-		vec_3d = glm::vec3(vector.x, vector.y, z);
-	}
-	return vec_3d;
 }
 
 void Application::onKey(int key, int scancode, int action, int mods) {

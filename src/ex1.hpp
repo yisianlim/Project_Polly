@@ -38,6 +38,9 @@ public:
     // Whether or not the left, middle or right buttons are down.
     bool m_mouseButtonDown[3];
 
+	float m_angle = 0;
+	float y_look_at = 10.0f;
+
 	MeshGenerator m_meshGenerator;
 	std::vector<glm::vec3> m_foliage_coords;
 

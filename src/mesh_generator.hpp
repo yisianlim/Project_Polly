@@ -28,7 +28,7 @@ class MeshGenerator {
 		double minHeight = DBL_MAX;
 		double maxHeight = DBL_MIN;
 		std::vector<glm::vec2> triangulated_points;
-		std::vector<float> fall_off_castle;
+		std::vector<float> fall_off;
 		std::vector<float> trim_edge;
 		std::vector<glm::vec3> m_vertices;
 
@@ -39,7 +39,6 @@ class MeshGenerator {
 		{ (int)Region::DARK_GRASS, glm::vec3(0.6, 0.77, 0.47) },
 		{ (int)Region::LIGHT_GRASS, glm::vec3(0.62, 0.92, 0.36) },
 		{ (int)Region::SAND, glm::vec3(0.43, 0.38, 0.26) },
-		{ (int)Region::DARK_SAND, glm::vec3(0.16, 0.5, 0.6) },
 		};
 
 		// Empty constructor.
@@ -55,7 +54,7 @@ class MeshGenerator {
 
 		// Generates the meshes of different regions making up the terrain. 
 		void init();
-		std::vector<cgra::Mesh> generateMeshes(Noise &n, float height, float redistribution_factor);
+		std::vector<cgra::Mesh> generateMeshes(Noise &n, float height, float redistribution_factor, float lake_size);
 
 		cgra::Mesh generateWaterMesh(double time);
 
@@ -65,6 +64,12 @@ class MeshGenerator {
 		float generateOffset(glm::vec2 coord, double time);
 
 	private:
+		struct compare_xz {
+			bool operator ()(const glm::vec3& left, const glm::vec3& right) const {
+				return (left.x == right.x ? left.z < right.z : left.x < right.x);
+			}
+		};
+
 		// Looks at the vertices and determine which region it should be in. 
 		void determineRegionForVertices(glm::vec3 v1, glm::vec3 v2, glm::vec3 v3);
 
@@ -83,6 +88,5 @@ class MeshGenerator {
 		std::vector<glm::vec3> dark_grass;
 		std::vector<glm::vec3> light_grass;
 		std::vector<glm::vec3> sand;
-		std::vector<glm::vec3> dark_sand;
 
 };

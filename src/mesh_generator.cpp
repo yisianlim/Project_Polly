@@ -8,36 +8,38 @@ void MeshGenerator::init() {
 
 	int num_of_points = m_width * m_height * m_subdivisions * m_subdivisions;
 
-	// Generate the coordinates of all vertices making up the mesh.
-	std::vector<glm::vec2> coords;
-	for (int i = 0; i < num_of_points; i++) {
-		float ranX = ((float)rand() / (float)(RAND_MAX));
-		float ranY = ((float)rand() / (float)(RAND_MAX));
-		coords.push_back(glm::vec2(minX + ranX * (m_width), minY + ranY * (m_height)));
-	}
-
-	// Carry out Delaunay triangulation.
-	Triangulation triangulation = Triangulation(coords);
-	triangulated_points = triangulation.getPoints();
-
-	//// Temporarily using the faster Delaunay library. 
-	//std::vector<double> coords;
+	//// Generate the coordinates of all vertices making up the mesh.
+	//std::vector<glm::vec2> coords;
 	//for (int i = 0; i < num_of_points; i++) {
 	//	float ranX = ((float)rand() / (float)(RAND_MAX));
 	//	float ranY = ((float)rand() / (float)(RAND_MAX));
-	//	coords.push_back(minX + ranX * (m_width));
-	//	coords.push_back(minY + ranY * (m_height));
+	//	coords.push_back(glm::vec2(minX + ranX * (m_width), minY + ranY * (m_height)));
 	//}
 
-	//delaunator::Delaunator d(coords);
-	//
-	//for (std::size_t i = 0; i < d.triangles.size(); i ++) {
-	//	float x = d.coords[2 * d.triangles[i]];        
-	//	float y = d.coords[2 * d.triangles[i] + 1];   
-	//	triangulated_points.push_back(glm::vec2(x, y));
-	//}
+	//// Carry out Delaunay triangulation.
+	//Triangulation triangulation = Triangulation(coords);
+	//triangulated_points = triangulation.getPoints();
+
+	// Temporarily using the faster Delaunay library. 
+	std::vector<double> coords;
+	for (int i = 0; i < num_of_points; i++) {
+		float ranX = ((float)rand() / (float)(RAND_MAX));
+		float ranY = ((float)rand() / (float)(RAND_MAX));
+		coords.push_back(minX + ranX * (m_width));
+		coords.push_back(minY + ranY * (m_height));
+	}
+
+	delaunator::Delaunator d(coords);
+
+	for (std::size_t i = 0; i < d.triangles.size(); i++) {
+		float x = d.coords[2 * d.triangles[i]];
+		float y = d.coords[2 * d.triangles[i] + 1];
+		triangulated_points.push_back(glm::vec2(x, y));
+	}
 	
-	// Generate a radial fall off map for each coordinate, for castle placement.  
+	// Generate a radial fall off map for each coordinate
+	// to reduce the number of mountains at the edges.
+	// Create a more island looking map. 
 	float centerX = 2;
 	float centerY = 2;
 	float radius = 3;
@@ -48,10 +50,10 @@ void MeshGenerator::init() {
 		float distanceToCenter = std::sqrt(distanceX + distanceY);
 
 		if (distanceToCenter < radius) {
-			fall_off_castle.push_back(0);
+			fall_off.push_back(0);
 		}
 		else {
-			fall_off_castle.push_back(distanceToCenter);
+			fall_off.push_back(distanceToCenter);
 		}
 	}
 
@@ -78,7 +80,7 @@ void MeshGenerator::init() {
 
 float MeshGenerator::generateOffset(glm::vec2 coord, double time) {
 	float waveLength = 10;
-	float waveAmplitude = 0.2;
+	float waveAmplitude = 0.1;
 	float speed = time / 2;
 	float radiansX = (coord.x / waveLength + speed) * 2.0 * std::_Pi;
 	float radiansY = (coord.y / waveLength + speed) * 2.0 * std::_Pi;
@@ -132,12 +134,13 @@ cgra::Mesh MeshGenerator::generateWaterMesh(double time) {
 	return mesh;
 }
 
-std::vector<cgra::Mesh> MeshGenerator::generateMeshes(Noise &n, float height, float redistribution_factor) {
-	printf("Generating meshes now!\n");
+std::vector<cgra::Mesh> MeshGenerator::generateMeshes(Noise &n, float height, float redistribution_factor, float river_size) {
 	std::vector<cgra::Mesh> meshes;
 
+	// Noise map to create lakes. 
+	PerlinNoise lake_map = PerlinNoise(0, 0.2, 0.1, 2.0, 6);
+
 	// Map each vertices generated to a height based on the noise function.
-	PerlinNoise river_map = PerlinNoise(0, 0.2, 0.1, 2.0, 6);
 	std::vector<glm::vec3> vertices;
 	for (std::size_t i = 0; i < triangulated_points.size(); i++) {
 		double x1 = triangulated_points[i].x;
@@ -147,27 +150,30 @@ std::vector<cgra::Mesh> MeshGenerator::generateMeshes(Noise &n, float height, fl
 		// for a more natural look. 
 		PerlinNoise n1 = PerlinNoise(500, 0.1, 0.1, 0.5, 6);
 		PerlinNoise n2 = PerlinNoise(0, 0.01, 0.5, 2, 6);
-
 		double h1 = 1.0 * n.noise(x1, y1) + 1.5 * n1.noise(x1, y1) + 0.15 * n2.noise(x1, y1);
-		//double h1 = n.noise(x1, y1);
 
-		// Castle space.
+		// Scale the height to be in the range of between 0 to 1.
 		h1 = (h1 - (-1.0f)) / 2.0f;
-		//h1 = (fall_off_castle[i] / (m_width / 4.0f)) - h1;
-		h1 = h1 - (fall_off_castle[i] / (m_width/0.7));
+
+		// Create more island look. 
+		h1 = h1 - (fall_off[i] / (m_width / 0.7));
 
 		// Trimming edges.
 		h1 = h1 - (trim_edge[i] / (m_width / 2.0f));
 
 		// More tweaking. 
-		
 		h1 = h1 <= 0 ? 0 : h1;
 		h1 = std::pow(h1, redistribution_factor);
 		h1 *= height;
 
-		// Create water at that region.
-		if (h1 <= 0 && x1 > -m_width/2 && x1 < 0 ) {
-			h1 -= std::abs(river_map.noise(x1, y1) * 4);
+		// Create a lake at that region.
+		float distanceX = std::pow(x1 + m_width / 2, 2);
+		float distanceY = std::pow(y1, 2);
+		float distanceToCenter = std::sqrt(distanceX + distanceY);
+
+		float denom = 31 - river_size;
+		if (h1 <= 0 && x1 > -m_width/2 && x1 < 0 && distanceToCenter < m_width / denom) {
+			h1 -= std::abs(lake_map.noise(x1, y1) * 4);
 		}
 
 		minHeight = std::min(minHeight, h1);
@@ -184,7 +190,6 @@ std::vector<cgra::Mesh> MeshGenerator::generateMeshes(Noise &n, float height, fl
 	dark_grass.clear();
 	light_grass.clear();
 	sand.clear();
-	dark_sand.clear();
 
 	// Go through all of the vertices and determine which region it is. 
 	for (int i = 0; i < vertices.size(); i+=3) {
@@ -202,7 +207,6 @@ std::vector<cgra::Mesh> MeshGenerator::generateMeshes(Noise &n, float height, fl
 	cgra::Mesh dark_grass_mesh = createMeshFromVertices(dark_grass);
 	cgra::Mesh light_grass_mesh = createMeshFromVertices(light_grass);
 	cgra::Mesh sand_mesh = createMeshFromVertices(sand);
-	cgra::Mesh dark_sand_mesh = createMeshFromVertices(dark_sand);
 
 	// Push the created meshes to be returned.
 	meshes.push_back(snow_mesh);
@@ -211,7 +215,6 @@ std::vector<cgra::Mesh> MeshGenerator::generateMeshes(Noise &n, float height, fl
 	meshes.push_back(dark_grass_mesh);
 	meshes.push_back(light_grass_mesh);
 	meshes.push_back(sand_mesh);
-	meshes.push_back(dark_sand_mesh);
 	return meshes;
 }
 
@@ -234,11 +237,8 @@ void MeshGenerator::determineRegionForVertices(glm::vec3 v1, glm::vec3 v2, glm::
 	else if (majority(v1.y, v2.y, v3.y, (0.5))) {
 		push_to_region(light_grass, v1, v2, v3);
 	}
-	else if(majority(v1.y, v2.y, v3.y, (-0.5))) {
-		push_to_region(sand, v1, v2, v3);
-	}
 	else {
-		push_to_region(dark_sand, v1, v2, v3);
+		push_to_region(sand, v1, v2, v3);
 	}
 }
 

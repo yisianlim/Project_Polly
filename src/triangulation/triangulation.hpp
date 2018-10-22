@@ -81,8 +81,15 @@ class Triangulation {
 			Triangle super_triangle = Triangle(p1, p2, p3);
 			m_triangles.push_back(super_triangle);
 
-			for (glm::vec2 p : points) {
-				run(p);
+
+
+			for (int i = 0; i < points.size(); i++) {
+				run(points[i]);
+
+				// Log the progress.
+				if (i % 250 == 0) {
+					printf("Progress: %.2f%% \n", ((float)i/(float)points.size())*100.0f);
+				}
 			}
 
 			m_triangles.erase(std::remove_if(begin(m_triangles), end(m_triangles), [p1, p2, p3](Triangle &t) {
