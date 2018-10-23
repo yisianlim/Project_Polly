@@ -8,9 +8,10 @@
 #include "noise/noise.hpp"
 #include "triangulation/triangulation.hpp"
 #include <algorithm>
+#define M_PI 3.14159265358979323846
 
 class MeshGenerator {
-	// Various regions of the terrain. 
+	// Various regions of the terrain.
 	enum Region {
 		SNOW,
 		ROCK,
@@ -47,19 +48,19 @@ class MeshGenerator {
 		// Overloaded constructor.
 		// points_num determine how many vertices are there in the mesh, which will affect
 		// the low poly look of the mesh.
-		MeshGenerator(double width, double height, int subdivisions) 
+		MeshGenerator(double width, double height, int subdivisions)
 			: m_width(width), m_height(height), m_subdivisions(subdivisions) {
 			init();
 		}
 
-		// Generates the meshes of different regions making up the terrain. 
+		// Generates the meshes of different regions making up the terrain.
 		void init();
-		std::vector<cgra::Mesh> generateMeshes(Noise &n, float height, float redistribution_factor, float lake_size);
+		std::vector<cgra::Mesh> generateMeshes(PerlinNoise n, float height, float redistribution_factor, float lake_size);
 
 		cgra::Mesh generateWaterMesh(double time);
 
-		// Using a noise map to generate the coordinates for tree placements. 
-		std::vector<glm::vec3> getFoliagePlacementCoordinates(Noise &n, int number_of_trees);
+		// Using a noise map to generate the coordinates for tree placements.
+		std::vector<glm::vec3> getFoliagePlacementCoordinates(PerlinNoise n, int number_of_trees);
 
 		float generateOffset(glm::vec2 coord, double time);
 
@@ -70,13 +71,13 @@ class MeshGenerator {
 			}
 		};
 
-		// Looks at the vertices and determine which region it should be in. 
+		// Looks at the vertices and determine which region it should be in.
 		void determineRegionForVertices(glm::vec3 v1, glm::vec3 v2, glm::vec3 v3);
 
 		bool majority(float y1, float y2, float y3, float factor);
 
-		// Create a mesh from the vector of vertices. 
-		// 3 consecutive vertices from one triangle. 
+		// Create a mesh from the vector of vertices.
+		// 3 consecutive vertices from one triangle.
 		cgra::Mesh createMeshFromVertices(std::vector<glm::vec3> v);
 
 		void push_to_region(std::vector<glm::vec3> &region, glm::vec3 v1, glm::vec3 v2, glm::vec3 v3);

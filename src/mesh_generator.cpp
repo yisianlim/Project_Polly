@@ -1,5 +1,4 @@
 #include "mesh_generator.hpp";
-#include "triangulation/delaunator.hpp";
 
 void MeshGenerator::init() {
 	// Initial positions of the mesh.
@@ -8,38 +7,21 @@ void MeshGenerator::init() {
 
 	int num_of_points = m_width * m_height * m_subdivisions * m_subdivisions;
 
-	//// Generate the coordinates of all vertices making up the mesh.
-	//std::vector<glm::vec2> coords;
-	//for (int i = 0; i < num_of_points; i++) {
-	//	float ranX = ((float)rand() / (float)(RAND_MAX));
-	//	float ranY = ((float)rand() / (float)(RAND_MAX));
-	//	coords.push_back(glm::vec2(minX + ranX * (m_width), minY + ranY * (m_height)));
-	//}
-
-	//// Carry out Delaunay triangulation.
-	//Triangulation triangulation = Triangulation(coords);
-	//triangulated_points = triangulation.getPoints();
-
-	// Temporarily using the faster Delaunay library. 
-	std::vector<double> coords;
+	// Generate the coordinates of all vertices making up the mesh.
+	std::vector<glm::vec2> coords;
 	for (int i = 0; i < num_of_points; i++) {
 		float ranX = ((float)rand() / (float)(RAND_MAX));
 		float ranY = ((float)rand() / (float)(RAND_MAX));
-		coords.push_back(minX + ranX * (m_width));
-		coords.push_back(minY + ranY * (m_height));
+		coords.push_back(glm::vec2(minX + ranX * (m_width), minY + ranY * (m_height)));
 	}
 
-	delaunator::Delaunator d(coords);
+	// Carry out Delaunay triangulation.
+	Triangulation triangulation = Triangulation(coords);
+	triangulated_points = triangulation.getPoints();
 
-	for (std::size_t i = 0; i < d.triangles.size(); i++) {
-		float x = d.coords[2 * d.triangles[i]];
-		float y = d.coords[2 * d.triangles[i] + 1];
-		triangulated_points.push_back(glm::vec2(x, y));
-	}
-	
 	// Generate a radial fall off map for each coordinate
 	// to reduce the number of mountains at the edges.
-	// Create a more island looking map. 
+	// Create a more island looking map.
 	float centerX = 2;
 	float centerY = 2;
 	float radius = 3;
@@ -57,7 +39,7 @@ void MeshGenerator::init() {
 		}
 	}
 
-	// Generate a second fall off map for each coordinate, to trim off edges. 
+	// Generate a second fall off map for each coordinate, to trim off edges.
 	centerX = 0;
 	centerY = 0;
 	for (int i = 0; i < triangulated_points.size(); i++) {
@@ -82,8 +64,8 @@ float MeshGenerator::generateOffset(glm::vec2 coord, double time) {
 	float waveLength = 10;
 	float waveAmplitude = 0.1;
 	float speed = time / 2;
-	float radiansX = (coord.x / waveLength + speed) * 2.0 * std::_Pi;
-	float radiansY = (coord.y / waveLength + speed) * 2.0 * std::_Pi;
+	float radiansX = (coord.x / waveLength + speed) * 2.0 * M_PI;
+	float radiansY = (coord.y / waveLength + speed) * 2.0 * M_PI;
 	return waveAmplitude * 0.5 * (std::sin(radiansX) + std::cos(radiansY));
 }
 
@@ -93,7 +75,7 @@ cgra::Mesh MeshGenerator::generateWaterMesh(double time) {
 	double minX = -m_width / 2;
 	double minY = -m_height / 2;
 
-	// Number of subdivisions for each mesh. 
+	// Number of subdivisions for each mesh.
 	int width_subdivisions = m_width * 2;
 	int height_subdivisions = m_height * 2;
 
@@ -117,7 +99,7 @@ cgra::Mesh MeshGenerator::generateWaterMesh(double time) {
 			vertices.setRow(count++, { x + offset, -0.5 + offset, y + offset });
 		}
 	}
-	// Set the triangle data by specificying the respective vertices to make up each triangle. 
+	// Set the triangle data by specificying the respective vertices to make up each triangle.
 	count = 0;
 	for (int x = 0; x < width_subdivisions; x++) {
 		for (int y = 0; y < height_subdivisions; y++) {
@@ -134,10 +116,10 @@ cgra::Mesh MeshGenerator::generateWaterMesh(double time) {
 	return mesh;
 }
 
-std::vector<cgra::Mesh> MeshGenerator::generateMeshes(Noise &n, float height, float redistribution_factor, float river_size) {
+std::vector<cgra::Mesh> MeshGenerator::generateMeshes(PerlinNoise n, float height, float redistribution_factor, float river_size) {
 	std::vector<cgra::Mesh> meshes;
 
-	// Noise map to create lakes. 
+	// Noise map to create lakes.
 	PerlinNoise lake_map = PerlinNoise(0, 0.2, 0.1, 2.0, 6);
 
 	// Map each vertices generated to a height based on the noise function.
@@ -147,7 +129,7 @@ std::vector<cgra::Mesh> MeshGenerator::generateMeshes(Noise &n, float height, fl
 		double y1 = triangulated_points[i].y;
 
 		// Low frequency noises are added to create smooth regions
-		// for a more natural look. 
+		// for a more natural look.
 		PerlinNoise n1 = PerlinNoise(500, 0.1, 0.1, 0.5, 6);
 		PerlinNoise n2 = PerlinNoise(0, 0.01, 0.5, 2, 6);
 		double h1 = 1.0 * n.noise(x1, y1) + 1.5 * n1.noise(x1, y1) + 0.15 * n2.noise(x1, y1);
@@ -155,13 +137,13 @@ std::vector<cgra::Mesh> MeshGenerator::generateMeshes(Noise &n, float height, fl
 		// Scale the height to be in the range of between 0 to 1.
 		h1 = (h1 - (-1.0f)) / 2.0f;
 
-		// Create more island look. 
+		// Create more island look.
 		h1 = h1 - (fall_off[i] / (m_width / 0.7));
 
 		// Trimming edges.
 		h1 = h1 - (trim_edge[i] / (m_width / 2.0f));
 
-		// More tweaking. 
+		// More tweaking.
 		h1 = h1 <= 0 ? 0 : h1;
 		h1 = std::pow(h1, redistribution_factor);
 		h1 *= height;
@@ -191,16 +173,16 @@ std::vector<cgra::Mesh> MeshGenerator::generateMeshes(Noise &n, float height, fl
 	light_grass.clear();
 	sand.clear();
 
-	// Go through all of the vertices and determine which region it is. 
+	// Go through all of the vertices and determine which region it is.
 	for (int i = 0; i < vertices.size(); i+=3) {
-			glm::vec3 vert_a = vertices[i];
-			glm::vec3 vert_b = vertices[i+1];
-			glm::vec3 vert_c = vertices[i+2];
-			glm::vec3 norm = glm::triangleNormal(vert_a, vert_b, vert_c);
-			determineRegionForVertices(vert_a, vert_b, vert_c);
+		glm::vec3 vert_a = vertices[i];
+		glm::vec3 vert_b = vertices[i+1];
+		glm::vec3 vert_c = vertices[i+2];
+		glm::vec3 norm = glm::triangleNormal(vert_a, vert_b, vert_c);
+		determineRegionForVertices(vert_a, vert_b, vert_c);
 	}
 
-	// Create the meshes. 
+	// Create the meshes.
 	cgra::Mesh snow_mesh = createMeshFromVertices(snow);
 	cgra::Mesh rock_mesh = createMeshFromVertices(rock);
 	cgra::Mesh ridge_mesh = createMeshFromVertices(ridge);
@@ -221,7 +203,7 @@ std::vector<cgra::Mesh> MeshGenerator::generateMeshes(Noise &n, float height, fl
 void MeshGenerator::determineRegionForVertices(glm::vec3 v1, glm::vec3 v2, glm::vec3 v3) {
 	float sublength = (maxHeight - minHeight) / 6.0f;
 
-	// Determining factors has to be between 1 to 5.
+	// Assign a region for the vertices of the triangle given, based on its height. 
 	if (majority(v1.y, v2.y, v3.y, (7))) {
 		push_to_region(snow, v1, v2, v3);
 	}
@@ -247,7 +229,6 @@ bool MeshGenerator::majority(float y1, float y2, float y3, float factor) {
 	if (y1 > factor && y3 > factor) return true;
 	if (y2 > factor && y3 > factor) return true;
 	return false;
-
 }
 
 void MeshGenerator::push_to_region(std::vector<glm::vec3> &region, glm::vec3 v1, glm::vec3 v2, glm::vec3 v3) {
@@ -263,6 +244,7 @@ cgra::Mesh MeshGenerator::createMeshFromVertices(std::vector<glm::vec3> v) {
 		mesh.setNull();
 		return mesh;
 	}
+
 	cgra::Matrix<double> vertices(v.size(), 3);
 	cgra::Matrix<unsigned int> triangles(v.size() / 3, 3);
 	int count = 0;
@@ -277,19 +259,19 @@ cgra::Mesh MeshGenerator::createMeshFromVertices(std::vector<glm::vec3> v) {
 }
 
 // https://gamedevacademy.org/complete-guide-to-procedural-level-generation-in-unity-part-3/
-std::vector<glm::vec3> MeshGenerator::getFoliagePlacementCoordinates(Noise &n, int density) {
+std::vector<glm::vec3> MeshGenerator::getFoliagePlacementCoordinates(PerlinNoise n, int density) {
 	std::vector<glm::vec3> tree_coords;
 	for (int i = 0; i < m_vertices.size(); i+= density * 3) {
 		glm::vec3 current = m_vertices[i];
 
-		// We are at a mountain or a lake, no trees should be placed. 
+		// We are at a mountain or a lake, no trees should be placed.
 		if (current.y > 1 || current.y < 0) {
 			continue;
 		}
 
 		float neighbour_radius = 0.1;
 
-		// Compare current noise values with neighbouring noise values. 
+		// Compare current noise values with neighbouring noise values.
 		int neighborZBegin = (int)std::max(0.0f, current.z - neighbour_radius);
 		int neighborZEnd = (int)std::min((float)(m_height/2), current.z + neighbour_radius);
 		int neighborXBegin = (int)std::max(0.0f, current.x - neighbour_radius);

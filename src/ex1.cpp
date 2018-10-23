@@ -29,20 +29,20 @@ void Application::init() {
     // Create a view matrix.
     glm::mat4 viewMatrix(1);
 	viewMatrix = glm::lookAt(
-					glm::vec3(4, 10, 23), 
-					glm::vec3(0, 0, 0), 
+					glm::vec3(4, 10, 23),
+					glm::vec3(0, 0, 0),
 					glm::vec3(0, 1, 0));
     m_program.setViewMatrix(viewMatrix);
 
 	// Generate the terrain
-	m_meshGenerator = MeshGenerator(40, 40, 2);
+	m_meshGenerator = MeshGenerator(50, 50, 2);
 	m_terrain_meshes = m_meshGenerator.generateMeshes(PerlinNoise(0, 0.1, 0.35, 2.0, 6), 5, 2, 28);
 	m_foliage_coords = m_meshGenerator.getFoliagePlacementCoordinates(PerlinNoise(0, 0.2, 0.1, 2.0, 6), 28);
 	water = m_meshGenerator.generateWaterMesh(glfwGetTime());
 
 	foliage = loadObj(CGRA_SRCDIR "/res/models/tree_leaves.obj");
 
-	// Test plane. 
+	// Test plane.
 	cgra::Matrix<double> vertices(4, 3);
 	cgra::Matrix<unsigned int> triangles(2, 3);
 
@@ -131,7 +131,7 @@ void Application::drawScene() {
     modelTransform = m_rotationMatrix * modelTransform;
     modelTransform = glm::translate(modelTransform, m_translation);
 
-	// Terrain drawing. 
+	// Terrain drawing.
 	for (int i = 0; i < m_terrain_meshes.size(); i++) {
 		if (m_terrain_meshes[i].null) {
 			continue;
@@ -194,7 +194,7 @@ void Application::doGUI() {
 	static int foliage_sparseness = 15;
 	static int lake_size = 28;
 
-	// Change the frequency. 
+	// Change the frequency.
 	if (ImGui::SliderFloat("Distance between peaks \n(Frequency)", &frequency, 0.0f, 2.0f, "%.3f")) {
 		m_terrain_meshes = m_meshGenerator.generateMeshes(PerlinNoise(seed, persistence, frequency, lacunarity, octave),
 			height, redistribution_factor, lake_size);
@@ -271,25 +271,25 @@ void Application::onCursorPos(double xpos, double ypos) {
     glm::vec2 mousePositionDelta = currentMousePosition - m_mousePosition;
 
     if (m_mouseButtonDown[GLFW_MOUSE_BUTTON_LEFT]) {
-		// Rotate around the y-axis. 
+		// Rotate around the y-axis.
 		float delta = glm::length(mousePositionDelta) / 100.0f;
 		delta = mousePositionDelta.x < 0 ? -delta : delta;
 		m_angle += delta;
     } else if (m_mouseButtonDown[GLFW_MOUSE_BUTTON_MIDDLE]) {
-		// Adjust the y position of the camera. 
+		// Adjust the y position of the camera.
     	glm::vec2 pos = mousePositionDelta / glm::vec2(20);
     	pos.y = -pos.y;
 		y_look_at += pos.y;
 
     } else if (m_mouseButtonDown[GLFW_MOUSE_BUTTON_RIGHT]) {
-		// Zoom into the scene. 
+		// Zoom into the scene.
     	float scale = currentMousePosition.y/(m_viewportSize.y/2);
     	if(scale > 0){
     		m_scale = scale;
     	}
     }
 
-	// Set the view matrix. 
+	// Set the view matrix.
 	float radius = 25.0f;
 	float camX = sin(m_angle) * radius;
 	float camZ = cos(m_angle) * radius;
