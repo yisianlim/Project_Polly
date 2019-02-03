@@ -49,9 +49,6 @@ class Triangulation {
 	// Return true if a point is inside the circumcircle of a triangle. 
 	bool inCircumcircle(glm::vec2 point, Triangle triangle);
 
-	// Returns true if successfully added, when there are no other similar edges in the set. 
-	bool addToEdges(Edge e, std::vector<Edge> &edges);
-
 	public:
 		Triangulation(std::vector<glm::vec2> points) {
 			// Determine the super triangle.

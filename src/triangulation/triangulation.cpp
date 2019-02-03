@@ -22,7 +22,6 @@ void Triangulation::run(glm::vec2 point) {
 		return t.isBad;
 	}), end(m_triangles));
 
-
 	for (int i = 0; i < edges.size(); i++)
 	{
 		Edge &e1 = edges[i];
@@ -47,20 +46,6 @@ void Triangulation::run(glm::vec2 point) {
 		Triangle tri = Triangle(e.a, e.b, point);
 		m_triangles.push_back(tri);
 	}
-
-	for (int i = 0; i < m_triangles.size(); i++) {
-		Triangle current = m_triangles[i];
-	}
-}
-
-bool Triangulation::addToEdges(Edge e, std::vector<Edge> &edges) {
-	for (Edge edge : edges) {
-		if (edge == e) {
-			return false;
-		}
-	}
-	edges.push_back(e);
-	return true;
 }
 
 bool Triangulation::inCircumcircle(glm::vec2 point, Triangle triangle) {

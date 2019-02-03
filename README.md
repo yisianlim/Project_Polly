@@ -72,3 +72,16 @@ where the difference between normals of different triangles were used to smooth 
 implemented by using a flat interpolation specifier when passing attributes from the vertex shader to the fragment shader.
 Each triangle was shaded with a colour corresponding to its height, calculated using height maps, to visually signify
 mountains and lakes.
+
+### Results 
+![ss1](images/ss1.JPG)
+
+![ss2](images/ss2.JPG)
+
+![ss3](images/ss3.JPG)
+
+![ss4](images/ss4.JPG)
+
+![ss5](images/ss5.JPG)
+
+![ss6](images/ss6.JPG)

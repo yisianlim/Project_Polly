@@ -60,7 +60,7 @@ class MeshGenerator {
 		cgra::Mesh generateWaterMesh(double time);
 
 		// Using a noise map to generate the coordinates for tree placements.
-		std::vector<glm::vec3> getFoliagePlacementCoordinates(PerlinNoise n, int number_of_trees);
+		std::vector<glm::vec3> getFoliagePlacementCoordinates(PerlinNoise n, int sparseness_factor);
 
 		float generateOffset(glm::vec2 coord, double time);
 

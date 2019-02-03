@@ -132,9 +132,10 @@ namespace cgra {
         // Set the appropriate polygon mode for the drawing mode
         if (m_drawWireframe) {
             glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-        } else {
-            glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-        }
+		}
+		else {
+			glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+		}
 
         // Bind the VAO
         glBindVertexArray(m_vao);

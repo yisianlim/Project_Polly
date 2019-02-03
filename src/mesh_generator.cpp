@@ -258,10 +258,10 @@ cgra::Mesh MeshGenerator::createMeshFromVertices(std::vector<glm::vec3> v) {
 	return mesh;
 }
 
-// https://gamedevacademy.org/complete-guide-to-procedural-level-generation-in-unity-part-3/
-std::vector<glm::vec3> MeshGenerator::getFoliagePlacementCoordinates(PerlinNoise n, int density) {
+
+std::vector<glm::vec3> MeshGenerator::getFoliagePlacementCoordinates(PerlinNoise n, int spareness_factor) {
 	std::vector<glm::vec3> tree_coords;
-	for (int i = 0; i < m_vertices.size(); i+= density * 3) {
+	for (int i = 0; i < m_vertices.size(); i+= spareness_factor * 3) {
 		glm::vec3 current = m_vertices[i];
 
 		// We are at a mountain or a lake, no trees should be placed.
