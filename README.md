@@ -1,4 +1,4 @@
-# Project_Polly
+# Project Polly
 ## Abstract
 Procedural generation is a powerful tool for creating virtual worlds to explore. Project Polly explores procedurally
 generating low-poly terrain and structures in a scene akin to a game map. With a rise in interest in the stylistic rendering
